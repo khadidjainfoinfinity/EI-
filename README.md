@@ -7,6 +7,7 @@ Supports de révision pour le module **Documents Structurés** (XML · DTD · XP
 - **[resume.html](resume.html)** — Résumé complet : chaque notion expliquée avec ses exemples **XML → requête → résultat**, le corrigé de l'examen exemple, et un aide-mémoire.
 - **[qcm.html](qcm.html)** — QCM interactif de 55 questions (correction + explication immédiates, score en direct).
 - **[examens.html](examens.html)** — 2 examens réels (2021/2022) **entièrement corrigés** (17 questions).
+- **[examens-blancs.html](examens-blancs.html)** — 3 examens blancs (24 questions) : **tu écris ta réponse**, puis tu révèles la solution.
 
 > Ouvre simplement les fichiers `.html` dans un navigateur.
 

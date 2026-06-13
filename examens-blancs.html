@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examens blancs — Documents Structurés</title>
+<style>
+  :root{
+    --bg:#f3f4f6;--card:#fff;--ink:#2c3038;--muted:#6b7280;
+    --accent:#3f6fb0;--accent-dark:#2c4f80;--accent-soft:#eaf1f9;
+    --line:#e3e6ea;--code-bg:#f5f6f8;--code-border:#e1e4e8;
+    --good-bg:#eef7ef;--good-bd:#9bc99f;--trap-bg:#fff8e8;--trap-bd:#e9c46a;
+    --shadow:0 2px 10px rgba(40,50,70,.07);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",system-ui,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:15.5px}
+  header.top{background:var(--card);border-bottom:1px solid var(--line);padding:16px 22px;position:sticky;top:0;z-index:20;box-shadow:var(--shadow)}
+  header.top h1{margin:0;font-size:1.3rem;color:var(--accent-dark)}
+  header.top .links{margin-top:5px;font-size:.85rem}
+  header.top a{color:var(--accent);text-decoration:none;font-weight:600;margin-right:14px}
+  main{max-width:1000px;margin:0 auto;padding:22px 20px 80px}
+  .intro{background:var(--card);border-radius:12px;padding:14px 18px;margin-bottom:20px;box-shadow:var(--shadow);border-left:5px solid var(--accent)}
+  .paper{background:var(--card);border-radius:14px;padding:16px 22px;margin-bottom:24px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  h2.sec{color:var(--accent-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin:0 0 4px;font-size:1.35rem}
+  .lead{color:var(--muted);margin:2px 0 10px;font-size:.9rem}
+  .q{border:1px solid var(--line);border-radius:11px;margin:14px 0;overflow:hidden}
+  .q .head{background:#f0f2f5;padding:9px 14px;font-weight:700;color:var(--accent-dark);border-bottom:1px solid var(--line)}
+  .q .body{padding:13px 16px}
+  .given{margin:0 0 8px}
+  .ask{font-weight:600;margin:8px 0 4px}
+  code{background:var(--code-bg);border:1px solid var(--code-border);padding:1px 5px;border-radius:5px;font-family:Consolas,"Courier New",monospace;font-size:.86em;color:#243b53}
+  pre{background:var(--code-bg);border:1px solid var(--code-border);border-left:4px solid var(--accent);border-radius:9px;padding:11px 13px;overflow-x:auto;font-size:.82rem;line-height:1.5;margin:8px 0}
+  pre code{background:none;border:none;padding:0;color:#243b53}
+  pre.xml{border-left-color:#9aa0a6}
+  textarea{width:100%;min-height:80px;border:1.5px solid var(--line);border-radius:9px;padding:10px 12px;font-family:Consolas,monospace;font-size:.86rem;resize:vertical;background:#fcfcfd;color:var(--ink)}
+  textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+  button.show{margin-top:9px;background:#2f6b3a;color:#fff;border:none;border-radius:8px;padding:8px 16px;cursor:pointer;font-weight:700;font-size:.85rem}
+  button.show:hover{background:#27592f}
+  .sol{display:none;background:var(--good-bg);border:1px solid var(--good-bd);border-left:5px solid var(--good-bd);border-radius:9px;padding:11px 15px;margin:10px 0 0}
+  .sol.open{display:block}
+  .sol b{color:#2f6b3a}
+  .sol .r{color:#1d7a3e;font-weight:600}
+  .out{background:#1e1e2e;color:#e4e4ef;border-radius:8px;padding:9px 13px;font-family:Consolas,monospace;font-size:.85rem;margin:7px 0;white-space:pre;overflow-x:auto}
+  ul,ol{padding-left:21px;margin:5px 0}
+  li{margin:3px 0}
+  .pt{font-size:.78rem;color:var(--muted);font-weight:600}
+  .tools{text-align:right;margin:-2px 0 8px}
+  .tools button{background:#fff;border:1px solid var(--line);color:var(--accent-dark);border-radius:8px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:.8rem}
+  .back{position:fixed;bottom:20px;right:20px;background:var(--accent);color:#fff;text-decoration:none;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:var(--shadow)}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <h1>✍️ Examens blancs — à toi de répondre</h1>
+  <div class="links"><a href="resume.html">← Résumé</a><a href="examens.html">Examens corrigés</a><a href="qcm.html">QCM</a></div>
+</header>
+
+<main>
+  <div class="intro">
+    Lis chaque question, <b>écris ta réponse dans le cadre</b>, puis clique <b>« Voir la solution »</b> pour te corriger. Rien n'est enregistré : tu peux refaire autant de fois que tu veux. &nbsp; 3 sujets · 24 questions.
+    <div class="tools" style="margin-top:8px"><button onclick="toggleAll()">Tout afficher / masquer les solutions</button></div>
+  </div>
+
+  <!-- ============ SUJET 1 ============ -->
+  <section class="paper">
+    <h2 class="sec">Sujet blanc n°1 (10 questions)</h2>
+    <p class="lead">XML · DTD · XPath · XQuery · DOM — durée conseillée : 1h30.</p>
+
+    <div class="q"><div class="head">Q1 — XQuery</div><div class="body">
+      <p class="given">Soit : <code>element livre {attribute id {"L1"}, attribute id {"L2"}, "XML"}</code></p>
+      <p class="ask">1) Pourquoi cette requête génère-t-elle une erreur ? 2) Corrigez-la.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>1)</b> Un élément ne peut pas avoir <b>deux attributs du même nom</b> (<code>id</code> deux fois).<br>
+        <b>2)</b> Renommer l'un ou fusionner : <code>element livre {attribute id {"L1"}, attribute ref {"L2"}, "XML"}</code> <span class="r">→ &lt;livre id="L1" ref="L2"&gt;XML&lt;/livre&gt;</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q2 — XQuery (ordre attribut / contenu)</div><div class="body">
+      <p class="given">Soit : <code>element personne {"Bonjour", attribute lang {"fr"}}</code></p>
+      <p class="ask">1) Pourquoi cette requête génère-t-elle une erreur ? 2) Corrigez-la.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>1)</b> Dans un constructeur d'élément, <b>les attributs doivent venir AVANT tout autre contenu</b> (texte ou sous-éléments). Ici le texte « Bonjour » est placé avant l'attribut → erreur (« un nœud attribut ne peut pas suivre un nœud non-attribut »).<br>
+        <b>2)</b> Mettre l'attribut en premier : <code>element personne {attribute lang {"fr"}, "Bonjour"}</code> <span class="r">→ &lt;personne lang="fr"&gt;Bonjour&lt;/personne&gt;</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q3 — XPath : <code>.</code> vs <code>text()</code></div><div class="body">
+      <p class="given">XML : <code>&lt;p&gt;Le &lt;b&gt;chat&lt;/b&gt; dort bien&lt;/p&gt;</code></p>
+      <p class="ask">Expliquer ce que retourne chaque expression :<br><code>//p[contains(., 'bien')]</code> &nbsp;et&nbsp; <code>//p[contains(text(), 'bien')]</code></p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>contains(<b>.</b>, 'bien')</code> → <code>.</code> = tout le texte de <code>p</code> (« Le chat dort bien », y compris après <code>&lt;/b&gt;</code>) → « bien » présent → <span class="r">retourne &lt;p&gt;</span>.<br>
+        <code>contains(<b>text()</b>, 'bien')</code> → <code>text()</code> = le <b>premier</b> nœud texte direct (« Le »). « bien » est après <code>&lt;b&gt;</code>, dans un autre nœud texte → <span class="r">ne retourne rien</span>.</div>
+    </div></div>
+
+    <div class="q"><div class="head">Q4 — XPath : positions</div><div class="body">
+      <p class="ask">Expliquer la différence entre <code>//item[1]</code> et <code>(//item)[1]</code>.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>//item[1]</code> = « le <code>item</code> en 1ʳᵉ position <b>chez chaque parent</b> » → peut renvoyer <b>plusieurs</b> nœuds.<br>
+        <code>(//item)[1]</code> = on collecte tous les <code>item</code> puis on prend le <b>1ᵉʳ de la liste globale</b> → <b>toujours 1 seul</b>.</div>
+    </div></div>
+
+    <div class="q"><div class="head">Q5 — XQuery : écrire une requête FLWOR</div><div class="body">
+      <p class="given">Fichier <code>bibliotheque.xml</code> : <code>&lt;livre&gt;&lt;titre&gt;…&lt;/titre&gt;&lt;prix&gt;…&lt;/prix&gt;&lt;annee&gt;…&lt;/annee&gt;&lt;/livre&gt;…</code></p>
+      <p class="ask">Écrire une requête XQuery qui retourne les <b>titres</b> des livres dont le <b>prix &gt; 50</b>, triés par <b>année décroissante</b>, le tout dans un élément racine <code>&lt;resultat&gt;</code>.</p>
+      <textarea placeholder="Ta réponse…" style="min-height:110px"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol">
+<pre><code>element resultat {
+  for $l in doc("bibliotheque.xml")//livre
+  where $l/prix &gt; 50
+  order by $l/annee descending
+  return element titre { $l/titre/text() }
+}</code></pre></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q6 — DTD : contenu mixte</div><div class="body">
+      <p class="given">XML : <code>&lt;note&gt;Bonjour &lt;gras&gt;Paul&lt;/gras&gt; !&lt;/note&gt;</code><br>
+      DTD : <code>&lt;!ELEMENT note (#PCDATA, gras)&gt;</code></p>
+      <p class="ask">Cette ligne DTD génère une erreur. Corrigez-la.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>note</code> a un <b>contenu mixte</b> (texte « Bonjour … ! » + sous-élément <code>gras</code>). Forme obligatoire :<br>
+        <code>&lt;!ELEMENT note (#PCDATA | gras)*&gt;</code></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q7 — DTD : attribut ID</div><div class="body">
+      <p class="given">XML : <code>&lt;produit ref="P 100"/&gt;</code> &nbsp;avec&nbsp; <code>&lt;!ATTLIST produit ref ID #REQUIRED&gt;</code></p>
+      <p class="ask">1) Pourquoi erreur ? 2) Donnez deux corrections différentes.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>1)</b> Un attribut de type <code>ID</code> ne peut pas contenir d'<b>espace</b> (la valeur « P 100 » en a un).<br>
+        <b>2)</b> (a) changer le type : <code>&lt;!ATTLIST produit ref CDATA #REQUIRED&gt;</code> · (b) enlever l'espace : <code>ref="P100"</code></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q8 — DOM : que va afficher ce code ?</div><div class="body">
+<pre class="xml"><code>&lt;cours&gt;
+  &lt;module code="M1"&gt;Algo&lt;/module&gt;
+  &lt;module code="M2"&gt;Reseaux&lt;/module&gt;
+&lt;/cours&gt;</code></pre>
+<pre><code>NodeList m = doc.getDocumentElement().getElementsByTagName("module");
+for(int i=0; i&lt;m.getLength(); i++){
+  System.out.println(m.item(i).getFirstChild().getNodeValue());
+  System.out.println(((Element)m.item(i)).getAttribute("code"));
+}</code></pre>
+      <p class="ask">Que va afficher ce code ? Justifier.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol">Pour chaque <code>module</code> : le texte (fils #text) puis l'attribut <code>code</code> (après cast en <code>Element</code>) :
+        <div class="out">Algo
+M1
+Reseaux
+M2</div>
+        <span class="pt">getElementsByTagName ne ramène que les éléments <code>module</code> (pas de #text parasite), donc <code>getFirstChild().getNodeValue()</code> donne directement le texte.</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q9 — DOM : erreur</div><div class="body">
+      <p class="given">Sur le même <code>&lt;cours&gt;</code>, on écrit :</p>
+<pre><code>NodeList n = doc.getDocumentElement().getChildNodes();
+for(int o=0; o&lt;n.getLength(); o++)
+   System.out.println(n.item(o).getFirstChild().getNodeValue());</code></pre>
+      <p class="ask">1) Pourquoi ce code génère-t-il une erreur ? 2) Comment la corriger ?</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>1)</b> <code>getChildNodes()</code> ramène aussi les nœuds <code>#text</code> parasites (sauts de ligne/espaces de l'indentation). Sur un nœud <code>#text</code>, <code>getFirstChild()</code> vaut <code>null</code> → <code>getNodeValue()</code> sur <code>null</code> → <b>NullPointerException</b>.<br>
+        <b>2)</b> Filtrer ces parasites avant d'accéder au fils :<br>
+        <code>if(n.item(o).getNodeName() != "#text") System.out.println(n.item(o).getFirstChild().getNodeValue());</code></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q10 — XQuery : <code>eq</code> vs <code>=</code></div><div class="body">
+      <p class="given">Soit : <code>doc("arbres.xml")//arbre/hauteur eq 30</code></p>
+      <p class="ask">1) Pourquoi cette requête génère-t-elle une erreur ? 2) Comment l'écrire pour obtenir un résultat booléen ?</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>1)</b> <code>eq</code> exige <b>une seule valeur typée</b>. Or <code>//arbre/hauteur</code> est une <b>séquence</b> (plusieurs hauteurs) et <b>non typée</b> (<code>xs:untypedAtomic</code>) → erreur.<br>
+        <b>2)</b> Utiliser la comparaison générale <code>=</code> (gère les séquences + conversion) : <code>//arbre/hauteur = 30</code> <span class="pt">(vrai s'il existe au moins une hauteur = 30)</span>. Ou caster un seul nœud : <code>xs:int(//arbre[1]/hauteur) eq 30</code>.</div>
+    </div></div>
+  </section>
+
+  <!-- ============ SUJET 2 ============ -->
+  <section class="paper">
+    <h2 class="sec">Sujet blanc n°2 (8 questions)</h2>
+    <p class="lead">Axes XPath · XQuery avancé · DOM construction.</p>
+
+    <div class="q"><div class="head">Q1 — XPath : simplifier</div><div class="body">
+      <p class="ask">Simplifier pour obtenir le même résultat : <code>/descendant::chapitre[1]</code></p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>//chapitre[1]</code> &nbsp;<span class="pt">(<code>/descendant::</code> ≡ <code>//</code>)</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q2 — XPath : axes (écrire l'expression)</div><div class="body">
+      <p class="given">XML composé de <code>&lt;mot pos="…"&gt;…&lt;/mot&gt;</code> (étiquetage grammatical).</p>
+      <p class="ask">Écrire l'expression XPath qui sélectionne tous les <code>mot</code> de POS <b>NOM</b> qui sont précédés <b>immédiatement</b> d'un <code>mot</code> de POS <b>DET</b>.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>//mot[@pos='DET']/following-sibling::mot[1][@pos='NOM']</code><br>
+        <span class="pt">ou, en partant du NOM : <code>//mot[@pos='NOM'][preceding-sibling::mot[1]/@pos='DET']</code>. Le <code>[1]</code> garantit le voisin <b>immédiat</b>.</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q3 — XQuery : <code>is</code> et <code>&lt;&lt;</code></div><div class="body">
+      <p class="given">XML <code>fic.xml</code> : <code>&lt;r&gt;&lt;x&gt;1&lt;/x&gt;&lt;y&gt;2&lt;/y&gt;&lt;x&gt;1&lt;/x&gt;&lt;/r&gt;</code></p>
+      <p class="ask">Donner et justifier le résultat de :<br><code>//x[1] is //x[2]</code> &nbsp;et&nbsp; <code>//x[1] &lt;&lt; //x[2]</code></p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>//x[1] is //x[2]</code> → <span class="r">false</span> : <code>is</code> compare l'<b>identité</b> ; ce sont deux nœuds différents (même si même valeur 1).<br>
+        <code>//x[1] &lt;&lt; //x[2]</code> → <span class="r">true</span> : <code>&lt;&lt;</code> compare l'<b>ordre</b> ; le 1ᵉʳ <code>x</code> apparaît avant le 2ᵉ.</div>
+    </div></div>
+
+    <div class="q"><div class="head">Q4 — XQuery : expliquer une construction</div><div class="body">
+      <p class="given"><code>personne</code> a pour enfants <code>&lt;nom&gt;Dupont&lt;/nom&gt;</code> puis <code>&lt;prenom&gt;Ali&lt;/prenom&gt;</code>.</p>
+<pre><code>element { doc("p.xml")//personne[1]/name(*[1]) }
+        { doc("p.xml")//personne[1]/*[1]/text() }</code></pre>
+      <p class="ask">Expliquer ce que produit cette requête.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>Nom de l'élément</b> = <code>name(*[1])</code> = nom du 1ᵉʳ enfant de <code>personne[1]</code> = « nom ».<br>
+        <b>Contenu</b> = <code>*[1]/text()</code> = texte du 1ᵉʳ enfant = « Dupont ».<br>
+        Résultat : <span class="r">&lt;nom&gt;Dupont&lt;/nom&gt;</span> (on reconstruit un élément nommé d'après le 1ᵉʳ enfant, contenant son texte).</div>
+    </div></div>
+
+    <div class="q"><div class="head">Q5 — encoding obligatoire ?</div><div class="body">
+      <p class="given">Un document commence par <code>&lt;?xml version="1.0"?&gt;</code> (sans <code>encoding</code>), est encodé en <b>UTF-8</b> et contient le mot « café ».</p>
+      <p class="ask">L'attribut <code>encoding</code> est-il obligatoire ici ? Justifier.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>Non, il n'est pas obligatoire.</b> L'encodage par défaut en XML est <b>UTF-8/UTF-16</b> ; comme le document est justement en UTF-8, le parseur lit correctement « café » sans déclaration. <span class="pt">(Il serait nécessaire seulement pour un encodage non par défaut, ex. iso-8859-1.)</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q6 — DOM : compléter le code de construction</div><div class="body">
+      <p class="given">On veut construire : <code>&lt;racine&gt;&lt;ville pays="France"&gt;Lyon&lt;/ville&gt;&lt;/racine&gt;</code></p>
+<pre><code>Element rac = doc.getDocumentElement();          // &lt;racine&gt;
+Element ville = doc.________("ville");           // (1)
+rac.________(ville);                              // (2)
+ville.________("pays","France");                  // (3)
+ville.appendChild(doc.________("Lyon"));          // (4)</code></pre>
+      <p class="ask">Compléter (1) à (4).</p>
+      <textarea placeholder="(1)… (2)… (3)… (4)…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol">(1) <code>createElement</code> · (2) <code>appendChild</code> · (3) <code>setAttribute</code> · (4) <code>createTextNode</code></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q7 — DOM : sortie d'un parcours récursif</div><div class="body">
+      <p class="given">XML (sur une seule ligne) : <code>&lt;a&gt;X&lt;b&gt;Y&lt;c&gt;Z&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;</code></p>
+<pre><code>public static void L(Node n){
+  for(int o=0; o&lt;n.getChildNodes().getLength(); o++){
+     Node z = n.getChildNodes().item(o);
+     if(z.getNodeName()=="#text") System.out.println(z.getNodeValue());
+     L(z);
+  }
+}   // appelé avec getDocumentElement()</code></pre>
+      <p class="ask">Que va afficher ce code ? Justifier.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol">Le code descend récursivement <code>a → b → c</code> et imprime chaque nœud #text rencontré :
+        <div class="out">X
+Y
+Z</div>
+        <span class="pt">Pas de blancs parasites car tout est sur une seule ligne (aucun espace entre balises).</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q8 — DTD : écrire la DTD</div><div class="body">
+<pre class="xml"><code>&lt;commande num="42"&gt;
+  &lt;client&gt;Ali&lt;/client&gt;
+  &lt;article&gt;Livre&lt;/article&gt;
+  &lt;article&gt;Stylo&lt;/article&gt;
+&lt;/commande&gt;</code></pre>
+      <p class="ask">Écrire la DTD complète de ce document.</p>
+      <textarea placeholder="Ta réponse…" style="min-height:110px"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol">
+<pre><code>&lt;!ELEMENT commande (client, article+)&gt;
+&lt;!ATTLIST commande num CDATA #REQUIRED&gt;
+&lt;!ELEMENT client (#PCDATA)&gt;
+&lt;!ELEMENT article (#PCDATA)&gt;</code></pre>
+        <span class="pt"><code>article+</code> car il y en a au moins un (ici deux).</span></div>
+    </div></div>
+  </section>
+
+  <!-- ============ SUJET 3 ============ -->
+  <section class="paper">
+    <h2 class="sec">Sujet blanc n°3 (6 questions express)</h2>
+    <p class="lead">Révision rapide tous thèmes.</p>
+
+    <div class="q"><div class="head">Q1 — XQuery : ordre attribut / élément</div><div class="body">
+      <p class="given">Soit : <code>element racine {attribute n {"1"}, element a {}, attribute m {"2"}}</code></p>
+      <p class="ask">1) Pourquoi erreur ? 2) Corrigez.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><b>1)</b> L'attribut <code>m</code> est placé <b>après</b> un sous-élément (<code>element a {}</code>). Or tous les attributs doivent précéder tout contenu → erreur.<br>
+        <b>2)</b> Regrouper les attributs en tête : <code>element racine {attribute n {"1"}, attribute m {"2"}, element a {}}</code> <span class="r">→ &lt;racine n="1" m="2"&gt;&lt;a/&gt;&lt;/racine&gt;</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q2 — XPath : expliquer</div><div class="body">
+      <p class="ask">Expliquer ce que localise l'expression : <code>//BBB/*/..</code></p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>//BBB/*</code> sélectionne les enfants-éléments de chaque <code>BBB</code>, puis <code>/..</code> remonte à leur parent → on obtient les <code>BBB</code> qui ont <b>au moins un enfant-élément</b>. <span class="pt">(Les <code>BBB</code> vides ou ne contenant que du texte ne sont pas retournés.)</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q3 — XPath : sélectionner tous les attributs</div><div class="body">
+      <p class="ask">Écrire l'expression XPath qui localise <b>tous les nœuds d'attribut</b> du document, en utilisant l'axe <code>descendant::</code>.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>/descendant::*/@*</code> <span class="pt">(équivalents : <code>/descendant::*/attribute::*</code> · <code>//@*</code>)</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q4 — XQuery : sans répétition</div><div class="body">
+      <p class="ask">Écrire la requête qui compte le nombre de <b>genres distincts</b> dans <code>arbres.xml</code>.</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol"><code>count(distinct-values(doc("arbres.xml")//genre))</code> <span class="pt">(<code>distinct-values()</code> enlève les doublons, <code>count()</code> compte.)</span></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q5 — XQuery : if-then-else</div><div class="body">
+      <p class="ask">Écrire une requête qui, pour chaque <code>arbre</code> de <code>arbres.xml</code>, affiche son <code>nom_commun</code> suivi de « ancien » si son <code>annee &lt; 1900</code>, sinon « récent ».</p>
+      <textarea placeholder="Ta réponse…" style="min-height:110px"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol">
+<pre><code>for $a in doc("arbres.xml")//arbre
+return if ($a/annee &lt; 1900)
+       then concat($a/nom_commun, " : ancien")
+       else concat($a/nom_commun, " : récent")</code></pre></div>
+    </div></div>
+
+    <div class="q"><div class="head">Q6 — DTD : pourquoi erreur</div><div class="body">
+      <p class="given">XML : <code>&lt;adresse lang="ar"&gt;Alger&lt;/adresse&gt;</code><br>
+      DTD : <code>&lt;!ATTLIST adresse lang (fr|en) #REQUIRED&gt;</code></p>
+      <p class="ask">Pourquoi le document n'est-il pas valide ? Comment corriger ?</p>
+      <textarea placeholder="Ta réponse…"></textarea>
+      <button class="show" onclick="sol(this)">Voir la solution</button>
+      <div class="sol">L'attribut <code>lang</code> est défini par une <b>énumération</b> <code>(fr|en)</code> : sa valeur doit être <code>fr</code> <b>ou</b> <code>en</code>. Or ici <code>lang="ar"</code> n'est pas dans la liste → document <b>non valide</b>.<br>
+        Correction : soit mettre une valeur autorisée (<code>lang="fr"</code>), soit ajouter <code>ar</code> à l'énumération : <code>&lt;!ATTLIST adresse lang (fr|en|ar) #REQUIRED&gt;</code>.</div>
+    </div></div>
+  </section>
+
+  <p style="text-align:center;color:var(--muted)">Bon courage 💪 &nbsp;·&nbsp; <a href="examens.html" style="color:var(--accent);font-weight:700">Examens corrigés</a> &nbsp;·&nbsp; <a href="resume.html" style="color:var(--accent);font-weight:700">Résumé</a></p>
+</main>
+<a href="#top" class="back" title="Haut">↑</a>
+
+<script>
+function sol(btn){
+  const box = btn.nextElementSibling;
+  const open = box.classList.toggle('open');
+  btn.textContent = open ? 'Masquer la solution' : 'Voir la solution';
+}
+function toggleAll(){
+  const boxes = document.querySelectorAll('.sol');
+  const anyClosed = [...boxes].some(b => !b.classList.contains('open'));
+  boxes.forEach(b=>{
+    b.classList.toggle('open', anyClosed);
+    const btn = b.previousElementSibling;
+    if(btn && btn.classList.contains('show')) btn.textContent = anyClosed ? 'Masquer la solution' : 'Voir la solution';
+  });
+}
+</script>
+</body>
+</html>
