@@ -1,0 +1,95 @@
+EX1:
+1-1
+/*/*/*/titleStmt//*
+/*/*/*/titleStmt/descendant::*
+/teiCorpus.2/teiHeader/fileDesc/titleStmt//*
+/teiCorpus.2/teiHeader/fileDesc/titleStmt/descendant::*
+/descendant::titleStmt[1]//* ou (//titleStmt)[1]//*
+
+1-2
+/*/*/*/titleStmt/descendant-or-self::* 
+/teiCorpus.2/teiHeader/fileDesc/titleStmt/descendant-or-self::* 
+/descendant::titleStmt[1]/descendant-or-self::* ou (//titleStmt)[1]/descendant-or-self::*
+
+2-
+//u[@who='O']/text()
+//u[@*='O']/text()
+
+3-
+//u[@who='C']/text()
+//u[@*='C']/text()
+
+4-//u[contains(., 'quand')] (cible l'élément "u")
+//u[contains(., 'quand')]/text() (cible le texte de l'élément "u")
+
+5-
+//u[contains(., '?')] (cible l'élément "u")
+//u[contains(., '?')]/text() (cible le texte de l'élément "u")
+
+EX2:
+
+1-
+//taggertoken[contains (@pos,'NOM')]
+//*[contains(@pos,'NOM')]
+//taggertoken[starts-with(@pos,'NO')]
+
+2-
+//taggertoken[contains (@pos,'VER')]
+//*[contains(@pos,'VER')]
+//taggertoken[starts-with(@pos,'V')]
+
+3-
+//taggertoken[contains (@pos,'DET')]/following-sibling::taggertoken[1][contains (@pos,'NOM')] (sort les "NOM")
+//*[contains (@pos,'DET')]/following-sibling::*[1][contains (@pos,'NOM')]
+//*[contains (@pos,'DE')]/following-sibling::*[1][contains (@pos,'NO')]
+//taggertoken[contains (@pos,'NOM')]/preceding-sibling::taggertoken[1][contains (@pos,'DET')] (sort les "DET")
+//*[contains (@pos,'NOM')]/preceding-sibling::*[1][contains (@pos,'DET')] 
+
+4-
+//taggertoken[contains (@pos,'ADJ')]/preceding-sibling::taggertoken[1][contains (@pos,'NOM')] | //taggertoken[contains (@pos,'NOM')]/following-sibling::taggertoken[1][contains (@pos,'ADJ')] | //taggertoken[contains (@pos,'NOM')]/preceding-sibling::taggertoken[1][contains (@pos,'ADJ')] | //taggertoken[contains (@pos,'ADJ')]/following-sibling::taggertoken[1][contains (@pos,'NOM')]
+--------------------------------------------------------------------------------------------------------------------------
+//*[contains (@pos,'ADJ')]/preceding-sibling::*[1][contains (@pos,'NOM')] | //*[contains (@pos,'NOM')]/following-sibling::*[1][contains (@pos,'ADJ')] | //*[contains (@pos,'NOM')]/preceding-sibling::*[1][contains (@pos,'ADJ')] | //*[contains (@pos,'ADJ')]/following-sibling::*[1][contains (@pos,'NOM')]
+
+
+Ex3
+
+1-
+//traduction[@lang='tcheque']
+//*[@lang='tcheque']
+//*[@*='tcheque']
+
+2-
+/descendant::traduction[@lang= 'tcheque'][2] ou (//traduction[@lang='tcheque'])[2]
+/descendant::*[@lang= 'tcheque'][2]
+/descendant::*[@*= 'tcheque'][2]
+
+3-
+/descendant::traduction[@lang= 'francais'][2] ou (//traduction[@lang='francais'])[2]
+/descendant::*[@lang= 'francais'][2]
+/descendant::*[@*= 'francais'][2]
+
+4-
+//phrase[@loc='narrateur']//traduction[@lang='francais']
+//*[@loc='narrateur']//*[@lang='francais']
+//*[@*='narrateur']//*[@*='francais']
+
+5-
+//phrase[@loc='narrateur']//traduction[@lang='francais']/text()
+//*[@loc='narrateur']//*[@lang='francais']/mot/text()
+//*[@*='narrateur']//*[@*='francais']/mot/text()
+//*[@*='narrateur']//*[@*='francais']/*/text()
+
+6- 
+//phrase[@loc='LePetitPrince']/modalite[@type='interrogative']/traduction[@lang='francais']
+//*[@loc='LePetitPrince']/*[@type='interrogative']/*[@lang='francais']
+//*[@*='LePetitPrince']/*[@*='interrogative']/*[@*='francais']
+
+7-
+//phrase[@loc='LePetitPrince']/modalite[@type='interrogative']/traduction[@lang='francais']/mot[contains (text(),'?')]
+//phrase[@loc='LePetitPrince']/modalite[@type='interrogative']/traduction[@lang='francais']/mot[contains (.,'?')]
+//*[@*='LePetitPrince']/*[@*='interrogative']/*[@*='francais']/*[contains (text(),'?')]
+//*[@*='LePetitPrince']/*[@*='interrogative']/*[@*='francais']/*[contains (.,'?')]
+//phrase[@loc='LePetitPrince']//traduction[@lang='francais']/mot[contains (text(),'?')]
+//phrase[@loc='LePetitPrince']//traduction[@lang='francais']/mot[contains (.,'?')]
+//*[@*='LePetitPrince']//*[@*='francais']/*[contains (text(),'?')] 
+//*[@*='LePetitPrince']//*[@*='francais']/*[contains (.,'?')]

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<classification_atomique>
+	<!--commentaire-->
+	<famille type="gaz rare">
+		<atome>
+			<nom>hélium</nom>
+			<symbole>He<autre>autre</autre>
+			</symbole>
+			<numero>2</numero>
+			<masse>la masse est 4</masse>
+		</atome>
+		<atome>
+			<nom>néon</nom>
+			<symbole>Ne</symbole>
+			<numero>10</numero>
+			<masse>20</masse>
+		</atome>
+		<atome>
+			<nom>argon</nom>
+			<symbole>Ar</symbole>
+			<numero>18</numero>
+			<masse>40</masse>
+		</atome>
+	</famille>
+</classification_atomique>

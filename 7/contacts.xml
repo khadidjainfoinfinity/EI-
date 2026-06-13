@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<contacts>
+	<personne>
+		<nom>Ghezal</nom>
+		<prenom>Ramy</prenom>
+		<dateDeNaissance>1977-07-09</dateDeNaissance>
+		<adresse lang="ar" pays="Algérie"/>
+		<email n="a120">ghezalr@gmail.com</email>
+		<telephone>0770 00 90</telephone>
+		<a/>
+	</personne>
+	<personne>
+		<nom>Brown</nom>
+		<prenom>John</prenom>
+		<dateDeNaissance>1977-01-06</dateDeNaissance>
+		<lieuDeNaissance arrondissement="Brooklyn">New York</lieuDeNaissance>
+		<adresse lang="en" pays="USA"/>
+		<email n="b120">brownj@gmail.com</email>
+		<b/>
+	</personne>
+</contacts>
+
+

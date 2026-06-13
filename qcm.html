@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QCM — Documents Structurés</title>
+<style>
+  :root{
+    --bg:#f3f4f6; --card:#fff; --ink:#2c3038; --muted:#6b7280;
+    --accent:#3f6fb0; --accent-dark:#2c4f80; --accent-soft:#eaf1f9;
+    --line:#e3e6ea; --code-bg:#f5f6f8; --code-bd:#e1e4e8;
+    --good:#3c9a52; --good-bg:#eef7ef; --good-bd:#9bc99f;
+    --bad:#c0493f; --bad-bg:#fbeeed; --bad-bd:#e0a59f;
+    --shadow:0 2px 10px rgba(40,50,70,.07);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",system-ui,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  header.top{background:var(--card);border-bottom:1px solid var(--line);padding:18px 22px;position:sticky;top:0;z-index:20;box-shadow:var(--shadow)}
+  header.top h1{margin:0;font-size:1.3rem;color:var(--accent-dark)}
+  .bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:10px;font-size:.9rem}
+  .pill{background:var(--accent-soft);color:var(--accent-dark);padding:5px 13px;border-radius:20px;font-weight:700}
+  .pill.ok{background:var(--good-bg);color:var(--good)}
+  .pill.tot{background:#f0f2f5;color:var(--muted)}
+  .progress{flex:1;min-width:140px;height:9px;background:#e7eaee;border-radius:6px;overflow:hidden}
+  .progress > div{height:100%;width:0;background:var(--accent);transition:width .3s}
+  button.reset{margin-left:auto;background:#fff;border:1px solid var(--line);color:var(--accent-dark);padding:6px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+  button.reset:hover{background:var(--accent-soft)}
+  main{max-width:920px;margin:0 auto;padding:24px 18px 80px}
+  .intro{background:var(--card);border-radius:12px;padding:16px 20px;margin-bottom:20px;box-shadow:var(--shadow);border-left:5px solid var(--accent)}
+  h2.sec{color:var(--accent-dark);font-size:1.2rem;margin:30px 0 4px;display:flex;align-items:center;gap:9px}
+  h2.sec .tag{font-size:.7rem;background:var(--accent);color:#fff;border-radius:6px;padding:2px 9px;font-weight:700}
+  .q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+  .q .num{color:var(--muted);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+  .q .stem{font-weight:600;margin:4px 0 12px;font-size:1.02rem}
+  .opt{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fafbfc;border-radius:9px;padding:10px 14px;margin:7px 0;cursor:pointer;font-size:.95rem;font-family:inherit;color:var(--ink);transition:.12s}
+  .opt:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}
+  .opt:disabled{cursor:default}
+  .opt .letter{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;background:#e7eaee;color:var(--muted);font-weight:700;font-size:.8rem;margin-right:9px}
+  .opt.correct{border-color:var(--good-bd);background:var(--good-bg)}
+  .opt.correct .letter{background:var(--good);color:#fff}
+  .opt.wrong{border-color:var(--bad-bd);background:var(--bad-bg)}
+  .opt.wrong .letter{background:var(--bad);color:#fff}
+  .explain{margin-top:10px;padding:11px 14px;border-radius:9px;background:var(--accent-soft);border-left:4px solid var(--accent);font-size:.92rem;display:none}
+  .explain.show{display:block}
+  .explain b{color:var(--accent-dark)}
+  code{background:var(--code-bg);border:1px solid var(--code-bd);padding:1px 5px;border-radius:5px;font-family:Consolas,monospace;font-size:.85em;color:#243b53}
+  .done-msg{text-align:center;background:var(--good-bg);border:1px solid var(--good-bd);border-radius:12px;padding:18px;margin-top:24px;font-weight:700;color:var(--good);display:none}
+  a.home{color:var(--accent);text-decoration:none;font-size:.85rem;font-weight:600}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>QCM de révision — Documents Structurés</h1>
+  <div class="bar">
+    <span class="pill tot">Répondu <span id="ans">0</span> / <span id="total">0</span></span>
+    <span class="pill ok">Correct <span id="score">0</span></span>
+    <div class="progress"><div id="pbar"></div></div>
+    <button class="reset" onclick="resetQuiz()">↻ Recommencer</button>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    Clique sur une réponse : elle devient <b style="color:var(--good)">verte</b> si correcte, <b style="color:var(--bad)">rouge</b> si fausse, et l'explication apparaît. Couvre <b>XML · DTD · XPath · Axes · XQuery · FLWOR · DOM</b>. &nbsp; <a class="home" href="resume.html">← retour au résumé</a>
+  </div>
+  <div id="quiz"></div>
+  <div class="done-msg" id="done">🎉 Terminé ! Refais les questions ratées en rouge.</div>
+</main>
+
+<script>
+const quiz = [
+{section:"XML & bien formé", questions:[
+ {q:`Combien d'éléments racine doit contenir un document XML bien formé ?`,
+  o:[`Aucun`,`Exactement un`,`Au moins deux`,`Autant qu'on veut`],a:1,
+  e:`Un document XML bien formé a <b>un seul</b> élément racine qui englobe tout le reste.`},
+ {q:`Lequel de ces fragments est <b>mal formé</b> ?`,
+  o:[`&lt;p&gt;&lt;e&gt;x&lt;/e&gt;&lt;/p&gt;`,`&lt;p&gt;&lt;e&gt;x&lt;/p&gt;&lt;/e&gt;`,`&lt;p/&gt;`,`&lt;p&gt;x&lt;/p&gt;`],a:1,
+  e:`Les balises doivent être correctement imbriquées : on ferme <code>e</code> avant <code>p</code>. <code>&lt;p&gt;&lt;e&gt;x&lt;/p&gt;&lt;/e&gt;</code> croise les balises.`},
+ {q:`Pour écrire le caractère <b>&amp;</b> dans du texte XML, on écrit :`,
+  o:[`&amp;`,`&amp;amp;`,`\\&`,`[&]`],a:1,
+  e:`<code>&amp;</code> est réservé. On l'échappe en <code>&amp;amp;</code> (ou <code>&amp;#38;</code>). Pareil pour <code>&lt;</code> → <code>&amp;lt;</code>.`},
+ {q:`Que signifie <code>standalone="no"</code> dans la déclaration XML ?`,
+  o:[`Le document est vide`,`Le document dépend d'une DTD externe`,`Le document est invalide`,`Pas d'encodage`],a:1,
+  e:`<code>"no"</code> (valeur par défaut) = le document n'est pas autonome, il s'appuie sur une DTD externe. <code>"yes"</code> = autonome (DTD interne).`},
+ {q:`Un document XML « valide » est un document qui :`,
+  o:[`respecte juste la syntaxe XML`,`est bien formé ET conforme à une DTD`,`a un encodage UTF-8`,`n'a pas de commentaires`],a:1,
+  e:`<b>Bien formé</b> = syntaxe correcte. <b>Valide</b> = bien formé <b>en plus</b> conforme à une grammaire (DTD). Question piège classique.`},
+ {q:`Pourquoi <code>&lt;date anniv=071185&gt;</code> est-il faux ?`,
+  o:[`anniv est un mot réservé`,`la valeur d'attribut n'est pas entre guillemets`,`il manque une balise fermante`,`071185 commence par 0`],a:1,
+  e:`Toute valeur d'attribut doit être entre guillemets : <code>anniv="071185"</code>.`},
+ {q:`Dans <code>&lt;nom date="x"&gt;Bob&lt;/nom&gt;</code>, « Bob » est un :`,
+  o:[`nœud élément`,`nœud attribut`,`nœud texte (#text)`,`nœud commentaire`],a:2,
+  e:`Le contenu textuel d'un élément est un <b>nœud texte (#text)</b>, qui est le fils de l'élément.`},
+ {q:`XML est-il sensible à la casse (majuscules/minuscules) ?`,
+  o:[`Non, jamais`,`Oui : &lt;Nom&gt; ≠ &lt;nom&gt;`,`Seulement pour les attributs`,`Seulement en UTF-8`],a:1,
+  e:`Oui, XML est <b>case sensitive</b> : <code>&lt;Nom&gt;</code> et <code>&lt;nom&gt;</code> sont des balises différentes.`},
+]},
+
+{section:"DTD", questions:[
+ {q:`<code>&lt;!ELEMENT img EMPTY&gt;</code> déclare un élément :`,
+  o:[`contenant du texte`,`vide (sans contenu)`,`répétable`,`avec un attribut`],a:1,
+  e:`<code>EMPTY</code> = élément vide, comme <code>&lt;img/&gt;</code>.`},
+ {q:`L'indicateur d'occurrence <code>+</code> signifie :`,
+  o:[`0 ou 1`,`exactement 1`,`1 ou plus`,`0 ou plus`],a:2,
+  e:`<code>+</code> = obligatoire et répétable (<b>au moins une fois</b>). <code>?</code>=0-1, <code>*</code>=0+, rien=exactement 1.`},
+ {q:`<code>&lt;!ELEMENT em (#PCDATA)&gt;</code> veut dire que <code>em</code> contient :`,
+  o:[`des sous-éléments`,`du texte`,`rien`,`un attribut`],a:1,
+  e:`<code>(#PCDATA)</code> = Parsed Character Data = du <b>texte</b>.`},
+ {q:`Pour <code>&lt;name&gt;W.B&lt;family&gt;Wallace&lt;/family&gt;&lt;/name&gt;</code> (texte + sous-élément), la DTD correcte est :`,
+  o:[`&lt;!ELEMENT name (#PCDATA, family)&gt;`,`&lt;!ELEMENT name (family)&gt;`,`&lt;!ELEMENT name (#PCDATA | family)*&gt;`,`&lt;!ELEMENT name EMPTY&gt;`],a:2,
+  e:`Contenu <b>mixte</b> (texte mélangé à des éléments) → forme obligatoire <code>(#PCDATA | family)*</code>.`},
+ {q:`Quel mot rend un attribut obligatoire ?`,
+  o:[`#FIXED`,`#IMPLIED`,`#REQUIRED`,`CDATA`],a:2,
+  e:`<code>#REQUIRED</code> = obligatoire · <code>#IMPLIED</code> = facultatif · <code>#FIXED</code> = valeur figée.`},
+ {q:`<code>&lt;personne id="a 1942"&gt;</code> avec <code>&lt;!ATTLIST personne id ID #REQUIRED&gt;</code> génère une erreur car :`,
+  o:[`id est réservé`,`un ID ne peut pas contenir d'espace`,`personne n'existe pas`,`il manque une valeur`],a:1,
+  e:`Un attribut de type <code>ID</code> ne peut pas contenir d'espace (ni commencer par un chiffre). Correction : type <code>CDATA</code>, ou enlever l'espace.`},
+ {q:`<code>&lt;!ATTLIST e lang (ar|en) #REQUIRED&gt;</code> signifie que <code>lang</code> :`,
+  o:[`vaut forcément "ar et en"`,`doit valoir "ar" ou "en"`,`est un nombre`,`est facultatif`],a:1,
+  e:`Le <code>|</code> dans une liste de valeurs = <b>choix</b> : la valeur doit être l'une des deux.`},
+ {q:`Un attribut de type <code>ID</code> garantit que sa valeur est :`,
+  o:[`un entier`,`unique dans tout le document`,`obligatoire`,`figée`],a:1,
+  e:`<code>ID</code> impose l'<b>unicité</b> de la valeur dans tout le document XML.`},
+]},
+
+{section:"XPath", questions:[
+ {q:`Que sélectionne <code>//personne</code> ?`,
+  o:[`la 1re personne`,`les personne enfants de la racine seulement`,`tous les éléments personne, n'importe où`,`l'attribut personne`],a:2,
+  e:`<code>//</code> = recherche récursive : tous les <code>personne</code> à n'importe quelle profondeur.`},
+ {q:`<code>//personne[2]</code> sélectionne :`,
+  o:[`les 2 premières personne`,`la personne en 2e position`,`2 personne au hasard`,`l'attribut n°2`],a:1,
+  e:`<code>[2]</code> est un prédicat de position → la 2e personne (chez son parent).`},
+ {q:`<code>//personne/@nom</code> sélectionne :`,
+  o:[`l'élément nom`,`l'attribut nom des personne`,`le texte nom`,`le parent de personne`],a:1,
+  e:`<code>@</code> désigne un <b>attribut</b> → ici l'attribut <code>nom</code>.`},
+ {q:`<code>..</code> en XPath désigne :`,
+  o:[`le nœud courant`,`le parent`,`tous les descendants`,`la racine`],a:1,
+  e:`<code>..</code> = le <b>parent</b> direct (raccourci de <code>parent::</code>). <code>.</code> = le nœud courant.`},
+ {q:`<code>//personne[@date]</code> sélectionne :`,
+  o:[`toutes les personne`,`les personne qui possèdent l'attribut date`,`l'attribut date`,`les personne sans date`],a:1,
+  e:`Un prédicat <code>[@date]</code> garde seulement les nœuds qui <b>ont</b> cet attribut.`},
+ {q:`<code>count(//personne)</code> retourne :`,
+  o:[`la 1re personne`,`le nombre de personne`,`la liste des noms`,`true/false`],a:1,
+  e:`<code>count()</code> compte les nœuds sélectionnés.`},
+ {q:`Sur <code>&lt;u&gt;donc &lt;vocal/&gt; ... quand même&lt;/u&gt;</code>, que retourne <code>//u[contains(<b>.</b>, 'quand')]</code> ?`,
+  o:[`rien`,`l'élément u (car . = tout le texte)`,`une erreur`,`l'élément vocal`],a:1,
+  e:`<code>.</code> = <b>tout</b> le texte de u (y compris après &lt;vocal/&gt;). « quand » s'y trouve → u est retourné.`},
+ {q:`Sur le même <code>u</code>, <code>//u[contains(<b>text()</b>, 'quand')]</code> retourne <b>rien</b>. Pourquoi ?`,
+  o:[`text() n'existe pas`,`text() ne prend que le 1er bout de texte (« donc »)`,`u est vide`,`il faut //u/text()`],a:1,
+  e:`<code>text()</code> = seulement les morceaux de texte directs (souvent le 1er, « donc »). « quand » est dans un autre bout, après &lt;vocal/&gt;.`},
+ {q:`Différence entre <code>//t[2]</code> et <code>(//t)[2]</code> ?`,
+  o:[`aucune`,`//t[2] = le 2e t chez son parent ; (//t)[2] = le 2e t de toute la liste`,`(//t)[2] retourne tous les t`,`//t[2] est une erreur`],a:1,
+  e:`<code>//t[2]</code> applique [2] à chaque parent (0, 1 ou + résultats). <code>(//t)[2]</code> prend toute la liste puis le 2e → <b>toujours 1 seul</b>.`},
+ {q:`<code>/liste/*</code> sélectionne :`,
+  o:[`l'attribut de liste`,`tous les éléments enfants directs de liste`,`tous les descendants`,`le texte de liste`],a:1,
+  e:`<code>*</code> = n'importe quel élément. Avec <code>/liste/*</code> → tous les enfants directs.`},
+ {q:`<code>//personne[not(@date)]</code> sélectionne :`,
+  o:[`les personne avec date`,`les personne sans attribut date`,`toutes les personne`,`l'attribut date`],a:1,
+  e:`<code>not(@date)</code> inverse la condition → celles qui n'ont <b>pas</b> l'attribut date.`},
+ {q:`<code>//personne[last()]</code> sélectionne :`,
+  o:[`la 1re personne`,`la dernière personne`,`toutes`,`la position`],a:1,
+  e:`<code>last()</code> = la position du dernier → la dernière personne.`},
+]},
+
+{section:"Axes XPath", questions:[
+ {q:`L'axe <code>descendant::</code> sélectionne :`,
+  o:[`seulement les enfants directs`,`tous les nœuds en dessous (enfants, petits-enfants...)`,`le parent`,`les frères`],a:1,
+  e:`<code>descendant::</code> = <b>tout</b> ce qui est imbriqué en dessous, à n'importe quelle profondeur. Proche de <code>//</code>.`},
+ {q:`Différence entre <code>child::</code> et <code>descendant::</code> ?`,
+  o:[`aucune`,`child:: = 1 seul niveau ; descendant:: = tous les niveaux`,`child:: va vers le parent`,`descendant:: ne prend que le texte`],a:1,
+  e:`<code>child::</code> s'arrête aux enfants directs (1 niveau). <code>descendant::</code> descend à tous les niveaux.`},
+ {q:`<code>parent::*</code> est équivalent à :`,
+  o:[`.`,`..`,`//`,`self::`],a:1,
+  e:`<code>parent::*</code> = remonter au parent = <code>..</code>.`},
+ {q:`<code>following-sibling::</code> sélectionne :`,
+  o:[`les frères situés avant`,`les frères situés après`,`les enfants`,`les ancêtres`],a:1,
+  e:`<code>following-sibling::</code> = les frères (même parent) placés <b>après</b> le nœud courant.`},
+ {q:`<code>preceding-sibling::</code> sélectionne :`,
+  o:[`les frères après`,`les frères avant`,`tous les descendants`,`le parent`],a:1,
+  e:`<code>preceding-sibling::</code> = les frères placés <b>avant</b> le nœud courant.`},
+ {q:`<code>descendant-or-self::</code> sélectionne :`,
+  o:[`seulement le nœud lui-même`,`les descendants + le nœud lui-même`,`seulement les descendants`,`le parent + le nœud`],a:1,
+  e:`Comme <code>descendant::</code> mais en incluant <b>aussi le nœud de départ</b>. C'est le sens du <code>//</code> au milieu d'un chemin.`},
+ {q:`<code>$nom</code> pointe sur <code>&lt;nom_commun&gt;</code>, et <code>id</code> est sur son parent <code>&lt;arbre&gt;</code>. Pour récupérer l'id :`,
+  o:[`$nom/@id`,`$nom/parent::arbre/@id`,`$nom/child::id`,`$nom/@arbre`],a:1,
+  e:`<code>nom_commun</code> n'a pas d'id. Il faut <b>remonter au parent</b> <code>arbre</code> puis prendre <code>@id</code> : <code>$nom/parent::arbre/@id</code> (≡ <code>$nom/../@id</code>).`},
+]},
+
+{section:"XQuery", questions:[
+ {q:`L'indexation d'une séquence en XQuery commence à :`,
+  o:[`0`,`1`,`-1`,`ça dépend`],a:1,
+  e:`En XQuery, <code>("a","b")[1]</code> = "a". L'index commence à <b>1</b>.`},
+ {q:`Que produit <code>1 to 5</code> ?`,
+  o:[`"15"`,`(1,2,3,4,5)`,`5`,`(1,5)`],a:1,
+  e:`L'opérateur <code>to</code> construit la séquence des entiers entre les bornes.`},
+ {q:`Utiliser <code>eq</code> pour comparer une séquence (ex. <code>//arbre/annee eq 1860</code>) donne :`,
+  o:[`true`,`false`,`une erreur (sequence found)`,`la 1re valeur`],a:2,
+  e:`<code>eq</code> exige <b>une seule</b> valeur typée. Sur une séquence → erreur. Il faut <code>=</code> ou caster avec <code>xs:int(...)</code>.`},
+ {q:`Quel opérateur accepte les séquences et fait la conversion automatique ?`,
+  o:[`eq`,`=`,`is`,`<<`],a:1,
+  e:`<code>=</code> (comparaison générale) gère les séquences et convertit ; <code>eq</code> (comparaison de valeurs) non.`},
+ {q:`L'opérateur <code>is</code> compare :`,
+  o:[`les valeurs`,`l'identité des nœuds`,`les positions`,`les types`],a:1,
+  e:`<code>is</code> teste si c'est <b>le même nœud</b> (même identité), pas la même valeur.`},
+ {q:`Sur <code>&lt;e&gt;&lt;a&gt;5&lt;/a&gt;&lt;a&gt;5&lt;/a&gt;&lt;/e&gt;</code>, que vaut <code>//a[1] is //a[2]</code> ?`,
+  o:[`true`,`false`,`erreur`,`5`],a:1,
+  e:`<b>false</b> : ce sont deux nœuds <b>différents</b>, même s'ils ont la même valeur (5).`},
+ {q:`Dans un littéral XML, les accolades <code>{ }</code> servent à :`,
+  o:[`commenter`,`indiquer ce qui doit être évalué`,`fermer une balise`,`déclarer une variable`],a:1,
+  e:`<code>{ }</code> = « calcule ceci ». En dehors, le texte reste brut. Ex. <code>&lt;m&gt;{$a}Query&lt;/m&gt;</code>.`},
+ {q:`Laquelle <b>n'existe pas</b> en XQuery ?`,
+  o:[`fn:number()`,`xs:int()`,`xs:number()`,`xs:date()`],a:2,
+  e:`<code>xs:number()</code> n'existe pas. Pour convertir en nombre : <code>fn:number()</code> (ou <code>xs:int()</code>).`},
+ {q:`Que produit <code>element x {attribute a {"v"}, "txt"}</code> ?`,
+  o:[`&lt;x&gt;v txt&lt;/x&gt;`,`&lt;x a="v"&gt;txt&lt;/x&gt;`,`&lt;a v="x"&gt;txt&lt;/a&gt;`,`une erreur`],a:1,
+  e:`<code>element</code> crée la balise, <code>attribute</code> pose l'attribut, le texte devient le contenu → <code>&lt;x a="v"&gt;txt&lt;/x&gt;</code>.`},
+]},
+
+{section:"FLWOR", questions:[
+ {q:`FLWOR correspond aux clauses :`,
+  o:[`Find Load Where Order Return`,`For Let Where Order-by Return`,`Filter List When Output Read`,`For Loop While Order Run`],a:1,
+  e:`<b>F</b>or · <b>L</b>et · <b>W</b>here · <b>O</b>rder by · <b>R</b>eturn.`},
+ {q:`La clause <code>where</code> sert à :`,
+  o:[`trier`,`filtrer les itérations`,`déclarer une variable`,`créer un élément`],a:1,
+  e:`<code>where</code> garde uniquement les tours de boucle qui passent la condition.`},
+ {q:`Pour trier dans l'ordre décroissant :`,
+  o:[`order by $x asc`,`order by $x descending`,`sort $x desc`,`reverse $x`],a:1,
+  e:`<code>order by $x descending</code> (par défaut c'est <code>ascending</code>).`},
+ {q:`Dans <code>for $a at $i in (...)</code>, à quoi sert <code>$i</code> ?`,
+  o:[`à la valeur`,`à la position dans la boucle`,`au parent`,`au nombre total`],a:1,
+  e:`<code>at $i</code> donne la <b>position</b> courante de l'élément dans la séquence parcourue.`},
+ {q:`Pour afficher les genres <b>sans répétition</b> :`,
+  o:[`for $g in //genre return $g`,`distinct-values(//genre)`,`count(//genre)`,`//genre[1]`],a:1,
+  e:`<code>distinct-values()</code> supprime les doublons.`},
+ {q:`Un <code>let</code> écrit à l'intérieur d'un bloc <code>{ }</code> :`,
+  o:[`est global`,`n'existe que dans ce bloc (portée locale)`,`provoque toujours une erreur`,`remplace declare`],a:1,
+  e:`Sa portée est <b>locale</b> au bloc. L'utiliser ailleurs → « Undeclared variable ». Pour du global → <code>declare variable</code>.`},
+ {q:`Compter les arbres de plus de 30 m :`,
+  o:[`count(//arbre)`,`count(//arbre[hauteur &gt; 30])`,`//arbre[hauteur &gt; 30]`,`sum(//hauteur)`],a:1,
+  e:`On filtre avec un prédicat puis on compte : <code>count(//arbre[hauteur &gt; 30])</code>.`},
+]},
+
+{section:"DOM (Java)", questions:[
+ {q:`Quel parseur utilise-t-on pour DOM en Java dans le cours ?`,
+  o:[`Xerces uniquement`,`JAXP (Java API for XML Processing)`,`SAXON`,`BaseX`],a:1,
+  e:`On utilise <b>JAXP</b> (<code>DocumentBuilderFactory</code> / <code>DocumentBuilder</code>).`},
+ {q:`<code>document.getDocumentElement()</code> retourne :`,
+  o:[`le 1er attribut`,`l'élément racine`,`tout le texte`,`le parseur`],a:1,
+  e:`<code>getDocumentElement()</code> donne le <b>nœud d'élément racine</b>.`},
+ {q:`Le texte d'un élément se récupère via :`,
+  o:[`getNodeValue() sur l'élément`,`getFirstChild().getNodeValue()`,`getNodeName()`,`getTagName()`],a:1,
+  e:`Le texte est sur le <b>fils #text</b> de l'élément → <code>getFirstChild().getNodeValue()</code>.`},
+ {q:`<code>getNodeValue()</code> appelé directement sur un <b>élément</b> renvoie :`,
+  o:[`son texte`,`son nom`,`null`,`une erreur`],a:2,
+  e:`Sur un nœud élément, <code>getNodeValue()</code> renvoie <b>null</b> (le texte est sur le fils #text).`},
+ {q:`<code>getChildNodes()</code> renvoie, en plus des vrais éléments :`,
+  o:[`les attributs`,`les nœuds #text parasites (sauts de ligne, espaces)`,`les commentaires uniquement`,`rien d'autre`],a:1,
+  e:`L'indentation crée des nœuds <code>#text</code> « parasites ». Les utiliser sans filtrer → <code>NullPointerException</code>.`},
+ {q:`Pour filtrer ces #text parasites, on teste :`,
+  o:[`getNodeValue() == null`,`getNodeName() != "#text"`,`getLength() == 0`,`item(0) == null`],a:1,
+  e:`On garde le nœud seulement si <code>getNodeName() != "#text"</code>.`},
+ {q:`Pour lire un attribut à partir d'un Node, il faut d'abord :`,
+  o:[`appeler getNodeValue()`,`le caster en Element puis getAttribute("...")`,`utiliser getChildNodes()`,`créer un parseur`],a:1,
+  e:`On ne peut pas lire un attribut depuis une NodeList directement : <code>(Element) node</code> puis <code>getAttribute("nom")</code>.`},
+ {q:`Après <code>createElement("x")</code>, pour l'attacher à son parent on appelle :`,
+  o:[`addNode()`,`appendChild()`,`setElement()`,`insert()`],a:1,
+  e:`<code>parent.appendChild(elementCree)</code> attache le nœud créé.`},
+ {q:`Pour écrire le résultat DOM dans un fichier, il faut 3 objets :`,
+  o:[`Reader, Writer, Buffer`,`DOMSource, StreamResult, Transformer`,`File, Scanner, PrintWriter`,`Parser, Builder, Factory`],a:1,
+  e:`<b>source</b> (DOMSource) + <b>résultat</b> (StreamResult) + <b>transformateur</b> (Transformer) → <code>tr.transform(ds,res)</code>.`},
+ {q:`<code>getTextContent()</code> diffère de <code>getFirstChild().getNodeValue()</code> quand l'élément :`,
+  o:[`est vide`,`a des sous-éléments (getTextContent ramène tout le texte des descendants)`,`a un attribut`,`jamais`],a:1,
+  e:`S'il n'y a que du texte → identiques. S'il y a des sous-éléments → <code>getTextContent()</code> concatène le texte de <b>tous</b> les descendants.`},
+]},
+];
+
+// ---- rendering ----
+const root = document.getElementById('quiz');
+let total=0, answered=0, score=0;
+let qi=0;
+quiz.forEach((sec,si)=>{
+  const h=document.createElement('h2'); h.className='sec';
+  h.innerHTML=`<span class="tag">${si+1}</span> ${sec.section}`;
+  root.appendChild(h);
+  sec.questions.forEach(item=>{
+    total++; qi++;
+    const card=document.createElement('div'); card.className='q';
+    const myNum=qi;
+    let html=`<div class="num">Question ${myNum}</div><div class="stem">${item.q}</div>`;
+    item.o.forEach((opt,idx)=>{
+      const letter=String.fromCharCode(65+idx);
+      html+=`<button class="opt" data-i="${idx}"><span class="letter">${letter}</span>${opt}</button>`;
+    });
+    html+=`<div class="explain"><b>Explication :</b> ${item.e}</div>`;
+    card.innerHTML=html;
+    const exp=card.querySelector('.explain');
+    card.querySelectorAll('.opt').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        if(card.dataset.done) return;
+        card.dataset.done="1";
+        answered++;
+        const chosen=+btn.dataset.i;
+        if(chosen===item.a) score++;
+        card.querySelectorAll('.opt').forEach(b=>{
+          b.disabled=true;
+          if(+b.dataset.i===item.a) b.classList.add('correct');
+          else if(b===btn) b.classList.add('wrong');
+        });
+        exp.classList.add('show');
+        update();
+      });
+    });
+    root.appendChild(card);
+  });
+});
+document.getElementById('total').textContent=total;
+
+function update(){
+  document.getElementById('ans').textContent=answered;
+  document.getElementById('score').textContent=score;
+  document.getElementById('pbar').style.width=(answered/total*100)+'%';
+  document.getElementById('done').style.display = answered===total ? 'block':'none';
+  if(answered===total){
+    document.getElementById('done').innerHTML=`🎉 Terminé ! Score : <b>${score} / ${total}</b> (${Math.round(score/total*100)}%). Refais les questions en rouge.`;
+  }
+}
+function resetQuiz(){ location.reload(); }
+</script>
+</body>
+</html>

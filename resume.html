@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Révision complète — Documents Structurés</title>
+<style>
+  :root{
+    --bg:#f3f4f6;--card:#ffffff;--ink:#2c3038;--muted:#6b7280;
+    --accent:#3f6fb0;--accent-dark:#2c4f80;--accent-soft:#eaf1f9;
+    --line:#e3e6ea;--code-bg:#f5f6f8;--code-border:#e1e4e8;
+    --trap-bg:#fff8e8;--trap-bd:#e9c46a;--good-bg:#eef7ef;--good-bd:#9bc99f;
+    --shadow:0 2px 10px rgba(40,50,70,.07);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Segoe UI",system-ui,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.62;font-size:15.5px}
+  .wrap{display:flex;max-width:1300px;margin:0 auto}
+  nav{width:236px;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto;padding:18px 12px;background:#eceef1;border-right:1px solid var(--line)}
+  nav h2{font-size:.74rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:13px 0 5px}
+  nav a{display:block;padding:5px 10px;margin:2px 0;border-radius:7px;text-decoration:none;color:var(--accent-dark);font-size:.85rem;font-weight:600}
+  nav a:hover{background:#fff;color:var(--accent)}
+  main{flex:1;padding:24px 34px;min-width:0}
+  header.top{padding:24px 28px;border-radius:14px;margin-bottom:20px;background:var(--card);box-shadow:var(--shadow);border-left:5px solid var(--accent)}
+  header.top h1{margin:0 0 6px;font-size:1.7rem;color:var(--accent-dark)}
+  header.top p{margin:0;color:var(--muted)}
+  section{background:var(--card);border-radius:14px;padding:20px 24px;margin-bottom:20px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  h2.sec{color:var(--accent-dark);border-bottom:2px solid var(--accent);padding-bottom:6px;margin:0 0 6px;font-size:1.4rem}
+  h3{color:var(--accent-dark);margin:20px 0 5px;font-size:1.12rem}
+  h4{color:var(--ink);margin:15px 0 4px;font-size:.98rem}
+  p{margin:7px 0}
+  .lead{color:var(--muted);margin:2px 0 9px}
+  code{background:var(--code-bg);border:1px solid var(--code-border);padding:1px 5px;border-radius:5px;font-family:Consolas,"Courier New",monospace;font-size:.85em;color:#243b53}
+  pre{background:var(--code-bg);border:1px solid var(--code-border);border-left:4px solid var(--accent);border-radius:9px;padding:11px 13px;overflow-x:auto;font-size:.82rem;line-height:1.5;margin:7px 0}
+  pre code{background:none;border:none;padding:0;color:#243b53}
+  pre .r{color:#1d7a3e;font-weight:600}
+  pre .c{color:#9aa0a6;font-style:italic}
+  table{border-collapse:collapse;width:100%;margin:11px 0;font-size:.88rem}
+  th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+  th{background:var(--accent-soft);color:var(--accent-dark)}
+  tr:nth-child(even){background:#fafbfc}
+  .ex{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:11px 0}
+  .ex .lbl{background:#f0f2f5;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;font-weight:700;padding:4px 12px;border-bottom:1px solid var(--line)}
+  .ex pre{margin:0;border:none;border-radius:0;border-left:none}
+  .ex .res .lbl{background:#e7f3e8;color:#3c6b3f}
+  .trap{background:var(--trap-bg);border:1px solid var(--trap-bd);border-left:5px solid var(--trap-bd);padding:10px 14px;border-radius:9px;margin:11px 0}
+  .trap b{color:#9a6a00}
+  .good{background:var(--good-bg);border:1px solid var(--good-bd);border-left:5px solid var(--good-bd);padding:10px 14px;border-radius:9px;margin:11px 0}
+  .note{background:var(--accent-soft);border-left:4px solid var(--accent);padding:10px 14px;border-radius:9px;margin:11px 0}
+  .exam{background:#f3f0fa;border-left:5px solid #8470b8;padding:10px 14px;border-radius:9px;margin:11px 0}
+  .exam b{color:#5a4a8a}
+  ul,ol{padding-left:21px;margin:7px 0}
+  li{margin:3px 0}
+  hr{border:none;border-top:1px solid var(--line);margin:16px 0}
+  .qa{background:#fafbfc;border:1px solid var(--line);border-radius:10px;padding:12px 15px;margin:11px 0}
+  .qa .q{font-weight:700;color:var(--accent-dark)}
+  details{background:#fafbfc;border:1px solid var(--line);border-radius:10px;padding:3px 14px;margin:9px 0}
+  summary{cursor:pointer;font-weight:700;color:var(--accent);padding:7px 0}
+  .back{position:fixed;bottom:20px;right:20px;background:var(--accent);color:#fff;text-decoration:none;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:var(--shadow)}
+  .tree{font-family:Consolas,monospace;font-size:.8rem;background:#f5f6f8;border:1px solid var(--code-border);border-radius:9px;padding:11px 13px;white-space:pre;overflow-x:auto;line-height:1.45}
+  @media(max-width:880px){nav{display:none}main{padding:15px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <h2>Révision</h2>
+    <a href="#how">Ce qui tombe à l'examen</a>
+    <a href="qcm.html">📝 QCM interactif</a>
+    <h2>Cours</h2>
+    <a href="#xml">1. XML : bases & arbre</a>
+    <a href="#struct">2. Structure & namespaces</a>
+    <a href="#dtd">3. DTD complète</a>
+    <a href="#xpath">4. XPath : chemins</a>
+    <a href="#xpath2">5. XPath : prédicats/fonctions</a>
+    <a href="#axes">6. Axes XPath</a>
+    <a href="#xq">7. XQuery : bases</a>
+    <a href="#xqop">8. XQuery : opérateurs</a>
+    <a href="#flwor">9. FLWOR</a>
+    <a href="#dom">10. DOM : lire</a>
+    <a href="#dom2">11. DOM : créer/transformer</a>
+    <h2>Examen</h2>
+    <a href="#exam">Corrigé complet</a>
+    <a href="#cheat">Aide-mémoire</a>
+  </nav>
+
+  <main>
+    <header class="top" id="top">
+      <h1>Documents Structurés — Révision complète</h1>
+      <p>Tout est ici : chaque notion avec ses <b>exemples du cours et leurs résultats</b> (<span style="color:#1d7a3e">→ en vert</span>). Pas besoin d'ouvrir les PDF.</p>
+    </header>
+
+    <section id="how">
+      <h2 class="sec">Ce qui tombe à l'examen</h2>
+      <p style="text-align:center;margin:0 0 12px"><a href="qcm.html" style="display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-weight:700">📝 Tester mes connaissances → QCM (55 questions)</a></p>
+      <table>
+        <tr><th>Sujet</th><th>Question type</th><th>Poids</th></tr>
+        <tr><td><b>XPath</b></td><td>écrire l'expression · expliquer un résultat · différence entre 2 expressions</td><td>★★★</td></tr>
+        <tr><td><b>XQuery</b></td><td>expliquer une requête · trouver/corriger l'erreur · écrire un FLWOR · construire un résultat</td><td>★★★</td></tr>
+        <tr><td><b>DTD</b></td><td>compléter une ligne · dire pourquoi ça génère une erreur</td><td>★★</td></tr>
+        <tr><td><b>DOM (Java)</b></td><td>compléter/expliquer · « que va afficher ce code ? » · rôle d'une ligne</td><td>★★</td></tr>
+      </table>
+      <div class="note"><b style="color:#9a6a00">Jaune</b> = piège fréquent · <b style="color:#5a4a8a">Violet</b> = exactement le type de question posée.</div>
+    </section>
+
+    <!-- ===== 1 XML ===== -->
+    <section id="xml">
+      <h2 class="sec">1. XML : vocabulaire & représentation en arbre</h2>
+
+      <div class="ex">
+        <div class="lbl">XML</div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;personne&gt;
+  &lt;nom date_naissance="1926-02-11"&gt;Bocuse&lt;/nom&gt;
+  &lt;prenom&gt;Paul&lt;/prenom&gt;
+  &lt;profession&gt;
+    Chef
+    &lt;lieu&gt;Auberge du Pont &lt;ville&gt;Lyon&lt;/ville&gt;&lt;/lieu&gt;
+    cuisinier
+  &lt;/profession&gt;
+&lt;/personne&gt;</code></pre>
+      </div>
+
+      <h4>Le même document vu comme un arbre</h4>
+      <div class="tree">#document
+ └─ ELEMENT personne
+     ├─ ELEMENT nom ── #text "Bocuse"
+     │                └─ ATTRIBUTE date_naissance
+     ├─ ELEMENT prenom ── #text "Paul"
+     └─ ELEMENT profession
+         ├─ #text "Chef"
+         ├─ ELEMENT lieu
+         │   ├─ #text "Auberge du Pont"
+         │   └─ ELEMENT ville ── #text "Lyon"
+         └─ #text "cuisinier"</div>
+
+      <table>
+        <tr><th>Terme</th><th>Exemple</th></tr>
+        <tr><td>Balise ouvrante / fermante</td><td><code>&lt;nom&gt;</code> / <code>&lt;/nom&gt;</code></td></tr>
+        <tr><td><b>Élément</b> (balise + contenu)</td><td><code>&lt;prenom&gt;Paul&lt;/prenom&gt;</code></td></tr>
+        <tr><td><b>Élément racine</b> (1 seul, obligatoire)</td><td><code>personne</code></td></tr>
+        <tr><td><b>Attribut</b></td><td><code>date_naissance="1926-02-11"</code></td></tr>
+        <tr><td><b>Nœud texte (#text)</b></td><td><code>Bocuse</code>, <code>Paul</code>, <code>Chef</code>…</td></tr>
+      </table>
+      <div class="note"><b>5 types de nœuds :</b> document (<code>/</code>) · élément · texte (#text) · attribut · commentaire. ⚠️ Un attribut ou un texte est un <b>nœud</b> mais <b>PAS un élément</b> (« nœud VS élément »).</div>
+
+      <h3>Bien formé : les 6 règles</h3>
+      <table>
+        <tr><th>Règle</th><th>✅</th><th>❌</th></tr>
+        <tr><td>1 seul élément racine</td><td>tout sous une racine</td><td>2 éléments au top</td></tr>
+        <tr><td>Toute balise se ferme</td><td><code>&lt;li&gt;…&lt;/li&gt;</code></td><td><code>&lt;li&gt;…</code></td></tr>
+        <tr><td>Bien imbriquées</td><td><code>&lt;p&gt;&lt;e&gt;…&lt;/e&gt;&lt;/p&gt;</code></td><td><code>&lt;p&gt;&lt;e&gt;…&lt;/p&gt;&lt;/e&gt;</code></td></tr>
+        <tr><td>Sensible à la casse</td><td><code>&lt;Document&gt;…&lt;/Document&gt;</code></td><td><code>&lt;Document&gt;…&lt;/document&gt;</code></td></tr>
+        <tr><td>Attribut = valeur entre guillemets</td><td><code>anniversaire="071185"</code></td><td><code>anniversaire</code> · <code>anniversaire=071185</code></td></tr>
+        <tr><td>Balise vide auto-fermée</td><td><code>&lt;personne/&gt;</code></td><td><code>&lt;personne&gt;</code></td></tr>
+      </table>
+
+      <h4>Caractères à échapper</h4>
+      <div class="ex">
+        <div class="lbl">XML bien formé</div>
+<pre><code>&lt;para&gt;Bonjour le &amp;#38; &lt;emphase&gt;monde !&amp;lt;&lt;/emphase&gt;&lt;/para&gt;
+<span class="r">→ affiche :  Bonjour le &amp;  monde !&lt;</span></code></pre>
+      </div>
+      <table>
+        <tr><th>Caractère</th><th>Entité nommée</th><th>Entité numérique</th></tr>
+        <tr><td><code>&amp;</code></td><td><code>&amp;amp;</code></td><td><code>&amp;#38;</code></td></tr>
+        <tr><td><code>&lt;</code></td><td><code>&amp;lt;</code></td><td><code>&amp;#60;</code></td></tr>
+      </table>
+      <div class="trap">Mal formé : <code>&lt;para&gt;Bonjour le &amp; …&lt;/para&gt;</code> → erreur « mal formé » (le navigateur affiche l'erreur de parsing). Le <code>&amp;</code> nu n'est pas autorisé.</div>
+
+      <div class="good"><b>Bien formé</b> = respecte la syntaxe. <b>Valide</b> = bien formé <b>ET</b> conforme à une DTD. Deux notions distinctes (piège classique).</div>
+
+      <h4>Exercice résolu : représenter Voiture.xml en arbre</h4>
+      <div class="ex">
+        <div class="lbl">XML</div>
+<pre><code>&lt;Voiture marque="Renault" modèle="Safrane"&gt;
+  &lt;Carosserie couleur="rouge"&gt;&lt;Capot&gt;Un peu cabossé&lt;/Capot&gt;&lt;/Carosserie&gt;
+  &lt;Moteur&gt;&lt;!-- commentaire --&gt;&lt;Cylindres/&gt;&lt;Allumage&gt;Défectueux&lt;/Allumage&gt;&lt;/Moteur&gt;
+  &lt;Transmission type="automatique" nb_vitesses="5"&gt;&lt;Boîte/&gt;&lt;TrainAV/&gt;&lt;TrainAR/&gt;&lt;/Transmission&gt;
+&lt;/Voiture&gt;</code></pre>
+      </div>
+      <div class="tree">Voiture (att: marque, modèle)
+ ├─ Carosserie (att: couleur) ─ Capot ─ #text "Un peu cabossé"
+ ├─ Moteur ─ COMMENT ─ Cylindres(vide) ─ Allumage ─ #text "Défectueux"
+ └─ Transmission (att: type, nb_vitesses) ─ Boîte ─ TrainAV ─ TrainAR</div>
+    </section>
+
+    <!-- ===== 2 STRUCTURE ===== -->
+    <section id="struct">
+      <h2 class="sec">2. Structure d'un document & espaces de noms</h2>
+
+      <h3>Les composants (dans l'ordre)</h3>
+      <div class="ex">
+        <div class="lbl">XML complet</div>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;            <span class="c">déclaration (facultative, en 1er)</span>
+&lt;?xml-stylesheet type="text/css" href="f.css"?&gt;  <span class="c">instruction de traitement (CSS/XSL)</span>
+&lt;!DOCTYPE itineraire SYSTEM "usthb.dtd"&gt;          <span class="c">déclaration de type (DTD)</span>
+&lt;!--itinéraire--&gt;                                  <span class="c">commentaire</span>
+&lt;itineraire&gt;                                       <span class="c">élément racine (obligatoire, non répétable)</span>
+  &lt;etape distance="0km"&gt;départ&lt;/etape&gt;
+&lt;/itineraire&gt;</code></pre>
+      </div>
+      <ul>
+        <li><b>Déclaration</b> : facultative, non répétable, doit être <b>en premier</b>. Si encodage UTF-8/UTF-16 (défaut), l'attribut <code>encoding</code> est inutile.</li>
+        <li><b>standalone</b> : <code>"yes"</code> = DTD interne (autonome) · <code>"no"</code> (défaut) = dépend d'une DTD externe.</li>
+        <li><b>Instructions de traitement</b> et <b>DTD</b> : facultatives. Un commentaire peut aller partout <b>sauf avant la déclaration</b>.</li>
+      </ul>
+
+      <h3>DTD : SYSTEM vs PUBLIC</h3>
+<pre><code>&lt;!DOCTYPE contacts SYSTEM "usthb.dtd"&gt;            <span class="c">DTD locale, via URI de type URL</span>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code></pre>
+      <ul>
+        <li><b>URI</b> (Uniform Resource Identifier) se décline en <b>URL</b> (Locator, où trouver) et <b>URN</b> (Name, un nom indépendant de l'accès).</li>
+        <li><code>"-//W3C//DTD XHTML 1.0 Strict//EN"</code> = un <b>FPI</b> (Formal Public Identifier).</li>
+      </ul>
+
+      <h3>Espaces de noms (namespaces) avec <code>xmlns</code></h3>
+      <div class="ex">
+        <div class="lbl">Par défaut (sans préfixe) — URN</div>
+<pre><code>&lt;book xmlns='urn:loc.gov:books'&gt;
+  &lt;title&gt;Cheaper by the Dozen&lt;/title&gt;
+&lt;/book&gt;</code></pre>
+        <div class="lbl">Avec préfixes (bk:, isbn:)</div>
+<pre><code>&lt;bk:book xmlns:bk='urn:loc.gov:books'
+         xmlns:isbn='urn:ISBN:0-395-36341-6'&gt;
+  &lt;bk:title&gt;Cheaper by the Dozen&lt;/bk:title&gt;
+  &lt;isbn:number&gt;1568491379&lt;/isbn:number&gt;
+&lt;/bk:book&gt;</code></pre>
+      </div>
+      <p><b>XHTML</b> = réécriture de HTML en syntaxe XML. Mode <b>transitional</b> (tolérant, garde des éléments de présentation) vs <b>strict</b> (interdit la présentation → tout en CSS).</p>
+    </section>
+
+    <!-- ===== 3 DTD ===== -->
+    <section id="dtd">
+      <h2 class="sec">3. DTD — décrire la structure autorisée</h2>
+
+      <h3>Les briques</h3>
+      <table>
+        <tr><th>Brique</th><th>Exemple</th><th>Sens</th></tr>
+        <tr><td><code>&lt;!ELEMENT&gt;</code></td><td><code>&lt;!ELEMENT contacts (personne+)&gt;</code></td><td>déclare un élément + son contenu</td></tr>
+        <tr><td><code>&lt;!ATTLIST&gt;</code></td><td><code>&lt;!ATTLIST adresse pays CDATA #REQUIRED&gt;</code></td><td>déclare un attribut</td></tr>
+        <tr><td>connecteur <code>,</code></td><td><code>(nom, prenom)</code></td><td>séquence (ordre imposé)</td></tr>
+        <tr><td>connecteur <code>|</code></td><td><code>(ar|en)</code></td><td>choix (l'un OU l'autre)</td></tr>
+        <tr><td>groupe <code>( )</code></td><td><code>…,(a|b))</code></td><td>regroupe pour appliquer une occurrence</td></tr>
+      </table>
+
+      <h4>Modèle de contenu</h4>
+      <table>
+        <tr><td><code>EMPTY</code></td><td><code>&lt;!ELEMENT a EMPTY&gt;</code> → élément vide</td></tr>
+        <tr><td><code>(#PCDATA)</code></td><td>contient du texte (Parsed Character DATA)</td></tr>
+        <tr><td><code>(a, b)</code></td><td>contient a puis b (sous-éléments)</td></tr>
+        <tr><td><code>(#PCDATA | a)*</code></td><td>contenu <b>mixte</b> : texte ET éléments</td></tr>
+      </table>
+
+      <h4>Occurrences</h4>
+      <table>
+        <tr><td>rien</td><td>exactement 1 — <code>&lt;!ELEMENT corpus (journal)&gt;</code></td></tr>
+        <tr><td><code>?</code></td><td>0 ou 1 — <code>dateDeNaissance?</code></td></tr>
+        <tr><td><code>+</code></td><td>1 ou plus — <code>email+</code></td></tr>
+        <tr><td><code>*</code></td><td>0 ou plus — <code>telephone*</code></td></tr>
+      </table>
+
+      <h4>Types & valeurs par défaut d'attribut</h4>
+      <table>
+        <tr><td><code>CDATA</code></td><td>chaîne quelconque, aucune unicité — <code>&lt;!ATTLIST adresse pays CDATA #REQUIRED&gt;</code></td></tr>
+        <tr><td><code>ID</code></td><td>valeur <b>unique</b> dans tout le doc, <b>sans espace</b>, pas de chiffre au début — <code>&lt;!ATTLIST email n ID #REQUIRED&gt;</code></td></tr>
+        <tr><td><code>(ar|en)</code></td><td>énumération — <code>&lt;!ATTLIST adresse lang (ar|en) #REQUIRED&gt;</code></td></tr>
+        <tr><td><code>#REQUIRED</code></td><td>obligatoire</td></tr>
+        <tr><td><code>#IMPLIED</code></td><td>facultatif</td></tr>
+        <tr><td><code>#FIXED "x"</code></td><td>valeur figée — <code>&lt;!ATTLIST lieu arrondissement CDATA #FIXED "Brooklyn"&gt;</code></td></tr>
+      </table>
+
+      <h3>★ Exemple complet : contacts.xml ↔ contacts.dtd</h3>
+      <div class="ex">
+        <div class="lbl">contacts.xml</div>
+<pre><code>&lt;contacts&gt;
+  &lt;personne&gt;
+    &lt;nom&gt;Ghezal&lt;/nom&gt;
+    &lt;prenom&gt;Ramy&lt;/prenom&gt;
+    &lt;dateDeNaissance&gt;1977-07-09&lt;/dateDeNaissance&gt;
+    &lt;adresse lang="ar" pays="Algérie"/&gt;
+    &lt;email n="a120"&gt;ghezalr@gmail.com&lt;/email&gt;
+    &lt;telephone&gt;0770 00 90&lt;/telephone&gt;
+    &lt;a/&gt;
+  &lt;/personne&gt;
+&lt;/contacts&gt;</code></pre>
+        <div class="lbl res">contacts.dtd</div>
+<pre class="res"><code>&lt;!ELEMENT contacts (personne+)&gt;
+&lt;!ELEMENT personne (nom, prenom, dateDeNaissance,
+          lieuDeNaissance?, adresse, email, telephone?, (a|b))&gt;
+&lt;!ELEMENT a EMPTY&gt;
+&lt;!ELEMENT b EMPTY&gt;
+&lt;!ELEMENT nom (#PCDATA)&gt;
+&lt;!ELEMENT prenom (#PCDATA)&gt;
+&lt;!ELEMENT dateDeNaissance (#PCDATA)&gt;
+&lt;!ELEMENT lieuDeNaissance (#PCDATA)&gt;
+&lt;!ATTLIST lieuDeNaissance arrondissement CDATA #FIXED "Brooklyn"&gt;
+&lt;!ELEMENT adresse EMPTY&gt;
+&lt;!ELEMENT email (#PCDATA)&gt;
+&lt;!ATTLIST email n ID #REQUIRED&gt;
+&lt;!ELEMENT telephone (#PCDATA)&gt;
+&lt;!ATTLIST adresse lang (ar|en) #REQUIRED&gt;
+&lt;!ATTLIST adresse pays CDATA #REQUIRED&gt;</code></pre>
+      </div>
+
+      <h3>★ Écrire la DTD de voiture.xml (exercice type)</h3>
+      <div class="ex">
+        <div class="lbl">DTD</div>
+<pre class="res"><code>&lt;!ELEMENT Voiture (Carosserie, Moteur, Transmission)&gt;
+&lt;!ATTLIST Voiture marque CDATA #REQUIRED&gt;
+&lt;!ATTLIST Voiture modèle CDATA #REQUIRED&gt;
+&lt;!ELEMENT Carosserie (Capot)&gt;
+&lt;!ATTLIST Carosserie couleur CDATA #REQUIRED&gt;
+&lt;!ELEMENT Capot (#PCDATA)&gt;
+&lt;!ELEMENT Moteur (Cylindres, Allumage)&gt;
+&lt;!ELEMENT Cylindres EMPTY&gt;
+&lt;!ELEMENT Allumage (#PCDATA)&gt;
+&lt;!ELEMENT Transmission (Boîte, TrainAV, TrainAR)&gt;
+&lt;!ATTLIST Transmission type CDATA #REQUIRED&gt;
+&lt;!ATTLIST Transmission nb_vitesses CDATA #REQUIRED&gt;
+&lt;!ELEMENT Boîte EMPTY&gt;  &lt;!ELEMENT TrainAV EMPTY&gt;  &lt;!ELEMENT TrainAR EMPTY&gt;</code></pre>
+      </div>
+      <div class="note"><b>Méthode :</b> pour chaque élément, lister ses enfants en séquence ; texte → <code>(#PCDATA)</code> ; vide → <code>EMPTY</code> ; un <code>&lt;!ATTLIST&gt;</code> par attribut.</div>
+
+      <h3>★ Les 2 « pourquoi cette DTD génère une erreur ? »</h3>
+      <div class="exam"><b>Contenu mixte.</b> XML : <code>&lt;name&gt;W.B&lt;family&gt;Wallace&lt;/family&gt;&lt;/name&gt;</code> (texte + sous-élément).<br>
+        ✅ <code>&lt;!ELEMENT name (#PCDATA | family)*&gt;</code> — interdit d'écrire <code>(#PCDATA, family)</code>.</div>
+      <div class="exam"><b>ID invalide.</b> <code>&lt;personne datenaissance="a 1942-01-08"/&gt;</code> + <code>&lt;!ATTLIST personne datenaissance ID #REQUIRED&gt;</code>.<br>
+        Erreur car un <code>ID</code> ne peut pas contenir d'<b>espace</b>. <b>2 corrections :</b> (a) type <code>CDATA</code> ; (b) <code>"a1942-01-08"</code> (sans espace).</div>
+
+      <details><summary>Plus d'exercices DTD du cours (book / list / enc)</summary>
+        <p><b>book.xml</b> : <code>&lt;person id="B.WALLACE" gender="male"&gt;&lt;name&gt;W.B&lt;family&gt;Wallace&lt;/family&gt;&lt;/name&gt;&lt;email&gt;…&lt;/email&gt;&lt;link manager="C.TUTTLE"/&gt;&lt;/person&gt;</code></p>
+<pre class="res"><code>&lt;!ELEMENT addressBook (person+)&gt;
+&lt;!ELEMENT person (name, email, link)&gt;
+&lt;!ATTLIST person id ID #REQUIRED&gt;
+&lt;!ATTLIST person gender (male|female) #REQUIRED&gt;
+&lt;!ELEMENT name (#PCDATA | family)*&gt;   <span class="c">contenu mixte !</span>
+&lt;!ELEMENT family (#PCDATA)&gt;
+&lt;!ELEMENT email (#PCDATA)&gt;
+&lt;!ELEMENT link EMPTY&gt;
+&lt;!ATTLIST link manager CDATA #REQUIRED&gt;</code></pre>
+        <p><b>list.xml (meal contient course + texte « . ») :</b></p>
+<pre class="res"><code>&lt;!ELEMENT list (recipe+)&gt;
+&lt;!ELEMENT recipe (author, recipe_name, meal, ingredients, directions)&gt;
+&lt;!ELEMENT meal (#PCDATA | course)*&gt;   <span class="c">mixte (texte « . » + course)</span>
+&lt;!ELEMENT ingredients (item+)&gt;
+&lt;!ELEMENT item (#PCDATA)&gt;  <span class="c">… author, recipe_name, course, directions = (#PCDATA)</span></code></pre>
+        <p><b>enc3.xml — lien référentiel entre dates :</b> l'élément <code>ref</code> a un attribut <code>datenaissance</code> qui pointe vers celui de <code>personne</code> → utiliser <code>ID</code> (sur personne) + <code>IDREF</code> (sur ref).</p>
+      </details>
+    </section>
+
+    <!-- ===== 4 XPATH chemins ===== -->
+    <section id="xpath">
+      <h2 class="sec">4. XPath — les chemins</h2>
+      <p class="lead">XPath = une « adresse » vers un ou plusieurs nœuds. <b>Arbre de référence</b> utilisé partout ci-dessous :</p>
+
+      <div class="tree">AAA
+ ├─ BBB(1)                    <span class="c">vide</span>
+ ├─ CCC(1)
+ ├─ BBB(2)
+ │   ├─ HHH att="1"
+ │   ├─ HHH att="2"
+ │   ├─ HHH fromage="Gouda"
+ │   ├─ HHH ─ TTT
+ │   └─ HHH
+ ├─ BCC ─ BCD ─ ( HHH fromage="Cantal" , CDB )
+ ├─ DDD ─ ( EEE , FFF , EFG )
+ ├─ GGG ─ BBB(dans GGG)
+ ├─ III ─ ( JJJ nom="jjj" , JJJ nom=" jjj" )
+ ├─ BBB(3) ─ DDD ─ CCC ─ ( DDD , EEE )
+ └─ CCC(2) ─ DDD ─ EEE ─ DDD ─ FFF</div>
+
+      <h3>Chemins de base (à connaître par cœur)</h3>
+      <table>
+        <tr><th>Expression</th><th>Sélectionne</th></tr>
+        <tr><td><code>/AAA</code> ou <code>/*</code></td><td>l'élément racine</td></tr>
+        <tr><td><code>//*</code></td><td>récursivement TOUS les éléments</td></tr>
+        <tr><td><code>/AAA/BBB</code></td><td>le nœud de contexte (enfant direct)</td></tr>
+        <tr><td><code>/AAA/BBB/.</code></td><td>idem (<code>.</code> = nœud courant)</td></tr>
+        <tr><td><code>/AAA/III/..</code></td><td>remonte au parent → <code>AAA</code></td></tr>
+        <tr><td><code>//III/*</code></td><td>tous les enfants directs de III</td></tr>
+        <tr><td><code>/*/*/BBB</code></td><td>les BBB ayant 2 niveaux au-dessus (père + ancêtre)</td></tr>
+      </table>
+
+      <div class="ex">
+        <div class="lbl">Toutes les façons d'atteindre GGG</div>
+<pre><code>//GGG          <span class="r">→ GGG</span>
+/AAA/GGG       <span class="r">→ GGG</span>
+/*/GGG         <span class="r">→ GGG</span>
+/*/*/BBB/..    <span class="r">→ GGG  (on remonte depuis le BBB qui est dans GGG)</span></code></pre>
+        <div class="lbl">Expression à expliquer</div>
+<pre><code>//BBB/*/..     <span class="c">= les BBB qui ont au moins un enfant élément</span>
+               <span class="r">→ BBB(2), BBB(3)</span></code></pre>
+      </div>
+
+      <h3>Sélection d'attributs</h3>
+      <div class="ex">
+        <div class="lbl">Expression → résultat</div>
+<pre><code>//HHH[@fromage="Gouda"]      <span class="r">→ &lt;HHH fromage="Gouda"/&gt;</span>
+//HHH[@fromage="Gouda"]/@fromage   <span class="r">→ l'attribut fromage="Gouda"</span>
+//*[@*="Cantal"]            <span class="r">→ &lt;HHH fromage="Cantal"/&gt;  (n'importe quel élément/attribut)</span>
+//HHH[last()]/@fromage      <span class="r">→ fromage du dernier HHH</span>
+/descendant::*/@*           <span class="r">→ TOUS les attributs du document</span></code></pre>
+      </div>
+    </section>
+
+    <!-- ===== 5 XPATH predicats ===== -->
+    <section id="xpath2">
+      <h2 class="sec">5. XPath — prédicats, fonctions & pièges</h2>
+      <p class="lead">Nouvel exemple plus parlant pour les prédicats :</p>
+      <div class="ex">
+        <div class="lbl">liste.xml</div>
+<pre><code>&lt;liste&gt;
+  &lt;personne prenom="Jack"  nom="Nolan"/&gt;
+  &lt;personne prenom="Jean"  nom="Palvadeau"/&gt;
+  &lt;personne prenom="Billy" nom="Madison"/&gt;
+  &lt;personne prenom="John"  nom="Woo" date="1946"/&gt;
+&lt;/liste&gt;</code></pre>
+      </div>
+
+      <h3>Prédicats <code>[ ]</code> (conditions)</h3>
+      <div class="ex">
+        <div class="lbl">Expression → résultat</div>
+<pre><code>//personne[@prenom="Jack"]        <span class="r">→ Jack Nolan</span>
+//personne[@date]                <span class="r">→ John Woo  (a l'attribut date)</span>
+//personne[not(@date)]           <span class="r">→ Jack, Jean, Billy</span>
+//personne[1]                    <span class="r">→ Jack (1er)</span>
+//personne[last()]               <span class="r">→ John (dernier)</span>
+//personne[position()=3]         <span class="r">→ Billy</span>
+//personne[@prenom="Jack" or @prenom="Jean"]   <span class="r">→ Jack, Jean</span>
+//personne[contains(@nom,'oo')]  <span class="r">→ John Woo</span>
+count(//personne)                <span class="r">→ 4</span></code></pre>
+      </div>
+
+      <h3>Fonctions utiles</h3>
+      <table>
+        <tr><th>Fonction</th><th>Exemple → résultat</th></tr>
+        <tr><td><code>text()</code></td><td><code>//Capot/text()</code> <span style="color:#1d7a3e">→ "Un peu cabossé"</span></td></tr>
+        <tr><td><code>contains(a,b)</code></td><td><code>contains(//nom,'oo')</code> <span style="color:#1d7a3e">→ true</span></td></tr>
+        <tr><td><code>starts-with(a,b)</code></td><td><code>//*[starts-with(name(),'p')]</code> <span style="color:#1d7a3e">→ les personne</span></td></tr>
+        <tr><td><code>position()</code> / <code>last()</code></td><td>position courante / dernière</td></tr>
+        <tr><td><code>count(x)</code></td><td><code>count(//HHH)</code> <span style="color:#1d7a3e">→ 6</span></td></tr>
+        <tr><td><code>name()</code></td><td><code>//*[name()='personne']</code></td></tr>
+        <tr><td><code>string(x)</code></td><td>convertit en texte</td></tr>
+        <tr><td><code>concat(a,b,…)</code></td><td><code>concat(//Capot,' !')</code> <span style="color:#1d7a3e">→ "Un peu cabossé !"</span></td></tr>
+      </table>
+
+      <h3>★ PIÈGE 1 : <code>.</code> vs <code>text()</code></h3>
+      <div class="ex">
+        <div class="lbl">XML</div>
+<pre><code>&lt;u&gt;donc &lt;vocal/&gt; ben je prends 17h quand même&lt;/u&gt;</code></pre>
+      </div>
+      <table>
+        <tr><th>Expression</th><th>Résultat</th><th>Pourquoi</th></tr>
+        <tr><td><code>//u[contains(., 'quand')]</code></td><td>✅ retourne <code>u</code></td><td><code>.</code> = TOUT le texte de u → « quand » présent</td></tr>
+        <tr><td><code>//u[contains(text(), 'quand')]</code></td><td>❌ rien</td><td><code>text()</code> = seulement le 1er bout (« donc ») ; « quand » est après <code>&lt;vocal/&gt;</code></td></tr>
+      </table>
+
+      <h3>★ PIÈGE 2 : <code>//x[2]</code> vs <code>(//x)[2]</code></h3>
+      <table>
+        <tr><th>Expression</th><th>Sens</th><th>Résultat</th></tr>
+        <tr><td><code>//titleStmt[2]</code> = <code>/descendant::titleStmt[2]</code></td><td>« le 2e titleStmt <b>chez son parent</b> »</td><td>0, 1 ou plusieurs</td></tr>
+        <tr><td><code>(//titleStmt)[2]</code></td><td>« tous les titleStmt, puis le 2e de la liste »</td><td><b>toujours 1 seul</b></td></tr>
+      </table>
+    </section>
+
+    <!-- ===== 6 AXES ===== -->
+    <section id="axes">
+      <h2 class="sec">6. Les axes XPath (<code>axe::nom</code>)</h2>
+      <p class="lead">Un axe = une <b>direction</b> dans l'arbre. Tous les résultats ci-dessous sont sur l'arbre AAA de la section 4.</p>
+
+      <table>
+        <tr><th>Axe</th><th>Va vers</th><th>Raccourci</th></tr>
+        <tr><td><code>self::</code></td><td>le nœud lui-même</td><td><code>.</code></td></tr>
+        <tr><td><code>child::</code></td><td>enfants directs (1 niveau)</td><td><code>/</code></td></tr>
+        <tr><td><code>parent::</code></td><td>le parent direct</td><td><code>..</code></td></tr>
+        <tr><td><code>descendant::</code></td><td>TOUS les descendants (tous niveaux)</td><td>≈ <code>//</code></td></tr>
+        <tr><td><code>descendant-or-self::</code></td><td>descendants + soi-même</td><td><code>/.//</code></td></tr>
+        <tr><td><code>ancestor::</code> / <code>ancestor-or-self::</code></td><td>parents/grands-parents (+ soi)</td><td>—</td></tr>
+        <tr><td><code>following-sibling::</code></td><td>frères situés APRÈS</td><td>—</td></tr>
+        <tr><td><code>preceding-sibling::</code></td><td>frères situés AVANT</td><td>—</td></tr>
+        <tr><td><code>following::</code></td><td>TOUT ce qui vient après dans le doc</td><td>—</td></tr>
+        <tr><td><code>preceding::</code></td><td>TOUT ce qui vient avant (sauf ancêtres)</td><td>—</td></tr>
+        <tr><td><code>attribute::</code></td><td>les attributs</td><td><code>@</code></td></tr>
+      </table>
+
+      <h3>Exemples du cours avec résultats exacts</h3>
+      <div class="ex">
+        <div class="lbl">self / child / parent</div>
+<pre><code>/AAA/BBB/self::*           <span class="r">→ BBB(1), BBB(2), BBB(3)</span>
+//BBB/self::*              <span class="r">→ les 4 BBB (dont celui dans GGG)</span>
+/AAA/BBB/child::*          <span class="r">→ les 5 HHH du BBB(2) + DDD du BBB(3)</span>
+/AAA/BBB/parent::AAA       <span class="r">→ AAA</span>
+//BBB/parent::*            <span class="r">→ AAA, GGG</span>
+//BBB/parent::GGG          <span class="r">→ GGG  (= /AAA/BBB/../GGG)</span></code></pre>
+        <div class="lbl">descendant / descendant-or-self</div>
+<pre><code>/AAA/BBB/descendant::*     <span class="r">→ HHH(1..5), TTT, DDD, CCC, DDD, EEE</span>
+//CCC/descendant::DDD      <span class="r">→ les DDD situés sous un CCC</span>
+/AAA/BBB/HHH/descendant::* <span class="r">→ TTT</span>
+/AAA/BBB/HHH/descendant-or-self::*  <span class="r">→ HHH(1..5) ET TTT (soi + descendants)</span>
+/descendant-or-self::BBB ≡ /descendant::BBB ≡ //BBB   <span class="r">→ 4 BBB</span></code></pre>
+        <div class="lbl">ancestor / siblings / following / preceding</div>
+<pre><code>//BCD/ancestor::*          <span class="r">→ AAA, BCC</span>
+//TTT/ancestor::*          <span class="r">→ AAA, BBB(2), HHH(4)</span>
+/AAA/BBB/following-sibling::*   <span class="r">→ CCC(1), BBB(2), BCC, DDD, GGG, III, BBB(3), CCC(2)</span>
+//Transmission/preceding-sibling::*  <span class="c">→ Carosserie, Moteur (sur voiture.xml)</span>
+/AAA/BBB[3]/following::*    <span class="r">→ CCC(2), DDD, EEE, DDD, FFF  (tout ce qui suit)</span>
+//BCD/preceding::*         <span class="r">→ BBB(1), CCC(1), BBB(2), HHH(1..5), TTT  (sauf ancêtres BCC, AAA)</span></code></pre>
+      </div>
+
+      <h3>Combinaisons d'axes (questions du cours)</h3>
+      <div class="ex">
+        <div class="lbl">Expression → résultat</div>
+<pre><code>//BBB/child::*/child::*    <span class="c">enfants directs des enfants de BBB</span>  <span class="r">→ TTT, DDD…</span>
+//BBB/child::*/parent::*   <span class="r">→ BBB(2) et BBB(3)  (on redescend puis remonte)</span>
+//BBB/child::node()/child::node()  <span class="c">node() = tout type de nœud (texte inclus)</span></code></pre>
+      </div>
+      <div class="exam"><b>Question type :</b> <code>id</code> est sur <code>arbre</code>, parent de <code>nom_commun</code>. Depuis <code>nom_commun</code> :<br>
+        <code>$nom/parent::arbre/@id</code> (≡ <code>$nom/../@id</code>) — il faut <b>remonter</b> au parent car l'attribut n'est pas sur nom_commun.</div>
+    </section>
+
+    <!-- ===== 7 XQUERY bases ===== -->
+    <section id="xq">
+      <h2 class="sec">7. XQuery — bases (types, séquences, doc, variables)</h2>
+      <p class="lead">XQuery interroge ET reconstruit du XML. Testé sur <b>BaseX</b>. Commentaires : <code>(: … :)</code>.</p>
+
+      <h3>Types (préfixe <code>xs:</code>) et conversions</h3>
+      <div class="ex">
+        <div class="lbl">Valeurs / fonctions → résultat</div>
+<pre><code>"Bonjour"            <span class="r">→ xs:string</span>
+15                   <span class="r">→ xs:integer</span>
+1.5                  <span class="r">→ xs:decimal  (xs:float(1.5) pour forcer float)</span>
+xs:date("2024-12-03")     xs:time("14:30:00")     xs:boolean("true")
+fn:true()  fn:false()     <span class="c">fonctions booléennes (0 argument)</span>
+fn:number("12")      <span class="r">→ 12   (xs:number() N'EXISTE PAS)</span></code></pre>
+      </div>
+
+      <h3>Séquences <code>( )</code></h3>
+      <div class="ex">
+        <div class="lbl">Expression → résultat</div>
+<pre><code>(39, "table", &lt;v/&gt;)        <span class="r">→ séquence de 3 items (hétérogène)</span>
+(39,(1,2),"table")         <span class="r">→ (39,1,2,"table")  pas d'imbrication</span>
+(39,"table",&lt;v/&gt;)[1]       <span class="r">→ 39   (l'index commence à 1 !)</span>
+1 to 5                     <span class="r">→ (1,2,3,4,5)</span>
+()                        <span class="r">→ séquence vide</span></code></pre>
+      </div>
+
+      <h3>La fonction <code>doc()</code></h3>
+      <p><code>doc("arbres.xml")</code> retourne le <b>nœud document</b>. On enchaîne avec du XPath : <code>doc("xpath-3.xml")//HHH</code>. (Inutile si le fichier est déjà ouvert dans BaseX.)</p>
+
+      <h3>Variables & accolades <code>{ }</code></h3>
+      <div class="ex">
+        <div class="lbl">Requête → résultat</div>
+<pre><code>declare variable $a := "X";
+declare variable $b := "Query";
+$a, $b, concat($a,$b)      <span class="r">→ X  Query  XQuery</span>
+
+declare variable $s := ("X","Query");
+concat($s[1],$s[2])        <span class="r">→ XQuery</span>
+
+declare variable $m := (1,2);
+&lt;e&gt;&lt;o&gt;{$m[1]}&lt;/o&gt;{$m[2],$m[1]} $m[2] {$m[2]}&lt;/e&gt;
+<span class="r">→ &lt;e&gt;&lt;o&gt;1&lt;/o&gt;2 1 $m[2] 2&lt;/e&gt;   ({}=évalué ; hors {} = texte brut)</span></code></pre>
+      </div>
+
+      <h3>Construire des nœuds : <code>element</code> / <code>attribute</code></h3>
+      <div class="ex">
+        <div class="lbl">Requête → résultat</div>
+<pre><code>element racine {
+  element element {
+    attribute lang { "fr" }, "Texte", element autre {}
+  }
+}
+<span class="r">→ &lt;racine&gt;&lt;element lang="fr"&gt;Texte&lt;autre/&gt;&lt;/element&gt;&lt;/racine&gt;</span>
+
+element racine { element element {
+  attribute lang {"fr"}, element autre {//HHH[@*='Cantal'], "Texte"} } }
+<span class="r">→ &lt;racine&gt;&lt;element lang="fr"&gt;&lt;autre&gt;&lt;HHH fromage="Cantal"/&gt;Texte&lt;/autre&gt;&lt;/element&gt;&lt;/racine&gt;</span></code></pre>
+      </div>
+      <div class="note"><b>Expression de chemin = requête XQuery.</b> <code>//HHH</code> ou <code>//*[@*="Cantal"]</code> sont des requêtes valides à elles seules. Dans un littéral XML, on les met entre <code>{ }</code> : <code>&lt;xq&gt;{doc("x.xml")//HHH[@*]}&lt;/xq&gt;</code>.</div>
+    </section>
+
+    <!-- ===== 8 XQUERY operateurs ===== -->
+    <section id="xqop">
+      <h2 class="sec">8. XQuery — opérateurs (le gros piège)</h2>
+
+      <h3>Les 3 familles de comparaison</h3>
+      <table>
+        <tr><th>Famille</th><th>Opérateurs</th><th>Compare</th></tr>
+        <tr><td>arithmétique</td><td><code>+ - * div mod</code></td><td>—</td></tr>
+        <tr><td>logique</td><td><code>and or not</code></td><td>—</td></tr>
+        <tr><td><b>valeur</b></td><td><code>eq ne lt le gt ge</code></td><td>2 valeurs <b>uniques + typées</b></td></tr>
+        <tr><td><b>générale</b></td><td><code>= != &lt; &lt;= &gt; &gt;=</code></td><td>valeurs / séquences (conversion auto)</td></tr>
+        <tr><td><b>nœud</b></td><td><code>is &lt;&lt; &gt;&gt;</code></td><td>identité / ordre des nœuds</td></tr>
+      </table>
+
+      <h3>★ <code>eq</code> vs <code>=</code> (tombe souvent)</h3>
+      <div class="ex">
+        <div class="lbl">Requête → résultat</div>
+<pre><code>1861 ne 1860                                 <span class="r">→ true</span>
+//arbre/annee eq 1860                        <span class="r">→ ERREUR (annee = séquence + non typée)</span>
+//arbre[@id="90"]/annee eq 1860              <span class="r">→ ERREUR (xs:untypedAtomic vs integer)</span>
+xs:int(//arbre[@id="90"]/annee) eq 1860      <span class="r">→ true   (1 seul nœud, casté)</span>
+//book/title eq "Data on the Web"            <span class="r">→ ERREUR (plusieurs titres = séquence)</span>
+//book[3]/title eq "Data on the Web"         <span class="r">→ true   (1 seul title)</span>
+
+//arbre/annee = 1860                         <span class="r">→ true   (le = gère tout seul)</span>
+//book/title = "Data on the Web"             <span class="r">→ true   (= accepte les séquences)</span>
+//a = //b                                    <span class="r">→ true   (s'il existe une égalité)</span></code></pre>
+      </div>
+      <div class="trap"><b>Règle :</b> <code>eq</code> exige <b>UN SEUL</b> nœud typé. Sur une séquence ou un nœud non typé → <b>erreur</b>. Le <code>=</code> convertit et accepte les séquences (vrai s'il existe au moins une égalité).</div>
+
+      <h3>Comparaison de séquences avec <code>=</code></h3>
+      <div class="ex">
+        <div class="lbl">Requête → résultat</div>
+<pre><code>("Platane commun","Platane") = ("Platane commun","Platane d'orient")
+<span class="r">→ true   (un élément commun existe)</span>
+
+count(//arbre[nom_commun = ("Platane commun","Platane d'orient")])
+<span class="r">→ 19   (11 « Platane commun » + 8 « Platane d'orient »)</span>
+
+(39,(1,2),"table",&lt;table/&gt;) = (39,1,2,"table",&lt;table/&gt;)
+<span class="r">→ true   (eq ici donnerait une ERREUR : séquence vs séquence interdit)</span></code></pre>
+      </div>
+
+      <h3>Comparaison de nœuds : <code>is</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></h3>
+      <div class="ex">
+        <div class="lbl">Sur &lt;element&gt;&lt;a&gt;5&lt;/a&gt;&lt;b&gt;5&lt;/b&gt;&lt;a&gt;5&lt;/a&gt;&lt;/element&gt;</div>
+<pre><code>doc("arbres.xml")//arbre[2] is doc("arbres.xml")//arbre[2]   <span class="r">→ true  (même nœud)</span>
+doc("arbres-.xml")//arbre[2] is doc("arbres.xml")//arbre[2]  <span class="r">→ false (2 docs différents)</span>
+//a[1] is //a[2]    <span class="r">→ false  (2 nœuds distincts, même si tous deux valent 5)</span>
+//a[1] &lt;&lt; //a[2]    <span class="r">→ true   (a[1] apparaît AVANT a[2])</span></code></pre>
+      </div>
+      <div class="note"><code>is</code> = même <b>identité</b> (pas même valeur). <code>&lt;&lt;</code> / <code>&gt;&gt;</code> = ordre d'apparition (avant / après).</div>
+
+      <h3>if-then-else</h3>
+      <div class="ex">
+        <div class="lbl">Requête → résultat</div>
+<pre><code>declare variable $arbre := //arbre[1];
+if ($arbre/annee &lt; 1900)
+then concat($arbre/nom_commun," est un arbre ancien")
+else concat($arbre/nom_commun," est un arbre récent")
+<span class="r">→ Oranger des osages est un arbre récent   (annee = 1935)</span></code></pre>
+      </div>
+    </section>
+
+    <!-- ===== 9 FLWOR ===== -->
+    <section id="flwor">
+      <h2 class="sec">9. FLWOR — la boucle de XQuery</h2>
+      <p class="lead"><b>F</b>or · <b>L</b>et · <b>W</b>here · <b>O</b>rder by · <b>R</b>eturn. (Document : <code>arbres.xml</code> avec <code>genre, hauteur, annee, nom_commun</code>.)</p>
+      <table>
+        <tr><td><code>for</code></td><td>parcourt une séquence (boucle)</td></tr>
+        <tr><td><code>let</code></td><td>définit une variable (locale dans un bloc)</td></tr>
+        <tr><td><code>where</code></td><td>filtre les itérations</td></tr>
+        <tr><td><code>order by</code></td><td>trie (<code>ascending</code> défaut / <code>descending</code>)</td></tr>
+        <tr><td><code>return</code></td><td>produit la sortie de chaque tour</td></tr>
+      </table>
+
+      <h3>Construction pas à pas (avec résultats)</h3>
+      <div class="ex">
+        <div class="lbl">1) for + return</div>
+<pre><code>for $i in (1 to 10) return $i        <span class="r">→ 1 2 3 4 5 6 7 8 9 10</span>
+for $a in //@* return $a             <span class="r">→ att="1" att="2" fromage="Gouda" …</span></code></pre>
+        <div class="lbl">2) let + return</div>
+<pre><code>let $v := //chapitre  return &lt;a&gt;{$v}&lt;/a&gt;
+<span class="r">→ &lt;a&gt;&lt;chapitre&gt;…&lt;/chapitre&gt;…&lt;/a&gt;  (tous les chapitres dans un &lt;a&gt;)</span></code></pre>
+        <div class="lbl">3) let + for + return + position « at »</div>
+<pre><code>let $v := //HHH
+for $a at $i in $v  return ($a,$i)
+<span class="r">→ &lt;HHH .../&gt; 1   &lt;HHH .../&gt; 2   …   ($i = position courante)</span></code></pre>
+        <div class="lbl">4) where (filtre)</div>
+<pre><code>let $arbres := //arbre
+for $arbre in $arbres
+where $arbre/hauteur &gt; 30
+return $arbre
+<span class="r">→ seulement les arbres de plus de 30 m  (ex. Platane commun, 45.0)</span></code></pre>
+        <div class="lbl">5) order by (tri)</div>
+<pre><code>let $genres := //genre
+for $g in $genres
+order by $g            (: order by $g descending :)
+return $g
+<span class="r">→ Acer, Acer, Acer, Aesculus, Aesculus, Ailanthus, Alnus … (trié)</span></code></pre>
+        <div class="lbl">6) element + let + for + return (emballer)</div>
+<pre><code>element resultat {
+  let $noms := //nom_commun
+  for $nom in $noms
+  return element nom { $nom/text() }
+}
+<span class="r">→ &lt;resultat&gt;&lt;nom&gt;Oranger des osages&lt;/nom&gt;&lt;nom&gt;Cedre a encens&lt;/nom&gt;…&lt;/resultat&gt;</span></code></pre>
+        <div class="lbl">7) let supplémentaire après for</div>
+<pre><code>element resultat {
+  for $nom in //nom_commun
+  let $res := starts-with($nom,"O")
+  return element nom { $nom/text(), " : ", $res }
+}
+<span class="r">→ &lt;nom&gt;Oranger des osages : true&lt;/nom&gt; &lt;nom&gt;Platane commun : false&lt;/nom&gt; …</span></code></pre>
+        <div class="lbl">8) for + return + if-then-else</div>
+<pre><code>for $a in //arbre
+return if ($a/annee &lt; 1900)
+       then concat($a/nom_commun," est un arbre ancien")
+       else concat($a/nom_commun," est un arbre récent")</code></pre>
+        <div class="lbl">9) boucles imbriquées</div>
+<pre><code>element resultat {
+  for $i in 1 to 5
+  for $j in ("a","b","c")
+  return concat($j,$i)
+}
+<span class="r">→ &lt;resultat&gt;a1 b1 c1 a2 b2 c2 a3 b3 c3 a4 b4 c4 a5 b5 c5&lt;/resultat&gt;</span></code></pre>
+      </div>
+
+      <div class="note"><b>Portée :</b> un <code>let</code> dans un bloc <code>{ }</code> n'existe que dans ce bloc (sinon « Undeclared variable »). <code>declare variable</code> (en tête) = global.</div>
+
+      <h3>Exercices XQuery du cours (avec solution)</h3>
+      <div class="ex">
+        <div class="lbl">Solutions</div>
+<pre><code><span class="c">Ex5 — genres sans répétition :</span>
+for $g in distinct-values(//genre) return $g
+
+<span class="c">Ex7a — compter les arbres &gt; 30 m :</span>
+count(//arbre[hauteur &gt; 30])
+
+<span class="c">Ex7b — arbres &gt; 30 m dont le genre commence par G ou T :</span>
+for $a in //arbre
+where $a/hauteur &gt; 30 and (starts-with($a/genre,"G") or starts-with($a/genre,"T"))
+return $a
+
+<span class="c">Ex6 — nom commun + ID dans &lt;res&gt; (l'id est sur l'élément arbre) :</span>
+element res {
+  for $a in //arbre
+  return element nom { $a/nom_commun/text(), " ID ", string($a/@id) }
+}
+<span class="r">→ &lt;res&gt;&lt;nom&gt;Oranger des osages ID 6&lt;/nom&gt;&lt;nom&gt;Cedre a encens ID 11&lt;/nom&gt;…&lt;/res&gt;</span>
+
+<span class="c">Ex7d — arbres &gt; 30 m dans le 12e ou 16e arrondissement :</span>
+for $a in //arbre
+where $a/hauteur &gt; 30 and $a//adresse/@arrondissement = ("12","16")
+return $a</code></pre>
+      </div>
+    </section>
+
+    <!-- ===== 10 DOM lire ===== -->
+    <section id="dom">
+      <h2 class="sec">10. DOM (Java) — LIRE un XML</h2>
+      <p class="lead">DOM = le XML chargé en <b>arbre d'objets en mémoire</b>. Parseur : <b>JAXP</b>.</p>
+      <div class="ex">
+        <div class="lbl">read.xml</div>
+<pre><code>&lt;liste&gt;
+  &lt;eleve nom="E1" note="12"&gt;L2 ACAD&lt;/eleve&gt;
+  &lt;eleve nom="E2" note="18"&gt;L3 ACAD&lt;/eleve&gt;
+  &lt;eleve nom="E3" note="07"&gt;L2 ACAD&lt;/eleve&gt;
+&lt;/liste&gt;</code></pre>
+      </div>
+
+      <h4>Étape 1 — créer le parseur & ouvrir (toujours pareil)</h4>
+<pre><code>String xmlFile = args[0];
+DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+DocumentBuilder parseur = factory.newDocumentBuilder();
+Document document = parseur.parse(xmlFile);       <span class="c">tout l'arbre</span>
+Element liste = document.getDocumentElement();    <span class="c">élément racine &lt;liste&gt;</span></code></pre>
+
+      <h4>Méthode 1 — getElementsByTagName()</h4>
+      <div class="ex">
+        <div class="lbl">Code → sortie console</div>
+<pre><code>NodeList eleves = liste.getElementsByTagName("eleve");
+for (int i=0; i&lt;eleves.getLength(); i++){
+  eleves.item(i).getNodeName();                   <span class="r">→ eleve</span>
+  eleves.item(i).getFirstChild().getNodeName();   <span class="r">→ #text</span>
+  eleves.item(i).getFirstChild().getNodeValue();  <span class="r">→ L2 ACAD</span>
+}
+<span class="c">Sortie : eleve/#text/L2 ACAD · eleve/#text/L3 ACAD · eleve/#text/L2 ACAD</span></code></pre>
+      </div>
+      <div class="trap"><b>À comprendre :</b> le texte d'un élément est sur son <b>premier fils #text</b>, d'où <code>getFirstChild().getNodeValue()</code>. Appeler <code>getNodeValue()</code> directement sur un <b>élément</b> → <b>null</b>.</div>
+
+      <h4>Lire UN attribut → cast en Element</h4>
+<pre><code>Element l_eleve = (Element) eleves.item(i);   <span class="c">Node → Element</span>
+l_eleve.getAttribute("nom");                  <span class="r">→ E1, E2, E3</span></code></pre>
+
+      <h4>Lire TOUS les attributs → NamedNodeMap</h4>
+<pre><code>NamedNodeMap atts = eleves.item(i).getAttributes();
+for (int e=0; e&lt;atts.getLength(); e++){
+  Attr attr = (Attr) atts.item(e);
+  attr.getName();   attr.getValue();          <span class="r">→ nom/E1, note/12, …</span>
+}</code></pre>
+
+      <h4>★ Méthode 2 — getChildNodes() & le PIÈGE des #text parasites</h4>
+      <p><code>getChildNodes()</code> renvoie <b>tous</b> les fils, y compris les sauts de ligne/espaces de l'indentation vus comme nœuds <code>#text</code>. Sans filtrage → <b>NullPointerException</b>.</p>
+      <div class="ex">
+        <div class="lbl">getChildNodes() brut → sortie</div>
+<pre><code>NodeList fils = liste.getChildNodes();
+for (int o=0; o&lt;fils.getLength(); o++)
+   System.out.println(fils.item(o).getNodeName());
+<span class="r">→ #text · eleve · #text · eleve · #text · eleve · #text   (#text = parasites)</span></code></pre>
+        <div class="lbl res">La solution : filtrer (Filtrer_parasites.java)</div>
+<pre class="res"><code>public boolean Filtrer(Node noeud) {
+   return (noeud.getNodeName() != "#text");   <span class="c">garde si PAS un #text</span>
+}
+<span class="c">// dans Read.java :</span>
+Filtrer_parasites a = new Filtrer_parasites();
+for (int o=0; o&lt;fils.getLength(); o++)
+   if (a.Filtrer(fils.item(o)))
+       System.out.println(fils.item(o).getFirstChild().getNodeValue());
+<span class="r">→ L2 ACAD · L3 ACAD · L2 ACAD</span></code></pre>
+      </div>
+      <div class="note"><code>getFirstChild().getNodeValue()</code> ≠ <code>getTextContent()</code> dès qu'il y a des sous-éléments : <code>getTextContent()</code> ramène TOUT le texte (lui + descendants).</div>
+    </section>
+
+    <!-- ===== 11 DOM creer ===== -->
+    <section id="dom2">
+      <h2 class="sec">11. DOM (Java) — CRÉER & TRANSFORMER</h2>
+
+      <h4>But : générer create.xml</h4>
+      <div class="ex">
+        <div class="lbl">create.xml visé</div>
+<pre><code>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;!DOCTYPE Racine SYSTEM "exemple-dom.dtd"&gt;
+&lt;Racine xmlns:EN="http://example.net/english" xmlns:FR="http://example.net/french"&gt;
+  &lt;FR:langue&gt;je suis le contenu du premier élément&lt;/FR:langue&gt;
+  &lt;EN:langue&gt;I am the content of the second element&lt;/EN:langue&gt;
+&lt;/Racine&gt;</code></pre>
+      </div>
+
+      <h4>Code (CreateDoc.java)</h4>
+<pre><code>DocumentBuilder p = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+DOMImplementation domimp = p.getDOMImplementation();
+<span class="c">// createDocument(namespaceURI, racine, dtd) — ici null,"Racine",null</span>
+DocumentType dtd = domimp.createDocumentType("Racine", null, "exemple-dom.dtd");
+Document doc = domimp.createDocument(null, "Racine", dtd);
+
+Element rac = doc.getDocumentElement();
+rac.setAttribute("xmlns:FR", "http://example.net/french");   <span class="c">un attribut</span>
+rac.setAttribute("xmlns:EN", "http://example.net/english");
+
+Element prem = doc.createElement("FR:langue");               <span class="c">créer l'élément</span>
+rac.appendChild(prem);                                       <span class="c">l'attacher au parent</span>
+prem.appendChild(doc.createTextNode("je suis le contenu du premier élément"));</code></pre>
+      <table>
+        <tr><th>Méthode</th><th>Rôle</th></tr>
+        <tr><td><code>createElement("x")</code></td><td>crée un élément</td></tr>
+        <tr><td><code>appendChild(n)</code></td><td>attache un nœud à un parent</td></tr>
+        <tr><td><code>createTextNode("t")</code></td><td>crée un nœud texte</td></tr>
+        <tr><td><code>setAttribute("a","v")</code></td><td>pose un attribut</td></tr>
+        <tr><td><code>doc.setXmlStandalone(true)</code></td><td>supprime/gère l'attribut standalone</td></tr>
+      </table>
+
+      <h4>Sortie sur fichier = une « transformation » (3 objets)</h4>
+<pre><code>DOMSource ds = new DOMSource(doc);                  <span class="c">1. source</span>
+StreamResult res = new StreamResult("create.xml"); <span class="c">2. résultat (ou System.out)</span>
+Transformer tr = TransformerFactory.newInstance().newTransformer();  <span class="c">3. transformateur</span>
+tr.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
+tr.setOutputProperty(OutputKeys.INDENT, "yes");
+tr.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+tr.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "exemple-dom.dtd");  <span class="c">lien DTD</span>
+<span class="c">// si objet dtd créé : tr.setOutputProperty(DOCTYPE_SYSTEM, dtd.getSystemId());</span>
+<span class="c">// FPI : tr.setOutputProperty(DOCTYPE_PUBLIC, dtd.getPublicId());</span>
+<span class="c">// standalone yes : tr.setOutputProperty(OutputKeys.STANDALONE, "yes");</span>
+tr.transform(ds, res);                              <span class="c">source → fichier</span></code></pre>
+
+      <h4>Transformer source.xml → cible.xml (TransformDoc.java)</h4>
+      <div class="ex">
+        <div class="lbl">On extrait une valeur et on la remet dans un nouveau doc</div>
+<pre><code><span class="c">source.xml : …&lt;Allumage&gt;Défectueux&lt;/Allumage&gt;…</span>
+String contenu = src.getElementsByTagName("Allumage")
+                    .item(0).getFirstChild().getNodeValue();   <span class="r">→ "Défectueux"</span>
+Element t = cible.createElement("texte");
+cible.getDocumentElement().appendChild(t);
+t.appendChild(cible.createTextNode(contenu));
+<span class="r">→ &lt;Racine&gt;&lt;texte&gt;Défectueux&lt;/texte&gt;&lt;/Racine&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <!-- ===== EXAM ===== -->
+    <section id="exam">
+      <h2 class="sec">🎯 Corrigé complet de l'examen exemple</h2>
+
+      <div class="qa"><p class="q">1) <code>element racine {attribute lang {"fr"}, attribute lang {"en"}}</code> — erreur ?</p>
+        <b>OUI.</b> Deux attributs de même nom (<code>lang</code>) interdits. Correction : renommer l'un, ou fusionner <code>attribute lang {"fr en"}</code>.</div>
+
+      <div class="qa"><p class="q">2) <code>element { //book[1]/name(@*[1]) } { attribute { //book[1]/name(*[2]) } { //book[1]/*[2] } }</code></p>
+        Sur <code>&lt;book title="XQuery"&gt;&lt;author&gt;…&lt;/author&gt;&lt;publisher&gt;O'Reilly&lt;/publisher&gt;&lt;/book&gt;</code> → produit <code>&lt;title publisher="O'Reilly"/&gt;</code>.
+        <ul>
+          <li><b><code>name(@*[1])</code> → <code>name(@*)</code> ?</b> <b>Oui, ici</b> : <code>book</code> n'a qu'<b>un seul</b> attribut (<code>title</code>), donc <code>@*</code> = séquence d'1 nœud → <code>name(@*)</code> renvoie « title », identique. ⚠️ Mais <b>pas robuste</b> : <code>name()</code> n'accepte qu'<b>un seul</b> nœud ; si on ajoute un 2ᵉ attribut, <code>name(@*)</code> plante (→ voir Q4), alors que <code>@*[1]</code> marche toujours.</li>
+          <li><b><code>name(*[2])</code> → <code>string(*[2])</code> ?</b> Non : <code>name()</code> donne le <b>nom</b> (publisher) pour nommer l'attribut ; <code>string()</code> donne le <b>contenu</b> (O'Reilly).</li>
+          <li><b>Pourquoi <code>*[2]</code> et <code>string(*[2])</code> donnent le même résultat (dernière ligne) ?</b> Une <b>valeur d'attribut est forcément du texte</b> : <code>publisher</code> est converti en sa valeur « O'Reilly » = ce que renvoie <code>string()</code>.</li>
+          <li><b>Quand erreur si on ajoute un 2e attribut à book ?</b> Si la requête utilise <code>@*</code> (sans <code>[1]</code>) → <code>name()</code> reçoit 2 attributs → erreur « un seul nœud attendu ».</li>
+        </ul></div>
+
+      <div class="qa"><p class="q">3) <code>.</code> et <code>text()</code> sur l'élément <code>u</code></p>
+        <code>contains(.,'quand')</code> → <code>.</code> = tout le texte → trouve « quand » → retourne <code>u</code>.<br>
+        <code>contains(text(),'quand')</code> → <code>text()</code> = 1er bout (« donc ») → ne trouve pas → rien.</div>
+
+      <div class="qa"><p class="q">4) <code>/descendant::titleStmt[2]</code> vs <code>//titleStmt[2]</code> vs <code>(//titleStmt)[2]</code></p>
+        Les 2 premières = identiques → « le titleStmt en 2e position chez son parent ».<br>
+        <code>(//titleStmt)[2]</code> → tous les titleStmt puis le 2e de la liste → <b>toujours 1 seul</b>.</div>
+
+      <div class="qa"><p class="q">5) Code DOM (liste d'élèves avec texte parasite « A », « B »)</p>
+        <b>a)</b> <code>standalone</code> : indique si le doc est autonome (<code>"no"</code> = dépend d'une DTD externe).<br>
+        <b>b)</b> compléter : <code>...getNodeValue().trim().replaceAll("\\s+"," ")</code> et <code>else ...getNodeValue().trim()</code>.<br>
+        <b>c)</b> affiche : <code>A</code>, <code>L3 ACAD</code>, <code>B</code>, <code>L3 ISIL</code>.<br>
+        <b>d)</b> ligne en gras <code>if(a.Filtrer(...))</code> = <b>séparer les éléments des nœuds #text parasites</b>.<br>
+        <b>e)</b> <code>getTextContent()</code> ≠ <code>getFirstChild().getNodeValue()</code> dès qu'il y a des sous-éléments.</div>
+
+      <div class="qa"><p class="q">6) <code>&lt;name&gt;W.B&lt;family&gt;Wallace&lt;/family&gt;&lt;/name&gt;</code> — compléter</p>
+        <code>&lt;!ELEMENT name (#PCDATA | family)*&gt;</code> (contenu mixte).</div>
+
+      <div class="qa"><p class="q">7) Expliquer la requête <code>for $b1…$b2 where $b1/@*=$b2/@year let $both:=(…) for $ele at $i …</code></p>
+        Double <code>for</code> = <b>jointure</b> entre les book de books1 et books2. <code>where $b1/@* = $b2/@year</code> garde les paires dont l'attribut correspond à l'année. <code>let $both</code> regroupe des valeurs des deux. <code>for $ele at $i</code> apparie chaque élément avec son correspondant décalé de la moitié de la séquence. Produit des <code>&lt;a&gt;</code> contenant les paires.</div>
+
+      <div class="qa"><p class="q">8) <code>&lt;arbres&gt;&lt;arbre id="6"&gt;…&lt;/arbre&gt;…&lt;/arbres&gt;</code> — R1 & R2</p>
+        Remplacer <code>@*</code> par <code>@id</code> dans R1. Compléter R2 : <code>string($nom/parent::arbre/@id)</code>. Si on ajoute <code>id</code> à l'élément racine, <b>R2 fonctionne</b> car elle remonte explicitement à <code>parent::arbre</code> (R1 prendrait alors aussi l'id de la racine via <code>@*</code>).</div>
+
+      <div class="qa"><p class="q">9) <code>datenaissance="a 1942-01-08"</code> + type <code>ID</code></p>
+        <b>Erreur</b> : un <code>ID</code> ne peut pas contenir d'espace. <b>2 corrections :</b> (a) type <code>CDATA</code> ; (b) <code>"a1942-01-08"</code>.</div>
+    </section>
+
+    <!-- ===== CHEAT ===== -->
+    <section id="cheat">
+      <h2 class="sec">Aide-mémoire (5 min avant l'examen)</h2>
+      <ol>
+        <li><b>Bien formé</b> = syntaxe. <b>Valide</b> = + conforme DTD. <b>5 nœuds</b> : document, élément, texte, attribut, commentaire.</li>
+        <li>Échapper : <code>&amp;</code>→<code>&amp;amp;</code>/<code>&amp;#38;</code> · <code>&lt;</code>→<code>&amp;lt;</code>/<code>&amp;#60;</code>.</li>
+        <li>DTD : <code>,</code> séquence · <code>|</code> choix · <code>?</code> 0-1 · <code>+</code> 1+ · <code>*</code> 0+ · <code>(#PCDATA)</code> texte · <code>EMPTY</code> vide · mixte <code>(#PCDATA|x)*</code>.</li>
+        <li>Attribut <code>ID</code> : unique, pas d'espace, pas de chiffre au début (sinon erreur → CDATA ou enlever l'espace). <code>#REQUIRED</code>/<code>#IMPLIED</code>/<code>#FIXED</code>.</li>
+        <li>XPath : <code>/</code> enfant · <code>//</code> n'importe où · <code>[n]</code> position · <code>@</code> attribut · <code>*</code> élément · <code>@*</code> attribut quelconque · <code>..</code> parent · <code>.</code> courant.</li>
+        <li><code>.</code> = tout le texte ; <code>text()</code> = 1er bout. <code>//x[2]</code> (2e chez le parent) ≠ <code>(//x)[2]</code> (2e global, 1 seul).</li>
+        <li>Axes : descendant (tous niveaux) ≠ child (1 niveau) · parent::=<code>..</code> · following/preceding-sibling = frères après/avant.</li>
+        <li>XQuery index dès <b>1</b>. <code>eq</code> = 1 valeur typée (sinon erreur) ; <code>=</code> = séquences + conversion ; <code>is</code> = identité du nœud ; <code>&lt;&lt;</code>/<code>&gt;&gt;</code> = ordre. <code>xs:number()</code> n'existe pas (→ <code>fn:number()</code>).</li>
+        <li>FLWOR = for/let/where/order by/return. <code>at $i</code> = position. <code>{ }</code> = « calcule ». <code>distinct-values()</code> = sans doublons.</li>
+        <li>2 attributs de même nom = interdit.</li>
+        <li>DOM lire : texte sur le fils #text → <code>getFirstChild().getNodeValue()</code> (sur un élément = null). <code>getChildNodes()</code> ramène les #text parasites → filtrer <code>getNodeName()!="#text"</code>. Attribut → cast (Element)+<code>getAttribute</code>.</li>
+        <li>DOM créer : <code>createElement</code>+<code>appendChild</code>+<code>createTextNode</code>+<code>setAttribute</code>. Sortie fichier = DOMSource+StreamResult+Transformer.</li>
+      </ol>
+      <p style="text-align:center;color:var(--muted);margin-top:16px">Bonne révision 💪 &nbsp;·&nbsp; <a href="qcm.html" style="color:var(--accent);font-weight:700">Faire le QCM →</a></p>
+    </section>
+
+  </main>
+</div>
+<a href="#top" class="back" title="Haut">↑</a>
+</body>
+</html>

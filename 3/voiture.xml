@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Voiture SYSTEM "voiture.dtd">
+<Voiture marque="Renault" modèle="Safrane">	
+	<Carosserie couleur="rouge">		
+		<Capot>Un peu cabossé</Capot>	
+	</Carosserie>	
+	<Moteur>
+		<!-- Ceci est un document XML -->		
+		<Cylindres />		
+		<Allumage>Défectueux</Allumage>	
+	</Moteur>	
+	<Transmission type="automatique" nb_vitesses="5">	
+		<Boîte />		
+		<TrainAV />		
+		<TrainAR />	
+	</Transmission>
+</Voiture>

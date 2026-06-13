@@ -1,0 +1,2059 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<texte>
+	<entete>
+		<info_texte>
+			<titre>Le Petit prince<AUDIO start="37.7087" end="38.5901"></AUDIO></titre>
+			<auteur>Antoine de Saint-Exupéry</auteur>
+			<image><image chemin="PP.gif"></image></image>
+		</info_texte>
+		<info_corpus>
+			<but>Td Phonetique</but>
+			<auteurs> Andrea Taillefer Kuncova et Aude Maisondieu</auteurs>
+			<date>2001</date>
+		</info_corpus>
+	</entete>
+	<corps>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>J'ai</mot>
+						<mot>ainsi</mot>
+						<mot>vécu</mot>
+						<mot>seul,</mot>
+						<mot>sans</mot>
+						<mot>personne</mot>
+						<mot>avec</mot>
+						<mot>qui</mot>
+						<mot>parler</mot>
+						<mot>véritablement,</mot>
+						<mot>jusqu'à Â </mot>
+						<mot>une</mot>
+						<mot>panne</mot>
+						<mot>dans</mot>
+						<mot>le</mot>
+						<mot>désert</mot>
+						<mot>du</mot>
+						<mot>Sahara,</mot>
+						<mot>il</mot>
+						<mot>y</mot>
+						<mot>a</mot>
+						<mot>six</mot>
+						<mot>ans.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="39.0206" end="45.8767"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Quelque</mot>
+						<mot>chose</mot>
+						<mot>s'était</mot>
+						<mot>cassé</mot>
+						<mot>dans</mot>
+						<mot>mon</mot>
+						<mot>moteur,</mot>
+						<mot>Et</mot>
+						<mot>comme</mot>
+						<mot>je</mot>
+						<mot>n'avais</mot>
+						<mot>avec</mot>
+						<mot>moi</mot>
+						<mot>ni</mot>
+						<mot>méchanicien,</mot>
+						<mot>ni</mot>
+						<mot>passagers,</mot>
+						<mot>je</mot>
+						<mot>me</mot>
+						<mot>préparai</mot>
+						<mot>à Â </mot>
+						<mot>essayer</mot>
+						<mot>de</mot>
+						<mot>réussir,</mot>
+						<mot>tout</mot>
+						<mot>seul,</mot>
+						<mot>une</mot>
+						<mot>réparation</mot>
+						<mot>difficile.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="45.8767" end="56.0629"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>C'était</mot>
+						<mot>pour</mot>
+						<mot>moi</mot>
+						<mot>une</mot>
+						<mot>question</mot>
+						<mot>de</mot>
+						<mot>vie</mot>
+						<mot>ou</mot>
+						<mot>de</mot>
+						<mot>mort.</mot>
+						<mot>J'avais</mot>
+						<mot>à Â </mot>
+						<mot>peine</mot>
+						<mot>de</mot>
+						<mot>l'eau</mot>
+						<mot>à Â </mot>
+						<mot>boire</mot>
+						<mot>pour</mot>
+						<mot>huit</mot>
+						<mot>jours.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="56.0629" end="61.5966"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Le</mot>
+						<mot>premier</mot>
+						<mot>soir</mot>
+						<mot>je</mot>
+						<mot>me</mot>
+						<mot>suis</mot>
+						<mot>donc</mot>
+						<mot>endormi</mot>
+						<mot>sur</mot>
+						<mot>le</mot>
+						<mot>sable</mot>
+						<mot>à Â </mot>
+						<mot>mille</mot>
+						<mot>milles</mot>
+						<mot>de</mot>
+						<mot>toute</mot>
+						<mot>terre</mot>
+						<mot>habitée.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="61.5966" end="66.6406"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>J'étais</mot>
+						<mot>bien</mot>
+						<mot>plus</mot>
+						<mot>isolé</mot>
+						<mot>qu'un</mot>
+						<mot>naufragé</mot>
+						<mot>sur</mot>
+						<mot>un</mot>
+						<mot>rideau</mot>
+						<mot>au</mot>
+						<mot>milieu</mot>
+						<mot>de</mot>
+						<mot>l'océan.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="66.6405" end="70.9990"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Alors</mot>
+						<mot>vous</mot>
+						<mot>imaginez</mot>
+						<mot>ma</mot>
+						<mot>surprise,</mot>
+						<mot>au</mot>
+						<mot>levé</mot>
+						<mot>du</mot>
+						<mot>jour,</mot>
+						<mot>quand</mot>
+						<mot>une</mot>
+						<mot>drà´le</mot>
+						<mot>de</mot>
+						<mot>petite</mot>
+						<mot>voix</mot>
+						<mot>m'a</mot>
+						<mot>réveillé.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="70.9989" end="76.2879"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Elle</mot>
+						<mot>disait:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="76.2879" end="77.5121"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Zil</mot>
+						<mot>jsem</mot>
+						<mot>sam</mot>
+						<mot>a</mot>
+						<mot>nemel</mot>
+						<mot>jsem</mot>
+						<mot>nikoho,</mot>
+						<mot>s</mot>
+						<mot>kym</mot>
+						<mot>jsem</mot>
+						<mot>si</mot>
+						<mot>mohl</mot>
+						<mot>opravdu</mot>
+						<mot>popovidat.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="77.5120" end="82.4092"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Az</mot>
+						<mot>se</mot>
+						<mot>mi</mot>
+						<mot>jednou</mot>
+						<mot>pred</mot>
+						<mot>sesti</mot>
+						<mot>lety</mot>
+						<mot>v</mot>
+						<mot>pousti</mot>
+						<mot>na</mot>
+						<mot>Sahare</mot>
+						<mot>porouchal</mot>
+						<mot>motor.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="82.4092" end="86.4249"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Neco</mot>
+						<mot>se</mot>
+						<mot>v</mot>
+						<mot>nem</mot>
+						<mot>rozbilo.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="86.4249" end="88.0899"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Nemel</mot>
+						<mot>jsem</mot>
+						<mot>s</mot>
+						<mot>sebou</mot>
+						<mot>mechanika</mot>
+						<mot>ani</mot>
+						<mot>spolucestujici,</mot>
+						<mot>takze</mot>
+						<mot>jsem</mot>
+						<mot>se</mot>
+						<mot>musel</mot>
+						<mot>do</mot>
+						<mot>te</mot>
+						<mot>slozite</mot>
+						<mot>opravy</mot>
+						<mot>pustit</mot>
+						<mot>sam.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="88.0899" end="95.0929"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Byla</mot>
+						<mot>to</mot>
+						<mot>otazka</mot>
+						<mot>zivota</mot>
+						<mot>nebo</mot>
+						<mot>smrti.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="95.0929" end="97.5414"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Pitnou</mot>
+						<mot>vodu</mot>
+						<mot>jsem</mot>
+						<mot>mel</mot>
+						<mot>sotva</mot>
+						<mot>na</mot>
+						<mot>tyden.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="97.5413" end="100.1858"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Prvni</mot>
+						<mot>vecer</mot>
+						<mot>jsem</mot>
+						<mot>usnul</mot>
+						<mot>v</mot>
+						<mot>pisku,</mot>
+						<mot>snad</mot>
+						<mot>tisic</mot>
+						<mot>mil</mot>
+						<mot>od</mot>
+						<mot>obydlenych</mot>
+						<mot>oblasti.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="100.1858" end="104.9850"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Pripadal</mot>
+						<mot>jsem</mot>
+						<mot>si</mot>
+						<mot>jako</mot>
+						<mot>trosecnik</mot>
+						<mot>na</mot>
+						<mot>voru</mot>
+						<mot>uprostred</mot>
+						<mot>oceanu.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="104.9849" end="109.1476"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Jistojiste</mot>
+						<mot>si</mot>
+						<mot>dokazete</mot>
+						<mot>predstavit,</mot>
+						<mot>jak</mot>
+						<mot>jsem</mot>
+						<mot>byl</mot>
+						<mot>prekvapen,</mot>
+						<mot>kdyz</mot>
+						<mot>me</mot>
+						<mot>casne</mot>
+						<mot>zrana</mot>
+						<mot>probudil</mot>
+						<mot>zvlastni</mot>
+						<mot>hlasek:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="109.3434" end="116.8852"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-S'il<AUDIO start="118.8406" end="118.9648"></AUDIO></mot>
+						<mot>vous<AUDIO start="119.1803" end="119.1803"></AUDIO></mot>
+						<mot>plaît...<AUDIO start="119.1607" end="119.7686"></AUDIO></mot>
+						<mot>dessine-moi<AUDIO start="119.7685" end="120.3895"></AUDIO></mot>
+						<mot>un<AUDIO start="120.3895" end="120.5006"></AUDIO></mot>
+						<mot>mouton!<AUDIO start="120.5006" end="120.9254"></AUDIO></mot>
+					</traduction>
+					<traduction lang="tcheque">
+						<mot>-"Prosim...<AUDIO start="121.6378" end="122.3634"></AUDIO></mot>
+						<mot>nakresli<AUDIO start="122.3634" end="123.1804"></AUDIO></mot>
+						<mot>mi<AUDIO start="123.1803" end="123.2914"></AUDIO></mot>
+						<mot>beranka..."<AUDIO start="123.2912" end="123.9776"></AUDIO></mot>
+					</traduction>
+				</modalite>
+			</phrase>
+			<phrase loc="narrateur">
+				<modalite type="exclamative">
+					<traduction lang="francais">
+						<mot>-Hein!<AUDIO start="123.9776" end="125.6967"></AUDIO></mot>
+					</traduction>
+					<traduction lang="tcheque">
+						<mot>-"Coze?"<AUDIO start="126.1673" end="128.4748"></AUDIO></mot>
+					</traduction>
+				</modalite>
+			</phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-Dessine-moi<AUDIO start="128.4747" end="129.6317"></AUDIO></mot>
+						<mot>un<AUDIO start="129.6317" end="129.7035"></AUDIO></mot>
+						<mot>mouton...<AUDIO start="129.7035" end="130.3049"></AUDIO></mot>
+					</traduction>
+					<traduction lang="tcheque">
+						<mot>"Nakresli<AUDIO start="130.3049" end="131.2591"></AUDIO></mot>
+						<mot>mi<AUDIO start="131.2590" end="131.3767"></AUDIO></mot>
+						<mot>beranka..."<AUDIO start="131.3767" end="132.2591"></AUDIO></mot>
+					</traduction>
+				</modalite>
+			</phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>J'ai</mot>
+						<mot>sauté</mot>
+						<mot>sur</mot>
+						<mot>mes</mot>
+						<mot>pieds</mot>
+						<mot>comme</mot>
+						<mot>si</mot>
+						<mot>j'avais</mot>
+						<mot>étéfrappé</mot>
+						<mot>par</mot>
+						<mot>la</mot>
+						<mot>foudre.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="132.4028" end="136.3118"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>J'ai</mot>
+						<mot>bien</mot>
+						<mot>froté</mot>
+						<mot>mes</mot>
+						<mot>yeux.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="136.3183" end="137.7890"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>J'ai</mot>
+						<mot>bien</mot>
+						<mot>regardé.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="137.7889" end="138.8871"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Et</mot>
+						<mot>j'ai</mot>
+						<mot>vu</mot>
+						<mot>un</mot>
+						<mot>petit</mot>
+						<mot>bonhomme</mot>
+						<mot>tout</mot>
+						<mot>à </mot>
+						<mot>fait</mot>
+						<mot>extraordinaire</mot>
+						<mot>qui</mot>
+						<mot>me</mot>
+						<mot>considérait</mot>
+						<mot>gravement.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="138.8871" end="143.8550"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Voià </mot>
+						<mot>le</mot>
+						<mot>meilleur</mot>
+						<mot>portrait</mot>
+						<mot>que,</mot>
+						<mot>plus</mot>
+						<mot>tard,</mot>
+						<mot>j'ai</mot>
+						<mot>réussi</mot>
+						<mot>à </mot>
+						<mot>faire</mot>
+						<mot>de</mot>
+						<mot>lui.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="143.8550" end="147.7836"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Mais</mot>
+						<mot>mon</mot>
+						<mot>dessin,bien</mot>
+						<mot>sà»r,</mot>
+						<mot>est</mot>
+						<mot>beaucoup</mot>
+						<mot>moins</mot>
+						<mot>ravissant</mot>
+						<mot>que</mot>
+						<mot>le</mot>
+						<mot>modèle.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="147.7836" end="151.4834"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Ce</mot>
+						<mot>n'est</mot>
+						<mot>pas</mot>
+						<mot>de</mot>
+						<mot>ma</mot>
+						<mot>faute.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="151.4834" end="152.7972"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>J'avais</mot>
+						<mot>été</mot>
+						<mot>découragé</mot>
+						<mot>dans</mot>
+						<mot>ma</mot>
+						<mot>carrière</mot>
+						<mot>de</mot>
+						<mot>peintre</mot>
+						<mot>par</mot>
+						<mot>les</mot>
+						<mot>grandes</mot>
+						<mot>personnes,</mot>
+						<mot>à </mot>
+						<mot>l'age</mot>
+						<mot>de</mot>
+						<mot>six</mot>
+						<mot>ans,</mot>
+						<mot>et</mot>
+						<mot>je</mot>
+						<mot>n'avais</mot>
+						<mot>rien</mot>
+						<mot>appris</mot>
+						<mot>à </mot>
+						<mot>dessiner,</mot>
+						<mot>sauf</mot>
+						<mot>les</mot>
+						<mot>boas</mot>
+						<mot>fermés</mot>
+						<mot>et</mot>
+						<mot>les</mot>
+						<mot>boas</mot>
+						<mot>ouverts.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="152.7415" end="162.3635"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Vyskocil</mot>
+						<mot>jsem,</mot>
+						<mot>jako</mot>
+						<mot>by</mot>
+						<mot>do</mot>
+						<mot>mne</mot>
+						<mot>uhodil</mot>
+						<mot>hrom.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="162.4375" end="165.6473"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Protrel</mot>
+						<mot>jsem</mot>
+						<mot>si</mot>
+						<mot>oci</mot>
+						<mot>a</mot>
+						<mot>pozorne</mot>
+						<mot>jsem</mot>
+						<mot>se</mot>
+						<mot>podival</mot>
+						<mot>na</mot>
+						<mot>podivneho</mot>
+						<mot>clovicka,</mot>
+						<mot>ktery</mot>
+						<mot>si</mot>
+						<mot>me</mot>
+						<mot>vazne</mot>
+						<mot>prohlizel.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="165.6473" end="172.3980"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Toto</mot>
+						<mot>je</mot>
+						<mot>nejspis</mot>
+						<mot>jeho</mot>
+						<mot>nejlepsi</mot>
+						<mot>portret,</mot>
+						<mot>jaky</mot>
+						<mot>se</mot>
+						<mot>mi</mot>
+						<mot>podarilo</mot>
+						<mot>pozdeji</mot>
+						<mot>nakreslit.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="172.3979" end="177.4941"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Kresba</mot>
+						<mot>neni</mot>
+						<mot>ovsem</mot>
+						<mot>ani</mot>
+						<mot>zdaleka</mot>
+						<mot>tak</mot>
+						<mot>puvabna</mot>
+						<mot>jako</mot>
+						<mot>model,</mot>
+						<mot>ale</mot>
+						<mot>za</mot>
+						<mot>to</mot>
+						<mot>nemohu.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="177.4941" end="182.6233"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Dospeli</mot>
+						<mot>me</mot>
+						<mot>jednou</mot>
+						<mot>provzdy</mot>
+						<mot>odradili</mot>
+						<mot>od</mot>
+						<mot>malirske</mot>
+						<mot>kariery,</mot>
+						<mot>kdyz</mot>
+						<mot>mi</mot>
+						<mot>bylo</mot>
+						<mot>sest</mot>
+						<mot>let,</mot>
+						<mot>takze</mot>
+						<mot>jsem</mot>
+						<mot>se</mot>
+						<mot>nenaucil</mot>
+						<mot>kreslit</mot>
+						<mot>nic</mot>
+						<mot>jineho</mot>
+						<mot>nez</mot>
+						<mot>zavrene</mot>
+						<mot>a</mot>
+						<mot>otevrene</mot>
+						<mot>hroznyse.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="182.6232" end="193.3780"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Je</mot>
+						<mot>regardai</mot>
+						<mot>donc</mot>
+						<mot>cette</mot>
+						<mot>apparition</mot>
+						<mot>avec</mot>
+						<mot>des</mot>
+						<mot>yeux</mot>
+						<mot>tout</mot>
+						<mot>ronds</mot>
+						<mot>d'étonnement.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="193.3780" end="197.1835"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>N'oubliez</mot>
+						<mot>pas</mot>
+						<mot>que</mot>
+						<mot>je</mot>
+						<mot>me</mot>
+						<mot>trouvais</mot>
+						<mot>à </mot>
+						<mot>mille</mot>
+						<mot>milles</mot>
+						<mot>de</mot>
+						<mot>toute</mot>
+						<mot>région</mot>
+						<mot>habitée.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="197.1835" end="200.4926"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Or</mot>
+						<mot>mon</mot>
+						<mot>petit</mot>
+						<mot>bonhomme</mot>
+						<mot>ne</mot>
+						<mot>me</mot>
+						<mot>semblait</mot>
+						<mot>ni</mot>
+						<mot>égaré,</mot>
+						<mot>ni</mot>
+						<mot>mort</mot>
+						<mot>de</mot>
+						<mot>fatigue,</mot>
+						<mot>ni</mot>
+						<mot>mort</mot>
+						<mot>de</mot>
+						<mot>faim,</mot>
+						<mot>ni</mot>
+						<mot>mort</mot>
+						<mot>de</mot>
+						<mot>soif,</mot>
+						<mot>ni</mot>
+						<mot>mort</mot>
+						<mot>de</mot>
+						<mot>peur.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="200.4925" end="207.2102"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Il</mot>
+						<mot>n'avait</mot>
+						<mot>en</mot>
+						<mot>rien</mot>
+						<mot>l'apparence</mot>
+						<mot>d'un</mot>
+						<mot>enfant</mot>
+						<mot>perdu</mot>
+						<mot>au</mot>
+						<mot>milieu</mot>
+						<mot>du</mot>
+						<mot>désert,</mot>
+						<mot>à </mot>
+						<mot>mille</mot>
+						<mot>milles</mot>
+						<mot>de</mot>
+						<mot>toute</mot>
+						<mot>région</mot>
+						<mot>habitée.</mot>
+						<mot>Quand</mot>
+						<mot>je</mot>
+						<mot>réussis</mot>
+						<mot>enfin</mot>
+						<mot>de</mot>
+						<mot>parler,</mot>
+						<mot>je</mot>
+						<mot>lui</mot>
+						<mot>dis:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="207.2102" end="217.2039"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Udivene</mot>
+						<mot>jsem</mot>
+						<mot>hledel</mot>
+						<mot>na</mot>
+						<mot>to</mot>
+						<mot>zjeveni.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="217.2038" end="220.6454"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Vzdyt</mot>
+						<mot>jsem</mot>
+						<mot>byl</mot>
+						<mot>na</mot>
+						<mot>tisic</mot>
+						<mot>mil</mot>
+						<mot>od</mot>
+						<mot>jakehokoliv</mot>
+						<mot>obydleneho</mot>
+						<mot>kraje.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="220.6454" end="224.5832"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>A</mot>
+						<mot>muj</mot>
+						<mot>clovicek</mot>
+						<mot>nevypadal,</mot>
+						<mot>ze</mot>
+						<mot>zabloudil,</mot>
+						<mot>ani</mot>
+						<mot>ze</mot>
+						<mot>je</mot>
+						<mot>k</mot>
+						<mot>smrti</mot>
+						<mot>unaveny</mot>
+						<mot>nebo</mot>
+						<mot>hladovy,</mot>
+						<mot>polomrtvy</mot>
+						<mot>zizni</mot>
+						<mot>nebo</mot>
+						<mot>vystraseny..</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="224.5831" end="232.1943"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Ani</mot>
+						<mot>trochu</mot>
+						<mot>nevypadal</mot>
+						<mot>jako</mot>
+						<mot>dite</mot>
+						<mot>ztracene</mot>
+						<mot>v</mot>
+						<mot>pousti,</mot>
+						<mot>na</mot>
+						<mot>tisic</mot>
+						<mot>mil</mot>
+						<mot>od</mot>
+						<mot>jake-</mot>
+						<mot>koliv</mot>
+						<mot>obydlene</mot>
+						<mot>oblasti.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="232.1943" end="238.3494"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Kdyz</mot>
+						<mot>jsem</mot>
+						<mot>se</mot>
+						<mot>konecne</mot>
+						<mot>zmohl</mot>
+						<mot>na</mot>
+						<mot>slovo,</mot>
+						<mot>rekl</mot>
+						<mot>jsem</mot>
+						<mot>mu:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="238.3494" end="242.1549"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="narrateur">
+				<modalite type="interrogative">
+					<traduction lang="francais">
+						<mot>-Mais</mot>
+						<mot>qu'est-ce</mot>
+						<mot>que</mot>
+						<mot>tu</mot>
+						<mot>fais</mot>
+						<mot>là ?</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="242.1548" end="245.3978"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="interrogative">
+					<traduction lang="tcheque">
+						<mot>"Copak</mot>
+						<mot>tu</mot>
+						<mot>delas?"</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="245.3977" end="247.2509"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Et</mot>
+						<mot>il</mot>
+						<mot>me</mot>
+						<mot>répéta</mot>
+						<mot>alors,</mot>
+						<mot>tout</mot>
+						<mot>doucement,</mot>
+						<mot>comme</mot>
+						<mot>une</mot>
+						<mot>chose</mot>
+						<mot>très</mot>
+						<mot>sérieuse:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="247.2509" end="251.2881"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot></mot>
+						<mot>A</mot>
+						<mot>on</mot>
+						<mot>mimoradne</mot>
+						<mot>vazne</mot>
+						<mot>tichounce</mot>
+						<mot>opakoval:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="251.2881" end="254.8288"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-S'il</mot>
+						<mot>vous</mot>
+						<mot>plaît...</mot>
+						<mot>dessine-moi</mot>
+						<mot>un</mot>
+						<mot>mouton...</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="254.8288" end="257.1782"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Prosim...</mot>
+						<mot>nakresli</mot>
+						<mot>mi</mot>
+						<mot>beranka..."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="257.1781" end="259.9909"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Quand</mot>
+						<mot>le</mot>
+						<mot>mystère</mot>
+						<mot>est</mot>
+						<mot>trop</mot>
+						<mot>impressionnant,</mot>
+						<mot>on</mot>
+						<mot>n'ose</mot>
+						<mot>pas</mot>
+						<mot>désobéir.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="259.9908" end="263.5316"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Aussi</mot>
+						<mot>absurde</mot>
+						<mot>que</mot>
+						<mot>cela</mot>
+						<mot>me</mot>
+						<mot>semblaît</mot>
+						<mot>à </mot>
+						<mot>mille</mot>
+						<mot>milles</mot>
+						<mot>de</mot>
+						<mot>tous</mot>
+						<mot>les</mot>
+						<mot>endroits</mot>
+						<mot>habités</mot>
+						<mot>et</mot>
+						<mot>en</mot>
+						<mot>danger</mot>
+						<mot>de</mot>
+						<mot>mort,</mot>
+						<mot>je</mot>
+						<mot>sortis</mot>
+						<mot>de</mot>
+						<mot>ma</mot>
+						<mot>poche</mot>
+						<mot>une</mot>
+						<mot>feuille</mot>
+						<mot>de</mot>
+						<mot>papier</mot>
+						<mot>et</mot>
+						<mot>un</mot>
+						<mot>stylographe.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="263.5315" end="271.3412"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Mais</mot>
+						<mot>je</mot>
+						<mot>me</mot>
+						<mot>rappelai</mot>
+						<mot>alors</mot>
+						<mot>que</mot>
+						<mot>j'avais</mot>
+						<mot>surtout</mot>
+						<mot>étudié</mot>
+						<mot>la</mot>
+						<mot>géographie,</mot>
+						<mot>l'histoire,</mot>
+						<mot>le</mot>
+						<mot>calcul</mot>
+						<mot>et</mot>
+						<mot>la</mot>
+						<mot>grammaire</mot>
+						<mot>et</mot>
+						<mot>je</mot>
+						<mot>dis</mot>
+						<mot>au</mot>
+						<mot>petit</mot>
+						<mot>bonhomme</mot>
+						<mot>(avec</mot>
+						<mot>un</mot>
+						<mot>peu</mot>
+						<mot>de</mot>
+						<mot>mauvaise</mot>
+						<mot>humeur)</mot>
+						<mot>que</mot>
+						<mot>je</mot>
+						<mot>ne</mot>
+						<mot>savais</mot>
+						<mot>pas</mot>
+						<mot>dessiner.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="271.3411" end="281.9636"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot></mot>
+						<mot>Il</mot>
+						<mot>me</mot>
+						<mot>répondit:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="281.9635" end="283.9821"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Pokud</mot>
+						<mot>je</mot>
+						<mot>pred</mot>
+						<mot>nami</mot>
+						<mot>nejaka</mot>
+						<mot>zvlast</mot>
+						<mot>velka</mot>
+						<mot>zahada,</mot>
+						<mot>neodva</mot>
+						<mot>zujeme</mot>
+						<mot>se</mot>
+						<mot>neuposlechnout.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="283.9820" end="290.2033"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Prestoze</mot>
+						<mot>se</mot>
+						<mot>mi</mot>
+						<mot>to</mot>
+						<mot>zdalo</mot>
+						<mot>zde,</mot>
+						<mot>tisice</mot>
+						<mot>mil</mot>
+						<mot>od</mot>
+						<mot>obydlenych</mot>
+						<mot>mist,</mot>
+						<mot>a</mot>
+						<mot>navic</mot>
+						<mot>v</mot>
+						<mot>nebezpeci</mot>
+						<mot>smrti,</mot>
+						<mot>ponekud</mot>
+						<mot>nesmyslne,</mot>
+						<mot>vytahl</mot>
+						<mot>jsem</mot>
+						<mot>z</mot>
+						<mot>kapsy</mot>
+						<mot>list</mot>
+						<mot>papiru</mot>
+						<mot>a</mot>
+						<mot>plnici</mot>
+						<mot>pero.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="290.2033" end="300.9251"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Vtom</mot>
+						<mot>jsem</mot>
+						<mot>si</mot>
+						<mot>ale</mot>
+						<mot>uvedomil,</mot>
+						<mot>ze</mot>
+						<mot>jsem</mot>
+						<mot>studoval</mot>
+						<mot>predevsim</mot>
+						<mot>zemepis,</mot>
+						<mot>dejepis,</mot>
+						<mot>matematiku</mot>
+						<mot>a</mot>
+						<mot>mluvnici,</mot>
+						<mot>a</mot>
+						<mot>rekl</mot>
+						<mot>jsem</mot>
+						<mot>tomu</mot>
+						<mot>clovickovi</mot>
+						<mot>(asi</mot>
+						<mot>trochu</mot>
+						<mot>mrzute),</mot>
+						<mot>ze</mot>
+						<mot>kreslit</mot>
+						<mot>neumim.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="300.9251" end="312.6727"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Odpovedel</mot>
+						<mot>mi:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="312.6727" end="313.9963"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="impérative">
+					<traduction lang="francais">
+						<mot>-Ca</mot>
+						<mot>ne</mot>
+						<mot>fait</mot>
+						<mot>rien.</mot>
+						<mot>Dessine-moi</mot>
+						<mot>un</mot>
+						<mot>mouton.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="313.9963" end="316.2134"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="impérative">
+					<traduction lang="tcheque">
+						<mot>"To</mot>
+						<mot>nevadi.</mot>
+						<mot>Nakresli</mot>
+						<mot>mi</mot>
+						<mot>beranka."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="316.2133" end="318.8276"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Comme</mot>
+						<mot>je</mot>
+						<mot>n'avais</mot>
+						<mot>jamais</mot>
+						<mot>dessiné</mot>
+						<mot>un</mot>
+						<mot>mouton</mot>
+						<mot>je</mot>
+						<mot>refis,</mot>
+						<mot>pour</mot>
+						<mot>,</mot>
+						<mot>un</mot>
+						<mot>des</mot>
+						<mot>deux</mot>
+						<mot>seuls</mot>
+						<mot>dessins</mot>
+						<mot>dont</mot>
+						<mot>j'étais</mot>
+						<mot>capable</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="318.8276" end="324.6186"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Celui</mot>
+						<mot>du</mot>
+						<mot>boa</mot>
+						<mot>fermé.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="324.6186" end="326.7695"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>ET</mot>
+						<mot>je</mot>
+						<mot>fus</mot>
+						<mot>stupéfait</mot>
+						<mot>d'entendre</mot>
+						<mot>le</mot>
+						<mot>petit</mot>
+						<mot>bonhomme</mot>
+						<mot>me</mot>
+						<mot>répondre:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="326.7694" end="330.8066"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Nikdy</mot>
+						<mot>predtim</mot>
+						<mot>jsem</mot>
+						<mot>beranka</mot>
+						<mot>nekreslil.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="330.8065" end="333.8510"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Proto</mot>
+						<mot>jsem</mot>
+						<mot>mu</mot>
+						<mot>nakreslil</mot>
+						<mot>jednu</mot>
+						<mot>ze</mot>
+						<mot>dvou</mot>
+						<mot>kreseb,</mot>
+						<mot>ktere</mot>
+						<mot>jsem</mot>
+						<mot>umel.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="333.8510" end="338.4838"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Obrazek</mot>
+						<mot>zavreneho</mot>
+						<mot>hroznyse.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="338.4837" end="340.8663"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>A</mot>
+						<mot>podivil</mot>
+						<mot>jsem</mot>
+						<mot>se,</mot>
+						<mot>kdyz</mot>
+						<mot>jsem</mot>
+						<mot>uslysel,</mot>
+						<mot>co</mot>
+						<mot>mi</mot>
+						<mot>ten</mot>
+						<mot>clovicek</mot>
+						<mot>povida:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="340.8662" end="345.3667"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Non!</mot>
+						<mot>Non!</mot>
+						<mot>Je</mot>
+						<mot>ne</mot>
+						<mot>veux</mot>
+						<mot>pas</mot>
+						<mot>d'un</mot>
+						<mot>éléphant</mot>
+						<mot>dans</mot>
+						<mot>un</mot>
+						<mot>boa.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="345.3666" end="348.7751"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Ja</mot>
+						<mot>nechci</mot>
+						<mot>slona</mot>
+						<mot>v</mot>
+						<mot>hroznysovi.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="348.7751" end="350.9591"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Un</mot>
+						<mot>boa</mot>
+						<mot>c'est</mot>
+						<mot>très</mot>
+						<mot>dangereux,</mot>
+						<mot>et</mot>
+						<mot>un</mot>
+						<mot>éléphant</mot>
+						<mot>c'est</mot>
+						<mot>très</mot>
+						<mot>encombrant.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="350.9591" end="355.2941"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Hroznys</mot>
+						<mot>je</mot>
+						<mot>nebezpecny</mot>
+						<mot>a</mot>
+						<mot>slon</mot>
+						<mot>zabere</mot>
+						<mot>moc</mot>
+						<mot>mista.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="355.2941" end="359.1989"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Chez</mot>
+						<mot>moi</mot>
+						<mot>c'est</mot>
+						<mot>tout</mot>
+						<mot>petit.</mot>
+						<mot></mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="359.1988" end="361.2505"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>U</mot>
+						<mot>mne</mot>
+						<mot>doma</mot>
+						<mot>je</mot>
+						<mot>vsechno</mot>
+						<mot>malinkate.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="361.2504" end="363.7654"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>J'ai</mot>
+						<mot>besoin</mot>
+						<mot>d'un</mot>
+						<mot>mouton.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="363.7654" end="365.2213"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Potrebuji</mot>
+						<mot>beranka.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="365.2212" end="366.6442"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="impérative">
+					<traduction lang="francais">
+						<mot>Dessine-moi</mot>
+						<mot>un</mot>
+						<mot>mouton.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="366.6442" end="368.3318"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="impérative">
+					<traduction lang="tcheque">
+						<mot>Nakresli</mot>
+						<mot>mi</mot>
+						<mot>beranka.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="368.3318" end="370.1187"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Alors</mot>
+						<mot>j'ai</mot>
+						<mot>dessiné.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="370.1186" end="371.6408"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Il</mot>
+						<mot>regarda</mot>
+						<mot>attentivement,</mot>
+						<mot>puis:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="371.6406" end="374.3872"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Tak</mot>
+						<mot>jsem</mot>
+						<mot>tedy</mot>
+						<mot>kreslil.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="374.9166" end="377.3654"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Pozorne</mot>
+						<mot>si</mot>
+						<mot>jej</mot>
+						<mot>prohledl</mot>
+						<mot>a</mot>
+						<mot>rekl:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="377.3654" end="379.9134"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="exclamative">
+					<traduction lang="francais">
+						<mot>-Non!</mot>
+						<mot>Celui-là </mot>
+						<mot>est</mot>
+						<mot>déjà </mot>
+						<mot>très</mot>
+						<mot>malade.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="379.9134" end="382.3622"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="exclamative">
+					<traduction lang="tcheque">
+						<mot>Kdepak!</mot>
+						<mot>Ten</mot>
+						<mot>je</mot>
+						<mot>nemocny.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="382.3622" end="384.5462"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="impérative">
+					<traduction lang="francais">
+						<mot>Fais-en</mot>
+						<mot>un</mot>
+						<mot>autre.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="384.5461" end="385.6381"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="impérative">
+					<traduction lang="tcheque">
+						<mot>Zkus</mot>
+						<mot>jineho.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="385.6381" end="387.0610"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Je</mot>
+						<mot>dessinai:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="387.0610" end="388.2854"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Mon</mot>
+						<mot>ami</mot>
+						<mot>sourit</mot>
+						<mot>gentiment,</mot>
+						<mot>avec</mot>
+						<mot>indulgence:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="388.2854" end="391.3298"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Tak</mot>
+						<mot>jsem</mot>
+						<mot>nakreslil</mot>
+						<mot>tento</mot>
+						<mot>obrazek:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="391.3298" end="394.3411"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Muj</mot>
+						<mot>maly</mot>
+						<mot>pritel</mot>
+						<mot>se</mot>
+						<mot>chapave</mot>
+						<mot>usmal:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="394.3410" end="396.9553"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-Tu</mot>
+						<mot>vois</mot>
+						<mot>bien...</mot>
+						<mot>ce</mot>
+						<mot>n'est</mot>
+						<mot>pas</mot>
+						<mot>un</mot>
+						<mot>mouton,</mot>
+						<mot>c'est</mot>
+						<mot>un</mot>
+						<mot>bélier.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="396.9553" end="400.6946"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Ale</mot>
+						<mot>to...</mot>
+						<mot>to</mot>
+						<mot>prece</mot>
+						<mot>neni</mot>
+						<mot>beranek,</mot>
+						<mot>to</mot>
+						<mot>je</mot>
+						<mot>beran."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="400.6945" end="404.6655"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Il</mot>
+						<mot>a</mot>
+						<mot>des</mot>
+						<mot>cornes...</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="404.6655" end="406.0222"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Ma</mot>
+						<mot>rohy..."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="406.0221" end="407.1141"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Je</mot>
+						<mot>refis</mot>
+						<mot>donc</mot>
+						<mot>encore</mot>
+						<mot>mon</mot>
+						<mot>dessin:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="407.1140" end="408.9010"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Mais</mot>
+						<mot>il</mot>
+						<mot>fut</mot>
+						<mot>refusé,</mot>
+						<mot>comme</mot>
+						<mot>les</mot>
+						<mot>précédents:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="408.9010" end="411.1842"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Kresbu</mot>
+						<mot>jsem</mot>
+						<mot>tedy</mot>
+						<mot>znovu</mot>
+						<mot>predelal.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="411.1841" end="413.8315"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>On</mot>
+						<mot>ji</mot>
+						<mot>ovsem</mot>
+						<mot>znovu</mot>
+						<mot>odmitl</mot>
+						<mot>jako</mot>
+						<mot>ty</mot>
+						<mot>predchazejici:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="413.8315" end="417.4054"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-Celui-là est</mot>
+						<mot>trop</mot>
+						<mot>vieux.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="417.4054" end="418.8944"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Tenhle</mot>
+						<mot>je</mot>
+						<mot>moc</mot>
+						<mot>stary."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="418.8943" end="420.5158"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Je</mot>
+						<mot>veux</mot>
+						<mot>un</mot>
+						<mot>mouton</mot>
+						<mot>qui</mot>
+						<mot>vive</mot>
+						<mot>longtemps.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="420.5157" end="422.5343"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Ja</mot>
+						<mot>chci</mot>
+						<mot>takoveho,</mot>
+						<mot>ktery</mot>
+						<mot>bude</mot>
+						<mot>dlouho</mot>
+						<mot>zit."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="422.5342" end="425.5125"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Alors,</mot>
+						<mot>faute</mot>
+						<mot>de</mot>
+						<mot>patience,</mot>
+						<mot>comme</mot>
+						<mot>j'avais</mot>
+						<mot>hate</mot>
+						<mot>de</mot>
+						<mot>commencer</mot>
+						<mot>le</mot>
+						<mot>démontage</mot>
+						<mot>de</mot>
+						<mot>mon</mot>
+						<mot>moteur,</mot>
+						<mot>je</mot>
+						<mot>griffonnai</mot>
+						<mot>ce</mot>
+						<mot>dessin-ci.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="425.5125" end="431.1380"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Et</mot>
+						<mot>je</mot>
+						<mot>lançai:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="431.1380" end="432.9911"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Uz</mot>
+						<mot>jsem</mot>
+						<mot>ztratil</mot>
+						<mot>trpelivost,</mot>
+						<mot>protoze</mot>
+						<mot>jsem</mot>
+						<mot>spechal,</mot>
+						<mot>abych</mot>
+						<mot>se</mot>
+						<mot>co</mot>
+						<mot>nejdriv</mot>
+						<mot>pustil</mot>
+						<mot>do</mot>
+						<mot>rozebirani</mot>
+						<mot>motoru,</mot>
+						<mot>nacaral</mot>
+						<mot>jsem</mot>
+						<mot>tuhle</mot>
+						<mot>kresbu:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="432.9910" end="441.6280"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>A</mot>
+						<mot>oznamil</mot>
+						<mot>jsem</mot>
+						<mot>mu:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="441.6279" end="443.1832"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-Ca</mot>
+						<mot>c'est</mot>
+						<mot>la</mot>
+						<mot>caisse.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="443.1831" end="444.9370"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"To</mot>
+						<mot>je</mot>
+						<mot>bedynka."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="444.9370" end="446.6908"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Le</mot>
+						<mot>mouton</mot>
+						<mot>que</mot>
+						<mot>tu</mot>
+						<mot>veux</mot>
+						<mot>est</mot>
+						<mot>dedans.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="446.6908" end="448.6432"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"A</mot>
+						<mot>tvuj</mot>
+						<mot>beranek</mot>
+						<mot>je</mot>
+						<mot>uvnitr."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="448.6432" end="450.3970"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Mais</mot>
+						<mot>je</mot>
+						<mot>fus</mot>
+						<mot>bien</mot>
+						<mot>surpris</mot>
+						<mot>de</mot>
+						<mot>voir</mot>
+						<mot>s'illuminer</mot>
+						<mot>le</mot>
+						<mot>visage</mot>
+						<mot>de</mot>
+						<mot>mon</mot>
+						<mot>jeune</mot>
+						<mot>juge:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="450.3969" end="454.2024"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Prekvapilo</mot>
+						<mot>me,</mot>
+						<mot>ze</mot>
+						<mot>se</mot>
+						<mot>oblicej</mot>
+						<mot>meho</mot>
+						<mot>maleho</mot>
+						<mot>soudce</mot>
+						<mot>rozjasnil.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="454.2024" end="459.0337"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="exclamative">
+					<traduction lang="francais">
+						<mot>-C'est</mot>
+						<mot>tout</mot>
+						<mot>à </mot>
+						<mot>fait</mot>
+						<mot>comme</mot>
+						<mot>ça</mot>
+						<mot>que</mot>
+						<mot>je</mot>
+						<mot>le</mot>
+						<mot>voulais!</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="459.0337" end="462.0781"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="exclamative">
+					<traduction lang="tcheque">
+						<mot>"Presne</mot>
+						<mot>tak</mot>
+						<mot>jsem</mot>
+						<mot>to</mot>
+						<mot>chtel."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="462.0781" end="463.9974"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="interrogative">
+					<traduction lang="francais">
+						<mot>Crois-tu</mot>
+						<mot>qu'il</mot>
+						<mot>faille</mot>
+						<mot>beaucoup</mot>
+						<mot>d'herbe</mot>
+						<mot>à </mot>
+						<mot>ce</mot>
+						<mot>mouton?</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="463.9974" end="466.2806"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="interrogative">
+					<traduction lang="tcheque">
+						<mot>"Myslis,</mot>
+						<mot>ze</mot>
+						<mot>ten</mot>
+						<mot>beranek</mot>
+						<mot>spotrebuje</mot>
+						<mot>hodne</mot>
+						<mot>travy?"</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="466.2805" end="469.2918"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="interrogative">
+					<traduction lang="francais">
+						<mot>-Pourquoi?</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="469.2434" end="470.4016"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="interrogative">
+					<traduction lang="tcheque">
+						<mot>"Proc?"</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="470.4016" end="471.2289"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-Parce</mot>
+						<mot>que</mot>
+						<mot>chez</mot>
+						<mot>moi</mot>
+						<mot>c'est</mot>
+						<mot>tout</mot>
+						<mot>petit...</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="471.1297" end="473.1483"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Protoze</mot>
+						<mot>u</mot>
+						<mot>mne</mot>
+						<mot>doma</mot>
+						<mot>je</mot>
+						<mot>vsechno</mot>
+						<mot>malinkate..."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="473.1483" end="475.8619"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-Ca</mot>
+						<mot>suffira</mot>
+						<mot>sà»rement.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="475.8619" end="477.3510"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Urcite</mot>
+						<mot>to</mot>
+						<mot>staci."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="477.3179" end="478.9394"></AUDIO></phrase>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Je</mot>
+						<mot>t'ai</mot>
+						<mot>donné</mot>
+						<mot>un</mot>
+						<mot>tout</mot>
+						<mot>petit</mot>
+						<mot>mouton.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="478.9394" end="480.7926"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Dal</mot>
+						<mot>jsem</mot>
+						<mot>ti</mot>
+						<mot>jen</mot>
+						<mot>maleho</mot>
+						<mot>beranka."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="480.8257" end="482.9105"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Il</mot>
+						<mot>pencha</mot>
+						<mot>la</mot>
+						<mot>tàªte</mot>
+						<mot>vers</mot>
+						<mot>le</mot>
+						<mot>dessin:</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="482.8774" end="484.9622"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Sklonil</mot>
+						<mot>se</mot>
+						<mot>nad</mot>
+						<mot>kresbu.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="484.9291" end="486.6829"></AUDIO></phrase>
+		</paragraphe>
+		<dialogue>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>-Pas</mot>
+						<mot>si</mot>
+						<mot>petit</mot>
+						<mot>que</mot>
+						<mot>ça...</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="486.7160" end="488.2052"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"No,</mot>
+						<mot>on</mot>
+						<mot>neni</mot>
+						<mot>zas</mot>
+						<mot>moc</mot>
+						<mot>maly..."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="488.2052" end="491.2496"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Tiens!</mot>
+						<mot>Il</mot>
+						<mot>s'est</mot>
+						<mot>endormi...</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="491.2496" end="492.7719"></AUDIO></phrase>
+			<phrase loc="LePetitPrince">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>"Je,</mot>
+						<mot>podivej,</mot>
+						<mot>on</mot>
+						<mot>usnul..."</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="492.7388" end="494.7243"></AUDIO></phrase>
+		</dialogue>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="francais">
+						<mot>Et</mot>
+						<mot>c'est</mot>
+						<mot>ainsi</mot>
+						<mot>que</mot>
+						<mot>je</mot>
+						<mot>fis</mot>
+						<mot>la</mot>
+						<mot>connaissance</mot>
+						<mot>du</mot>
+						<mot>petit</mot>
+						<mot>prince.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="494.6581" end="497.8019"></AUDIO></phrase>
+		</paragraphe>
+		<paragraphe>
+			<phrase loc="narrateur">
+				<modalite type="declarative">
+					<traduction lang="tcheque">
+						<mot>Tak</mot>
+						<mot>jsem</mot>
+						<mot>se</mot>
+						<mot>seznamil</mot>
+						<mot>s</mot>
+						<mot>malym</mot>
+						<mot>princem.</mot>
+					</traduction>
+				</modalite>
+			<AUDIO start="497.8019" end="500.9125"></AUDIO></phrase>
+		</paragraphe>
+	</corps>
+<image><image chemin="mouton.gif"></image></image>
+</texte>
+

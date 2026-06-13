@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE contacts SYSTEM "usthb.dtd">
+<contacts>
+	<personne>
+		<nom>Chazalon</nom>
+		<prenom>Grégory</prenom>
+		<dateDeNaissance>1977-07-09</dateDeNaissance>
+		<adresse pays="France"/>
+		<email>gchazalon@voila.fr</email>
+		<telephone>01 23 45 67 89</telephone>
+	</personne>
+	<personne>
+		<nom>Lemoine</nom>
+		<prenom>Joséphine</prenom>
+		<dateDeNaissance>1977-01-06</dateDeNaissance>
+		<adresse pays="France"/>
+		<email>joe6@voila.fr</email>
+	</personne>
+</contacts>
+

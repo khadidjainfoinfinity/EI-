@@ -1,0 +1,10 @@
+<livre>
+	<chapitre>
+		<titre>Chapitre 1</titre>
+		<texte>Ce chapitre.</texte>
+	</chapitre>
+	<chapitre>
+		<titre>Chapitre 2</titre>
+		<texte>Ce chapitre.<chapitre>Chapitre 3 </chapitre></texte>
+	</chapitre>
+</livre>

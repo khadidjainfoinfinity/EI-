@@ -1,0 +1,1392 @@
+<?xml version="1.0"?>
+<arbres>
+  <arbre id="6">
+    <genre>Maclura</genre>
+    <espece>Pomifera</espece>
+    <famille>Moraceae</famille>
+    <nom_commun>Oranger des osages</nom_commun>
+    <annee>1935</annee>
+    <hauteur>13.0</hauteur>
+    <lieu>
+      <geopoint lat="48.857140829" lon="2.29533455314" />
+      <nom>Parc du Champ de Mars</nom>
+      <adresse arrondissement="7">Quai branly, avenue de la motte-piquet, avenue de la bourdonnais, avenue de suffren</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="11">
+    <genre>Calocedrus</genre>
+    <espece>Decurrens</espece>
+    <famille>Cupressaceae</famille>
+    <nom_commun>Cedre a encens</nom_commun>
+    <annee>1854</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>195.0</circonference>
+    <lieu>
+      <geopoint lat="48.8685686134" lon="2.31331809304" />
+      <nom>Jardin des Champs Elysees</nom>
+      <adresse arrondissement="8">Cours-la-reine, avenue franklin-d.-roosevelt, avenue matignon, avenue gabriel</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="14">
+    <genre>Pterocarya</genre>
+    <espece>Fraxinifolia</espece>
+    <famille>Juglandaceae</famille>
+    <nom_commun>Perocarya du caucase</nom_commun>
+    <annee>1862</annee>
+    <hauteur>22.0</hauteur>
+    <circonference>330.0</circonference>
+    <lieu>
+      <geopoint lat="48.8768191638" lon="2.33210374339" />
+      <nom>Square etienne d'orves</nom>
+      <adresse arrondissement="9">Place d'estienne-d'orves</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="16">
+    <genre>Celtis</genre>
+    <espece>Australis</espece>
+    <famille>Cannabaceae</famille>
+    <nom_commun>Micocoulier de provence</nom_commun>
+    <annee>1906</annee>
+    <hauteur>16.0</hauteur>
+    <circonference>295.0</circonference>
+    <lieu>
+      <geopoint lat="48.8373323894" lon="2.40776275516" />
+      <nom>Avenue 27 boulevard soult</nom>
+      <adresse arrondissement="12">27, boulevard soult</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="19">
+    <genre>Quercus</genre>
+    <espece>Petraea</espece>
+    <famille>Fagaceae</famille>
+    <nom_commun>Chene rouvre</nom_commun>
+    <annee>1784</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>430.0</circonference>
+    <lieu>
+      <geopoint lat="48.8341842636" lon="2.46130493573" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Lac des minimes</nom_precis>
+      <adresse arrondissement="12">Route ronde des minimes</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="21">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1860</annee>
+    <hauteur>45.0</hauteur>
+    <circonference>405.0</circonference>
+    <lieu>
+      <geopoint lat="48.8325900983" lon="2.41116455985" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Ile de Bercy</nom_precis>
+      <adresse arrondissement="12">Ile de Bercy</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="26">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1840</annee>
+    <hauteur>40.0</hauteur>
+    <circonference>580.0</circonference>
+    <lieu>
+      <geopoint lat="48.8226749117" lon="2.33869560229" />
+      <nom>Parc Montsouris</nom>
+      <adresse arrondissement="14">Bd jourdan, avenue reille, rue gazan, rue de la cite,-universitaire, rue nansouty</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="28">
+    <genre>Alnus</genre>
+    <espece>Glutinosa</espece>
+    <famille>Betulaceae</famille>
+    <nom_commun>Aulne glutineux</nom_commun>
+    <annee>1933</annee>
+    <hauteur>16.0</hauteur>
+    <circonference>220.0</circonference>
+    <lieu>
+      <geopoint lat="48.8428118006" lon="2.2972574926" />
+      <nom>Square saint lambert</nom>
+      <adresse arrondissement="15">Rue theophraste-renaudot, rue leon-lhermitte, rue jean formig,, rue du docteur jacquem</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="30">
+    <genre>Aesculus</genre>
+    <espece>Hippocastanum</espece>
+    <famille>Sapindaceae</famille>
+    <nom_commun>Marronnier d'inde</nom_commun>
+    <hauteur>30.0</hauteur>
+    <circonference>505.0</circonference>
+    <lieu>
+      <geopoint lat="48.8717782491" lon="2.27973325759" />
+      <nom>Avenue Foch</nom>
+      <adresse arrondissement="16">Avenue Foch</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="46">
+    <genre>Ginkgo</genre>
+    <espece>Biloba</espece>
+    <famille>Ginkgoaceae</famille>
+    <nom_commun>Arbre aux quarante ecus</nom_commun>
+    <annee>1913</annee>
+    <hauteur>33.0</hauteur>
+    <circonference>230.0</circonference>
+    <lieu>
+      <geopoint lat="48.8802898189" lon="2.38157469859" />
+      <nom>Parc des Buttes Chaumont</nom>
+      <adresse arrondissement="19">Rue manin, rue botzaris</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="52">
+    <genre>Fraxinus</genre>
+    <espece>Excelsior</espece>
+    <famille>Oleaceae</famille>
+    <nom_commun>Frene commun</nom_commun>
+    <hauteur>30.0</hauteur>
+    <circonference>365.0</circonference>
+    <lieu>
+      <geopoint lat="48.8820015094" lon="2.39836942721" />
+      <nom>Square de la butte du chapeau rouge</nom>
+      <adresse arrondissement="19">Boulevard d'algerie</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="53">
+    <genre>Ailanthus</genre>
+    <espece>Giraldii</espece>
+    <famille>Simaroubaceae</famille>
+    <nom_commun>Ailanthe</nom_commun>
+    <hauteur>35.0</hauteur>
+    <circonference>460.0</circonference>
+    <lieu>
+      <geopoint lat="48.846044762" lon="2.2529555706" />
+      <nom>Jardin des serres d'Auteuil</nom>
+      <adresse arrondissement="16">3 avenue de la porte d'Auteuil, 1 avenue gordon benett</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="56">
+    <genre>Taxodium</genre>
+    <espece>Distichum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Cypres chauve</nom_commun>
+    <annee>1862</annee>
+    <hauteur>35.0</hauteur>
+    <circonference>350.0</circonference>
+    <lieu>
+      <geopoint lat="48.8606198209" lon="2.2599223737" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>berge du lac inferieur</nom_precis>
+      <adresse arrondissement="16">Berge du lac inferieur</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="58">
+    <genre>Diospyros</genre>
+    <espece>Kaki</espece>
+    <famille>Ebenaceae</famille>
+    <nom_commun>Kaki</nom_commun>
+    <hauteur>12.0</hauteur>
+    <circonference>160.0</circonference>
+    <lieu>
+      <geopoint lat="48.8232165418" lon="2.46016871078" />
+      <nom>Arboretum de l'Ecole du Breuil</nom>
+      <adresse arrondissement="12">Route de la ferme, route de la pyramide</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="59">
+    <genre>Sequoiadendron</genre>
+    <espece>Giganteum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Sequoia geant</nom_commun>
+    <annee>1850</annee>
+    <hauteur>30.0</hauteur>
+    <lieu>
+      <geopoint lat="48.8764503804" lon="2.25765244347" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>portes saint james</nom_precis>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="61">
+    <genre>Gymnocladus</genre>
+    <espece>Dioicus</espece>
+    <famille>Fabaceae</famille>
+    <nom_commun>Chicot du canada</nom_commun>
+    <hauteur>10.0</hauteur>
+    <circonference>162.0</circonference>
+    <lieu>
+      <geopoint lat="48.8691485018" lon="2.27224125103" />
+      <nom>Square schumann</nom>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="63">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Pendula</variete>
+    <nom_commun>Hetre pleureur</nom_commun>
+    <annee>1857</annee>
+    <hauteur>10.0</hauteur>
+    <circonference>200.0</circonference>
+    <lieu>
+      <geopoint lat="48.8615768444" lon="2.25902702441" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>petite ile du lac inferieur</nom_precis>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="65">
+    <genre>Pterocarya</genre>
+    <espece>Fraxinifolia</espece>
+    <famille>Juglandaceae</famille>
+    <nom_commun>Perocarya du caucase</nom_commun>
+    <annee>1882</annee>
+    <hauteur>27.0</hauteur>
+    <circonference>400.0</circonference>
+    <lieu>
+      <geopoint lat="48.8633555664" lon="2.26174532022" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>berge du lac inferieur</nom_precis>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="67">
+    <genre>Sequoiadendron</genre>
+    <espece>Giganteum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Sequoia geant</nom_commun>
+    <annee>1872</annee>
+    <circonference>655.0</circonference>
+    <lieu>
+      <geopoint lat="48.8646024472" lon="2.25171449183" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>pre catelan</nom_precis>
+      <adresse arrondissement="16">Route de la grande cascade, carrefour de la croix catelan</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="69">
+    <genre>Pinus</genre>
+    <espece>Nigra</espece>
+    <famille>Pinaceae</famille>
+    <nom_commun>Pin noir</nom_commun>
+    <hauteur>30.0</hauteur>
+    <circonference>250.0</circonference>
+    <lieu>
+      <geopoint lat="48.865022534" lon="2.2538285063" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>pre catelan</nom_precis>
+      <adresse arrondissement="16">Route de la grande cascade, carrefour de la croix catelan</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="73">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1843</annee>
+    <hauteur>26.0</hauteur>
+    <circonference>340.0</circonference>
+    <lieu>
+      <geopoint lat="48.8704017043" lon="2.24852577475" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>Bagatelle</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, route de sevres a neuilly</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="83">
+    <genre>Zelkova</genre>
+    <espece>Serrata</espece>
+    <famille>Ulmaceae</famille>
+    <nom_commun>Zelkova du japon</nom_commun>
+    <annee>1872</annee>
+    <hauteur>18.0</hauteur>
+    <circonference>240.0</circonference>
+    <lieu>
+      <geopoint lat="48.8347628794" lon="2.42029690936" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>ecole chiens guide d'aveugle</nom_precis>
+      <adresse arrondissement="12" />
+    </lieu>
+  </arbre>
+  <arbre id="85">
+    <genre>Juglans</genre>
+    <espece>Nigra</espece>
+    <famille>Juglandaceae</famille>
+    <nom_commun>Noyer noir</nom_commun>
+    <annee>1845</annee>
+    <hauteur>28.0</hauteur>
+    <circonference>570.0</circonference>
+    <lieu>
+      <geopoint lat="48.8333849101" lon="2.41261756721" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>lac daumesnil/porte doree</nom_precis>
+      <adresse arrondissement="12">Route de la ceinture du lac daumesnil</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="87">
+    <genre>Taxodium</genre>
+    <espece>Distichum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Cypres chauve</nom_commun>
+    <annee>1930</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>270.0</circonference>
+    <lieu>
+      <geopoint lat="48.8324049718" lon="2.41169855654" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Ile de Bercy</nom_precis>
+      <adresse arrondissement="12">Ile de Bercy</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="95">
+    <genre>Pinus</genre>
+    <espece>Bungeana</espece>
+    <famille>Pinaceae</famille>
+    <nom_commun>Pin napoleon</nom_commun>
+    <hauteur>10.0</hauteur>
+    <circonference>50.0</circonference>
+    <lieu>
+      <geopoint lat="48.8213214388" lon="2.45537251962" />
+      <nom>Arboretum de l'Ecole du Breuil</nom>
+      <adresse arrondissement="12">Route de la ferme, route de la pyramide</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="97">
+    <genre>Pinus</genre>
+    <espece>Nigra</espece>
+    <famille>Pinaceae</famille>
+    <variete>Austriaca</variete>
+    <nom_commun>Pin noir</nom_commun>
+    <annee>1870</annee>
+    <hauteur>25.0</hauteur>
+    <circonference>248.0</circonference>
+    <lieu>
+      <geopoint lat="48.8204495642" lon="2.44579219199" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>lac de gravelle</nom_precis>
+      <adresse arrondissement="12">Route de la tourelle, route du point de vue</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="4">
+    <genre>Robinia</genre>
+    <espece>Pseudoacacia</espece>
+    <famille>Fabaceae</famille>
+    <nom_commun>Robinier faux-acacia</nom_commun>
+    <annee>1601</annee>
+    <hauteur>11.0</hauteur>
+    <circonference>385.0</circonference>
+    <lieu>
+      <geopoint lat="48.8520958913" lon="2.34740754195" />
+      <nom>Square viviani</nom>
+      <adresse arrondissement="5">Quai de montebello, rue lagrange, rue saint-julien-le-pauvre</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="7">
+    <genre>Eucommia</genre>
+    <espece>Ulmoides</espece>
+    <famille>Eucomiaceae</famille>
+    <nom_commun>Arbre a gutta-percha</nom_commun>
+    <hauteur>12.0</hauteur>
+    <circonference>190.0</circonference>
+    <lieu>
+      <geopoint lat="48.8578717375" lon="2.29706549763" />
+      <nom>Parc du Champ de Mars</nom>
+      <adresse arrondissement="7">Quai branly, avenue de la motte-piquet, avenue de la bourdonnais, avenue de suffren</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="10">
+    <genre>Ginkgo</genre>
+    <espece>Biloba</espece>
+    <famille>Ginkgoaceae</famille>
+    <nom_commun>Arbre aux quarante ecus</nom_commun>
+    <annee>1879</annee>
+    <hauteur>22.0</hauteur>
+    <circonference>283.0</circonference>
+    <lieu>
+      <geopoint lat="48.8792159582" lon="2.30640768208" />
+      <nom>Parc Monceau</nom>
+      <adresse arrondissement="8">Boulevard de courcelles, avenue v,lasquez, avenue van-dyck, avenue ruysdael</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="12">
+    <genre>Sequoiadendron</genre>
+    <espece>Giganteum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Sequoia geant</nom_commun>
+    <annee>1850</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>320.0</circonference>
+    <lieu>
+      <geopoint lat="48.8669690843" lon="2.31951408752" />
+      <nom>Jardin des Champs Elysees</nom>
+      <adresse arrondissement="8">Cours-la-reine, avenue franklin-d.-roosevelt, avenue matignon, avenue gabriel</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="17">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <hauteur>35.0</hauteur>
+    <circonference>510.0</circonference>
+    <lieu>
+      <geopoint lat="48.8353848188" lon="2.38157245444" />
+      <nom>Parc de Bercy</nom>
+      <adresse arrondissement="12">Rue paul-belmondo, rue joseph-kessel, rue de l'ambroise, rue francois-truffaut</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="23">
+    <genre>Aesculus</genre>
+    <espece>Hippocastanum</espece>
+    <famille>Sapindaceae</famille>
+    <nom_commun>Marronnier d'inde</nom_commun>
+    <annee>1894</annee>
+    <hauteur>18.0</hauteur>
+    <circonference>355.0</circonference>
+    <lieu>
+      <geopoint lat="48.8330496955" lon="2.35078878768" />
+      <nom>Square rene le gall</nom>
+      <adresse arrondissement="13">Rue croulebarbe, rue corvisart, rue emile-deslandres, rue des cordelieres</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="25">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Purpurea</variete>
+    <nom_commun>Hetre pourpre</nom_commun>
+    <hauteur>30.0</hauteur>
+    <circonference>370.0</circonference>
+    <lieu>
+      <geopoint lat="48.8224956954" lon="2.3366608746" />
+      <nom>Parc Montsouris</nom>
+      <adresse arrondissement="14">Bd jourdan, avenue reille, rue gazan, rue de la cite,-universitaire, rue nansouty</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="27">
+    <genre>Sequoia</genre>
+    <espece>Sempervirens</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Sequoia sempervirent</nom_commun>
+    <annee>1935</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>335.0</circonference>
+    <lieu>
+      <geopoint lat="48.8220238534" lon="2.33628540112" />
+      <nom>Parc Montsouris</nom>
+      <adresse arrondissement="14">Bd jourdan, avenue reille, rue gazan, rue de la cite,-universitaire, rue nansouty</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="44">
+    <genre>Styphnolobium</genre>
+    <espece>Japonicum</espece>
+    <famille>Fabaceae</famille>
+    <nom_commun>Sophora du japon</nom_commun>
+    <annee>1873</annee>
+    <hauteur>10.0</hauteur>
+    <circonference>335.0</circonference>
+    <lieu>
+      <geopoint lat="48.8814628758" lon="2.38367383179" />
+      <nom>Parc des Buttes Chaumont</nom>
+      <adresse arrondissement="19">Rue manin, rue botzaris</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="45">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1862</annee>
+    <hauteur>34.0</hauteur>
+    <circonference>670.0</circonference>
+    <lieu>
+      <geopoint lat="48.8803986732" lon="2.38129958306" />
+      <nom>Parc des Buttes Chaumont</nom>
+      <adresse arrondissement="19">Rue manin, rue botzaris</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="48">
+    <genre>Acer</genre>
+    <espece>Monspessulanum</espece>
+    <famille>Sapindacaees</famille>
+    <nom_commun>Erable de montpellier</nom_commun>
+    <annee>1833</annee>
+    <hauteur>12.0</hauteur>
+    <circonference>225.0</circonference>
+    <lieu>
+      <geopoint lat="48.8619346483" lon="2.39870061217" />
+      <nom>Cimetiere du Pere Lachaise</nom>
+      <adresse arrondissement="20">Rue du repos, rue des rondeaux</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="57">
+    <genre>Sequoiadendron</genre>
+    <espece>Giganteum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Sequoia geant</nom_commun>
+    <hauteur>35.0</hauteur>
+    <circonference>470.0</circonference>
+    <lieu>
+      <geopoint lat="48.879759998" lon="2.38064802989" />
+      <nom>Parc des Buttes Chaumont</nom>
+      <adresse arrondissement="19">Rue manin, rue botzaris</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="60">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Purpurea</variete>
+    <nom_commun>Hetre pourpre</nom_commun>
+    <hauteur>18.0</hauteur>
+    <circonference>300.0</circonference>
+    <lieu>
+      <geopoint lat="48.8640166469" lon="2.26774597209" />
+      <nom>Stade muette</nom>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="68">
+    <genre>Diospyros</genre>
+    <espece>Kaki</espece>
+    <famille>Ebenaceae</famille>
+    <nom_commun>Kaki</nom_commun>
+    <annee>1897</annee>
+    <hauteur>14.0</hauteur>
+    <circonference>145.0</circonference>
+    <lieu>
+      <geopoint lat="48.8647824278" lon="2.25120424857" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>pre catelan</nom_precis>
+      <adresse arrondissement="16">Route de la grande cascade, carrefour de la croix catelan</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="72">
+    <genre>Sequoiadendron</genre>
+    <espece>Giganteum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Sequoia geant</nom_commun>
+    <annee>1850</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>490.0</circonference>
+    <lieu>
+      <geopoint lat="48.8693939056" lon="2.24776773334" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>Bagatelle</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, route de sevres a neuilly</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="74">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1872</annee>
+    <hauteur>40.0</hauteur>
+    <circonference>520.0</circonference>
+    <lieu>
+      <geopoint lat="48.867043584" lon="2.25320074406" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>route du lac a Bagatelle</nom_precis>
+      <adresse arrondissement="16">Route du lac a Bagatelle</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="76">
+    <genre>Pinus</genre>
+    <espece>Nigra laricio</espece>
+    <famille>Pinaceae</famille>
+    <nom_commun>Pin de corse</nom_commun>
+    <annee>1882</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>240.0</circonference>
+    <lieu>
+      <geopoint lat="48.8630909172" lon="2.24159242682" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>reservoir de la cascade</nom_precis>
+      <adresse arrondissement="16">All,e de Longchamp, carrefour des cascades</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="77">
+    <genre>Taxodium</genre>
+    <espece>Distichum</espece>
+    <famille>Taxodiaceae</famille>
+    <nom_commun>Cypres chauve</nom_commun>
+    <annee>1859</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>290.0</circonference>
+    <lieu>
+      <geopoint lat="48.8632834941" lon="2.24066981564" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>grande cascade</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, carrefour des cascades</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="78">
+    <genre>Acer</genre>
+    <espece>Cappadocicum</espece>
+    <famille>Sapindaceae</famille>
+    <nom_commun>Erable de cappadoce</nom_commun>
+    <annee>1900</annee>
+    <hauteur>16.0</hauteur>
+    <circonference>280.0</circonference>
+    <lieu>
+      <geopoint lat="48.8400020891" lon="2.46422657197" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>pelouse de fontenay</nom_precis>
+      <adresse arrondissement="12">Avenue de la belle gabrielle</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="81">
+    <genre>Liriodendron</genre>
+    <espece>Tulipifera</espece>
+    <famille>Magnoliaceae</famille>
+    <nom_commun>Tulipier de virginie</nom_commun>
+    <annee>1862</annee>
+    <hauteur>35.0</hauteur>
+    <circonference>305.0</circonference>
+    <lieu>
+      <geopoint lat="48.8394165343" lon="2.43360205128" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>square carnot</nom_precis>
+      <adresse arrondissement="12">Avenue daumesnil, esplanade du chateau de Vincennes</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="88">
+    <genre>Liriodendron</genre>
+    <espece>Tulipifera</espece>
+    <famille>Magnoliaceae</famille>
+    <nom_commun>Tulipier de virginie</nom_commun>
+    <annee>1930</annee>
+    <hauteur>22.0</hauteur>
+    <circonference>205.0</circonference>
+    <lieu>
+      <geopoint lat="48.8319232533" lon="2.41202933239" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Ile de Bercy</nom_precis>
+      <adresse arrondissement="12">Ile de Bercy</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="89">
+    <genre>Taxus</genre>
+    <espece>Baccata</espece>
+    <famille>Taxaceae</famille>
+    <nom_commun>If commun</nom_commun>
+    <annee>1870</annee>
+    <hauteur>5.0</hauteur>
+    <circonference>140.0</circonference>
+    <lieu>
+      <geopoint lat="48.8320684332" lon="2.41182825531" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Ile de Bercy</nom_precis>
+      <adresse arrondissement="12">Ile de Bercy</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="92">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1871</annee>
+    <hauteur>25.0</hauteur>
+    <circonference>490.0</circonference>
+    <lieu>
+      <geopoint lat="48.8292071873" lon="2.41301158121" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>lac daumesnil</nom_precis>
+      <adresse arrondissement="12">Route de la ceinture du lac daumesnil</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="94">
+    <genre>Diospyros</genre>
+    <espece>Virginiana</espece>
+    <famille>Ebenaceae</famille>
+    <nom_commun>Plaqueminier de virginie</nom_commun>
+    <annee>1875</annee>
+    <hauteur>14.0</hauteur>
+    <circonference>180.0</circonference>
+    <lieu>
+      <geopoint lat="48.8400754064" lon="2.43381509843" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>square carnot</nom_precis>
+      <adresse arrondissement="12">Avenue daumesnil, esplanade du chateau de Vincennes</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="98">
+    <genre>Quercus</genre>
+    <espece>Ilex</espece>
+    <famille>Fagaceae</famille>
+    <nom_commun>Chene vert</nom_commun>
+    <annee>1860</annee>
+    <hauteur>15.0</hauteur>
+    <lieu>
+      <geopoint lat="48.8183933679" lon="2.43791766754" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>pente de gravelle</nom_precis>
+      <adresse arrondissement="12">Route de gravelle, route du mar,chal leclercsaint maurice</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="2">
+    <genre>Ulmus</genre>
+    <espece>Carpinifolia</espece>
+    <famille>Ulmaceae</famille>
+    <nom_commun>Orme champetre</nom_commun>
+    <annee>1935</annee>
+    <hauteur>15.0</hauteur>
+    <circonference>180.0</circonference>
+    <lieu>
+      <geopoint lat="48.8557581795" lon="2.35399582218" />
+      <nom>Place saint gervais</nom>
+      <adresse arrondissement="4">Place st gervais</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="3">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Tortuosa</variete>
+    <nom_commun>Faux de verzy</nom_commun>
+    <annee>1905</annee>
+    <hauteur>2.0</hauteur>
+    <circonference>72.0</circonference>
+    <lieu>
+      <geopoint lat="48.8453050031" lon="2.35307565328" />
+      <nom>Square des arenes de lutece</nom>
+      <adresse arrondissement="5">Rue des arenes, rue de navarre, rue monge</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="15">
+    <genre>Corylus</genre>
+    <espece>Colurna</espece>
+    <famille>Betulaceae</famille>
+    <nom_commun>Noisetier de byzance</nom_commun>
+    <annee>1879</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>245.0</circonference>
+    <lieu>
+      <geopoint lat="48.8618464812" lon="2.37910176561" />
+      <nom>Square maurice gardette</nom>
+      <adresse arrondissement="11">Rue lacharriere, rue rochebrune, rue du general-guilhem, rue du general-blaise</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="18">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Purpurea</variete>
+    <nom_commun>Hetre pourpre</nom_commun>
+    <annee>1895</annee>
+    <hauteur>23.0</hauteur>
+    <circonference>370.0</circonference>
+    <lieu>
+      <geopoint lat="48.8420426954" lon="2.43848438671" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>cours marigny</nom_precis>
+      <adresse arrondissement="12">Cours marigny</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="22">
+    <genre>Cedrus</genre>
+    <espece>Libanii</espece>
+    <famille>Pinaceae</famille>
+    <nom_commun>Cedre du liban</nom_commun>
+    <annee>1829</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>440.0</circonference>
+    <lieu>
+      <geopoint lat="48.8201249835" lon="2.44524393613" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>lac de gravelle</nom_precis>
+      <adresse arrondissement="12">Route de la tourelle, route du point de vue</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="32">
+    <genre>Quercus</genre>
+    <espece>Suber</espece>
+    <famille>Fagaceae</famille>
+    <nom_commun>Chene liege</nom_commun>
+    <annee>1895</annee>
+    <hauteur>10.0</hauteur>
+    <circonference>180.0</circonference>
+    <lieu>
+      <geopoint lat="48.8471789821" lon="2.25293802515" />
+      <nom>Jardin des serres d'Auteuil</nom>
+      <adresse arrondissement="16">3 avenue de la porte d'Auteuil, 1 avenue gordon benett</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="33">
+    <genre>Broussonetia</genre>
+    <espece>Papyrifera</espece>
+    <famille>Moraceae</famille>
+    <nom_commun>Murier a papier</nom_commun>
+    <hauteur>12.0</hauteur>
+    <circonference>190.0</circonference>
+    <lieu>
+      <geopoint lat="48.8450859307" lon="2.26948936839" />
+      <nom>Parc sainte perinne</nom>
+      <adresse arrondissement="16">Rue mirabeau, avenue de versailles</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="37">
+    <genre>Cedrus</genre>
+    <espece>Libanii</espece>
+    <famille>Pinaceae</famille>
+    <nom_commun>Cedre du liban</nom_commun>
+    <annee>1862</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>460.0</circonference>
+    <lieu>
+      <geopoint lat="48.8634848878" lon="2.2403752961" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>reservoir de la grande cascade</nom_precis>
+      <adresse arrondissement="16">All,e de Longchamp, carrefour des cascades</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="42">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1857</annee>
+    <hauteur>27.0</hauteur>
+    <circonference>470.0</circonference>
+    <lieu>
+      <geopoint lat="48.8845880534" lon="2.34391859224" />
+      <nom>Square Louise Michel</nom>
+      <adresse arrondissement="18">Place saint-pierre, rue ronsard, rue paul-albert, rue maurice utrillo</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="43">
+    <genre>Tilia</genre>
+    <espece>Tomentosa</espece>
+    <famille>Malvaceae</famille>
+    <nom_commun>Tilleul argente</nom_commun>
+    <annee>1945</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>205.0</circonference>
+    <lieu>
+      <geopoint lat="48.8830346813" lon="2.37007425143" />
+      <nom>Place de la bataille de stalingrad</nom>
+      <adresse arrondissement="19">Place stalingrad</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="51">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1880</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>395.0</circonference>
+    <lieu>
+      <geopoint lat="48.85646631" lon="2.39469777758" />
+      <nom>Alignement 148 boulevard de charonne</nom>
+      <adresse arrondissement="20">148 boulevard de charonne</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="54">
+    <genre>Pterocarya</genre>
+    <espece>Stenoptera</espece>
+    <famille>Juglandaceae</famille>
+    <nom_commun>Pterocarya de chine</nom_commun>
+    <annee>1905</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>530.0</circonference>
+    <lieu>
+      <geopoint lat="48.8471653404" lon="2.25199572129" />
+      <nom>Jardin des serres d'Auteuil</nom>
+      <adresse arrondissement="16">3 avenue de la porte d'Auteuil, 1 avenue gordon benett</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="62">
+    <genre>Cedrus</genre>
+    <espece>Atlantica</espece>
+    <famille>Pinaceae</famille>
+    <variete>Glauca pendula</variete>
+    <nom_commun>Cedre bleu de l'atlas ple</nom_commun>
+    <hauteur>6.0</hauteur>
+    <circonference>195.0</circonference>
+    <lieu>
+      <geopoint lat="48.867221687" lon="2.27027693483" />
+      <nom>Square debussy</nom>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="70">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Pendula</variete>
+    <nom_commun>Hetre pleureur</nom_commun>
+    <annee>1868</annee>
+    <hauteur>15.0</hauteur>
+    <circonference>230.0</circonference>
+    <lieu>
+      <geopoint lat="48.8731203887" lon="2.24884917245" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>Bagatelle</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, route de sevres a neuilly</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="71">
+    <genre>Davidia</genre>
+    <espece>Involucrata</espece>
+    <famille>Cornaceae</famille>
+    <nom_commun>Arbre aux pochettes</nom_commun>
+    <annee>1906</annee>
+    <hauteur>12.0</hauteur>
+    <circonference>120.0</circonference>
+    <lieu>
+      <geopoint lat="48.8732545226" lon="2.24886543775" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>Bagatelle</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, route de sevres a neuilly</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="80">
+    <genre>Quercus</genre>
+    <espece>Petraea</espece>
+    <famille>Fagaceae</famille>
+    <nom_commun>Chene rouvre</nom_commun>
+    <annee>1815</annee>
+    <hauteur>31.0</hauteur>
+    <circonference>450.0</circonference>
+    <lieu>
+      <geopoint lat="48.8433252639" lon="2.4497117757" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>fort neuf</nom_precis>
+      <adresse arrondissement="12" />
+    </lieu>
+  </arbre>
+  <arbre id="90">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1860</annee>
+    <hauteur>42.0</hauteur>
+    <circonference>405.0</circonference>
+    <lieu>
+      <geopoint lat="48.8323806372" lon="2.41052012477" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Ile de Bercy</nom_precis>
+      <adresse arrondissement="12">Ile de Bercy</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="93">
+    <genre>Diospyros</genre>
+    <espece>Virginiana</espece>
+    <famille>Ebenaceae</famille>
+    <nom_commun>Plaqueminier de virginie</nom_commun>
+    <annee>1935</annee>
+    <hauteur>12.0</hauteur>
+    <lieu>
+      <geopoint lat="48.8314334738" lon="2.4115101993" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Ile de Bercy</nom_precis>
+      <adresse arrondissement="12">Ile de Bercy</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="96">
+    <genre>Pinus</genre>
+    <espece>Coulteri</espece>
+    <famille>Pinaceae</famille>
+    <nom_commun>Pin aux grands cones</nom_commun>
+    <hauteur>14.0</hauteur>
+    <circonference>225.0</circonference>
+    <lieu>
+      <geopoint lat="48.8210086122" lon="2.45551492936" />
+      <nom>Arboretum de l'Ecole du Breuil</nom>
+      <adresse arrondissement="12">Route de la ferme, route de la pyramide</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="9">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1814</annee>
+    <hauteur>31.0</hauteur>
+    <circonference>700.0</circonference>
+    <lieu>
+      <geopoint lat="48.8785456147" lon="2.30757576047" />
+      <nom>Parc Monceau</nom>
+      <adresse arrondissement="8">Boulevard de courcelles, avenue v,lasquez, avenue van-dyck, avenue ruysdael</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="13">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1900</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>480.0</circonference>
+    <lieu>
+      <geopoint lat="48.8652536076" lon="2.31333976248" />
+      <nom>Jardin des Champs Elysees</nom>
+      <adresse arrondissement="8">Cours-la-reine, avenue franklin-d.-roosevelt, avenue matignon, avenue gabriel</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="31">
+    <genre>Ginkgo</genre>
+    <espece>Biloba</espece>
+    <famille>Ginkgoaceae</famille>
+    <nom_commun>Arbre aux quarante ecus</nom_commun>
+    <annee>1895</annee>
+    <hauteur>25.0</hauteur>
+    <circonference>395.0</circonference>
+    <lieu>
+      <geopoint lat="48.8476260928" lon="2.25278179131" />
+      <nom>Jardin des serres d'Auteuil</nom>
+      <adresse arrondissement="16">3 avenue de la porte d'Auteuil, 1 avenue gordon benett</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="34">
+    <genre>Corylus</genre>
+    <espece>Colurna</espece>
+    <famille>Betulaceae</famille>
+    <nom_commun>Noisetier de byzance</nom_commun>
+    <hauteur>20.0</hauteur>
+    <circonference>260.0</circonference>
+    <lieu>
+      <geopoint lat="" lon="" />
+      <nom>Jardin du Trocadero</nom>
+      <adresse arrondissement="16">Place du Trocadero et du 11 novembre, rue benjamin franklin, avenue albert de mun</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="36">
+    <genre>Taxus</genre>
+    <espece>Baccata</espece>
+    <famille>Taxaceae</famille>
+    <nom_commun>If commun</nom_commun>
+    <annee>1772</annee>
+    <hauteur>13.0</hauteur>
+    <circonference>235.0</circonference>
+    <lieu>
+      <geopoint lat="48.8708601366" lon="2.24769299518" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>Bagatelle</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, route de sevres a neuilly</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="38">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Purpurea</variete>
+    <nom_commun>Hetre pourpre</nom_commun>
+    <annee>1782</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>558.0</circonference>
+    <lieu>
+      <geopoint lat="48.8646850734" lon="2.25360607406" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>pre catelan</nom_precis>
+      <adresse arrondissement="16">Route de la grande cascade, carrefour de la croix catelan</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="41">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1840</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>595.0</circonference>
+    <lieu>
+      <geopoint lat="48.8880577555" lon="2.31595908796" />
+      <nom>Square des batignolles</nom>
+      <adresse arrondissement="17">Place charles filion, rue cardinet</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="47">
+    <genre>Aesculus</genre>
+    <espece>Hippocastanum</espece>
+    <famille>Sapindaceae</famille>
+    <nom_commun>Marronnier d'inde</nom_commun>
+    <hauteur>22.0</hauteur>
+    <circonference>345.0</circonference>
+    <lieu>
+      <geopoint lat="48.8597396934" lon="2.39997847741" />
+      <nom>Cimetiere du Pere Lachaise</nom>
+      <adresse arrondissement="20">Rue du repos, rue des rondeaux</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="64">
+    <genre>Ginkgo</genre>
+    <espece>Biloba</espece>
+    <famille>Ginkgoaceae</famille>
+    <nom_commun>Arbre aux quarante ecus</nom_commun>
+    <annee>1893</annee>
+    <hauteur>18.0</hauteur>
+    <circonference>215.0</circonference>
+    <lieu>
+      <geopoint lat="48.8622517606" lon="2.26098883991" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>berge du lac inferieur</nom_precis>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="84">
+    <genre>Ginkgo</genre>
+    <espece>Biloba</espece>
+    <famille>Ginkgoaceae</famille>
+    <nom_commun>Arbre aux quarante ecus</nom_commun>
+    <annee>1865</annee>
+    <hauteur>25.0</hauteur>
+    <circonference>255.0</circonference>
+    <lieu>
+      <geopoint lat="48.8336849895" lon="2.42111102704" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>ecole chiens guide d'aveugle</nom_precis>
+      <adresse arrondissement="12" />
+    </lieu>
+  </arbre>
+  <arbre id="1">
+    <genre>Corylus</genre>
+    <espece>Colurna</espece>
+    <famille>Betulaceae</famille>
+    <nom_commun>Noisetier de byzance</nom_commun>
+    <annee>1882</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>210.0</circonference>
+    <lieu>
+      <geopoint lat="48.8648376291" lon="2.36062929978" />
+      <nom>Square du Temple</nom>
+      <adresse arrondissement="3">Rue du Temple, rue de Bretagne, rue perree, rue eugene-spuller</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="5">
+    <genre>Catalpa</genre>
+    <espece>Bignonioides</espece>
+    <famille>Bignoniaceae</famille>
+    <nom_commun>Catalpa commun</nom_commun>
+    <hauteur>15.0</hauteur>
+    <circonference>260.0</circonference>
+    <lieu>
+      <geopoint lat="48.856902513" lon="2.33666989768" />
+      <nom>Square Gabriel Pierne</nom>
+      <adresse arrondissement="6">Rue de seine, rue mazarine</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="8">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1814</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>700.0</circonference>
+    <lieu>
+      <geopoint lat="48.8577766649" lon="2.29329076205" />
+      <nom>Parc du Champ de Mars</nom>
+      <adresse arrondissement="7">Quai branly, avenue de la motte-piquet, avenue de la bourdonnais, avenue de suffren</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="20">
+    <genre>Fagus</genre>
+    <espece>Sylvatica</espece>
+    <famille>Fagaceae</famille>
+    <variete>Pendula</variete>
+    <nom_commun>Hetre pleureur</nom_commun>
+    <annee>1865</annee>
+    <hauteur>20.0</hauteur>
+    <circonference>530.0</circonference>
+    <lieu>
+      <geopoint lat="48.8399672948" lon="2.43375148978" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>square carnot</nom_precis>
+      <adresse arrondissement="12">Avenue daumesnil, esplanade du chateau de Vincennes</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="24">
+    <genre>Cedrus</genre>
+    <espece>Atlantica</espece>
+    <famille>Pinaceae</famille>
+    <variete>Glauca</variete>
+    <nom_commun>Cedre bleu de l'atlas</nom_commun>
+    <annee>1939</annee>
+    <hauteur>25.0</hauteur>
+    <circonference>350.0</circonference>
+    <lieu>
+      <geopoint lat="48.827737189" lon="2.3592096955" />
+      <nom>Parc de Choisy</nom>
+      <adresse arrondissement="13">128-160 avenue de Choisy, rue georges-eastman, rue charles-moureu, rue du docteur-magn</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="29">
+    <genre>Zelkova</genre>
+    <espece>Carpinifolia</espece>
+    <famille>Ulmaceae</famille>
+    <nom_commun>Faux orme de siberie</nom_commun>
+    <annee>1852</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>395.0</circonference>
+    <lieu>
+      <geopoint lat="48.8723867386" lon="2.27912885453" />
+      <nom>Avenue Foch</nom>
+      <adresse arrondissement="16">Avenue Foch</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="35">
+    <genre>Paulownia</genre>
+    <espece>Tomentosa</espece>
+    <famille>Paulowniaceae</famille>
+    <nom_commun>Paulownia</nom_commun>
+    <hauteur>20.0</hauteur>
+    <circonference>420.0</circonference>
+    <lieu>
+      <geopoint lat="48.8619170093" lon="2.2924448277" />
+      <nom>Jardin du Trocadero</nom>
+      <adresse arrondissement="16">Place du Trocadero et du 11 novembre, rue benjamin franklin, avenue albert de mun</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="39">
+    <genre>Araucaria</genre>
+    <espece>Araucana</espece>
+    <famille>Araucariaceae</famille>
+    <nom_commun>Desespoir du singe</nom_commun>
+    <annee>1907</annee>
+    <hauteur>9.0</hauteur>
+    <circonference>140.0</circonference>
+    <lieu>
+      <geopoint lat="48.8716117578" lon="2.24933653506" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>Bagatelle</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, route de sevres a neuilly</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="40">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1847</annee>
+    <hauteur>40.0</hauteur>
+    <circonference>480.0</circonference>
+    <lieu>
+      <geopoint lat="48.8691433358" lon="2.24587597613" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>Bagatelle</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, route de sevres a neuilly</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="49">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1859</annee>
+    <hauteur>25.0</hauteur>
+    <circonference>375.0</circonference>
+    <lieu>
+      <geopoint lat="48.8661956075" lon="2.26238964912" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>ile du lac inferieur</nom_precis>
+      <adresse arrondissement="16">Ile du lac inferieur</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="50">
+    <genre>Zelkova</genre>
+    <espece>Carpinifolia</espece>
+    <famille>Ulmaceae</famille>
+    <nom_commun>Faux orme de siberie</nom_commun>
+    <hauteur>12.0</hauteur>
+    <circonference>245.0</circonference>
+    <lieu>
+      <geopoint lat="48.8215800145" lon="2.45494779675" />
+      <nom>Arboretum de l'Ecole du Breuil</nom>
+      <adresse arrondissement="12">Route de la ferme, route de la pyramide</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="55">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1852</annee>
+    <hauteur>30.0</hauteur>
+    <circonference>525.0</circonference>
+    <lieu>
+      <geopoint lat="48.8727584235" lon="2.2873548507" />
+      <nom>Avenue Foch</nom>
+      <adresse arrondissement="16">Avenue Foch</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="66">
+    <genre>Magnolia</genre>
+    <espece>Grandiflora</espece>
+    <famille>Magnoliaceae</famille>
+    <nom_commun>Magnolia a grandes fleurs</nom_commun>
+    <annee>1863</annee>
+    <hauteur>12.0</hauteur>
+    <lieu>
+      <geopoint lat="48.8588189763" lon="2.25832952119" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>berge du lac inferieur</nom_precis>
+      <adresse arrondissement="16">Allee de Longchamp, carrefour des cascades</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="75">
+    <genre>Zelkova</genre>
+    <espece>Carpinifolia</espece>
+    <famille>Ulmaceae</famille>
+    <nom_commun>Faux orme de siberie</nom_commun>
+    <annee>1896</annee>
+    <hauteur>16.0</hauteur>
+    <circonference>260.0</circonference>
+    <lieu>
+      <geopoint lat="48.86260617" lon="2.23782412563" />
+      <nom>Bois de Boulogne</nom>
+      <nom_precis>moulin de Longchamp</nom_precis>
+      <adresse arrondissement="16" />
+    </lieu>
+  </arbre>
+  <arbre id="82">
+    <genre>Platanus</genre>
+    <espece>X acerifolia</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane commun</nom_commun>
+    <annee>1918</annee>
+    <hauteur>32.0</hauteur>
+    <circonference>570.0</circonference>
+    <lieu>
+      <geopoint lat="48.8395160905" lon="2.43350820893" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>square carnot</nom_precis>
+      <adresse arrondissement="12">Avenue daumesnil, esplanade du chateau de Vincennes</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="86">
+    <genre>Platanus</genre>
+    <espece>Orientalis</espece>
+    <famille>Platanaceae</famille>
+    <nom_commun>Platane d'orient</nom_commun>
+    <annee>1860</annee>
+    <hauteur>22.0</hauteur>
+    <circonference>475.0</circonference>
+    <lieu>
+      <geopoint lat="48.833545551" lon="2.41033694606" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>lac daumesnil, porte doree</nom_precis>
+      <adresse arrondissement="12">Route de la ceinture du lac daumesnil</adresse>
+    </lieu>
+  </arbre>
+  <arbre id="91">
+    <genre>Acer</genre>
+    <espece>Opalus</espece>
+    <famille>Sapindaceae</famille>
+    <nom_commun>Erable d'italie</nom_commun>
+    <annee>1870</annee>
+    <hauteur>15.0</hauteur>
+    <circonference>160.0</circonference>
+    <lieu>
+      <geopoint lat="48.8302532096" lon="2.41400587444" />
+      <nom>Bois de Vincennes</nom>
+      <nom_precis>Ile de Bercy</nom_precis>
+      <adresse arrondissement="12">Ile de Bercy</adresse>
+    </lieu>
+  </arbre>
+</arbres>

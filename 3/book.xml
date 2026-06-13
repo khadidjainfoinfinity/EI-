@@ -1,0 +1,11 @@
+﻿<?xml version='1.0'?>
+<!DOCTYPE addressBook SYSTEM "book.dtd">
+<addressBook>
+  <person id="B.WALLACE" gender= "male"> 
+    <name>W.B
+       <family>Wallace</family> 
+    </name>
+    <email>bwallace@megacorp.com</email>
+    <link manager="C.TUTTLE"/>
+     </person>
+</addressBook>

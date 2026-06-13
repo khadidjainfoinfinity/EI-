@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<AAA>
+	<BBB/>
+	<CCC/>
+	<BBB>
+		<HHH att="1"/>
+		<HHH att="2"/>
+		<HHH fromage="Gouda" />
+		<HHH>
+			<TTT/>
+		</HHH>
+		<HHH />
+	</BBB>
+	<BCC>
+		<BCD>
+			<HHH fromage="Cantal" />
+			<CDB />
+		</BCD>
+	</BCC>
+	<DDD>
+		<EEE />
+		<FFF />
+		<EFG />
+	</DDD>
+	<GGG>
+		<BBB/>
+	</GGG>
+	<III>
+		<JJJ nom="jjj" />
+		<JJJ nom=" jjj" />
+	</III>
+	<BBB>
+		<DDD>
+			<CCC>
+				<DDD/>
+				<EEE/>
+			</CCC>
+		</DDD>
+	</BBB>
+	<CCC>
+		<DDD>
+			<EEE>
+				<DDD>
+					<FFF/>
+				</DDD>
+			</EEE>
+		</DDD>
+	</CCC>
+</AAA>

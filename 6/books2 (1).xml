@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<bib>
+	<book title="XQuery">
+		<author>
+			<la>Amann</la>
+			<fi>B.</fi>
+		</author>
+		<author>
+			<la>Rigaux</la>
+			<fi>P.</fi>
+		</author>
+		<publisher>O’Reilly</publisher>
+		<price>28.95</price>
+	</book>
+	<book year="2001" title="Spatial Databases">
+		<author>
+			<la>Rigaux</la>
+			<fi>P.</fi>
+		</author>
+		<author>
+			<la>Scholl</la>
+			<fi>M.</fi>
+		</author>
+		<author>
+			<la>Voisard</la>
+			<fi>A.</fi>
+		</author>
+		<publisher>Morgan Kaufmann Publishers</publisher>
+		<price>35.00</price>
+	</book>
+	<book year="2000" title="Data on the Web">
+		<author>
+			<la>Abiteboul</la>
+			<fi>S.</fi>
+		</author>
+		<author>
+			<la>Buneman</la>
+			<fi>P.</fi>
+		</author>
+		<author>
+			<la>Suciu</la>
+			<fi>D.</fi>
+		</author>
+		<publisher>Morgan Kaufmann Publishers</publisher>
+		<price>39.95</price>
+	</book>
+</bib>

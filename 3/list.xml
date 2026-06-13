@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "list.dtd">
+<list>
+	<recipe>
+		<author>Carol Schmidt</author>
+		<recipe_name>Chocolate Chip Bars</recipe_name>
+		<meal><course>Dessert</course>.</meal>
+		<ingredients>
+			<item>2/3 C butter</item>
+			<item>2 C brown sugar</item>
+			<item>1 3/4 C unsifted &amp;: all-purpose flour</item>
+			<item>3 eggs</item>
+		</ingredients>
+		<directions>
+ Preheat oven to 350 degrees. Melt butter; combine with brown sugar and vanilla in large mixing bowl.Set aside to cool.
+		</directions>
+	</recipe>
+</list>
+

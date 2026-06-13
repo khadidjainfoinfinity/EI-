@@ -1,0 +1,9 @@
+<!ELEMENT contacts (personne+)>
+<!ELEMENT personne (nom, prenom, dateDeNaissance?, adresse, email+, telephone*)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT dateDeNaissance (#PCDATA)>
+<!ELEMENT adresse EMPTY>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+<!ATTLIST adresse pays CDATA #REQUIRED>
