@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examens corrigés — Documents Structurés</title>
+<style>
+  :root{
+    --bg:#f3f4f6;--card:#fff;--ink:#2c3038;--muted:#6b7280;
+    --accent:#3f6fb0;--accent-dark:#2c4f80;--accent-soft:#eaf1f9;
+    --line:#e3e6ea;--code-bg:#f5f6f8;--code-border:#e1e4e8;
+    --good-bg:#eef7ef;--good-bd:#9bc99f;--trap-bg:#fff8e8;--trap-bd:#e9c46a;
+    --shadow:0 2px 10px rgba(40,50,70,.07);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",system-ui,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.62;font-size:15.5px}
+  header.top{background:var(--card);border-bottom:1px solid var(--line);padding:18px 22px;position:sticky;top:0;z-index:20;box-shadow:var(--shadow)}
+  header.top h1{margin:0;font-size:1.35rem;color:var(--accent-dark)}
+  header.top .links{margin-top:6px;font-size:.85rem}
+  header.top a{color:var(--accent);text-decoration:none;font-weight:600;margin-right:14px}
+  main{max-width:1000px;margin:0 auto;padding:24px 20px 80px}
+  .paper{background:var(--card);border-radius:14px;padding:18px 22px;margin-bottom:24px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  h2.sec{color:var(--accent-dark);border-bottom:2px solid var(--accent);padding-bottom:7px;margin:0 0 4px;font-size:1.4rem}
+  .lead{color:var(--muted);margin:2px 0 12px}
+  .q{border:1px solid var(--line);border-radius:11px;margin:14px 0;overflow:hidden}
+  .q .head{background:#f0f2f5;padding:9px 14px;font-weight:700;color:var(--accent-dark);border-bottom:1px solid var(--line)}
+  .q .body{padding:13px 16px}
+  .q .given{margin:0 0 10px}
+  code{background:var(--code-bg);border:1px solid var(--code-border);padding:1px 5px;border-radius:5px;font-family:Consolas,"Courier New",monospace;font-size:.86em;color:#243b53}
+  pre{background:var(--code-bg);border:1px solid var(--code-border);border-left:4px solid var(--accent);border-radius:9px;padding:11px 13px;overflow-x:auto;font-size:.82rem;line-height:1.5;margin:8px 0}
+  pre code{background:none;border:none;padding:0;color:#243b53}
+  pre.xml{border-left-color:#9aa0a6}
+  .sol{background:var(--good-bg);border:1px solid var(--good-bd);border-left:5px solid var(--good-bd);border-radius:9px;padding:11px 15px;margin:9px 0}
+  .sol b{color:#2f6b3a}
+  .sol .r{color:#1d7a3e;font-weight:600}
+  .trap{background:var(--trap-bg);border-left:5px solid var(--trap-bd);border-radius:8px;padding:9px 13px;margin:9px 0}
+  .trap b{color:#9a6a00}
+  ul,ol{padding-left:21px;margin:6px 0}
+  li{margin:4px 0}
+  .out{background:#1e1e2e;color:#e4e4ef;border-radius:8px;padding:10px 14px;font-family:Consolas,monospace;font-size:.85rem;margin:8px 0;white-space:pre;overflow-x:auto}
+  .back{position:fixed;bottom:20px;right:20px;background:var(--accent);color:#fff;text-decoration:none;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:var(--shadow)}
+  .pt{font-size:.78rem;color:var(--muted);font-weight:600}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <h1>📝 Examens corrigés — Documents Structurés (2021/2022)</h1>
+  <div class="links"><a href="resume.html">← Résumé</a><a href="qcm.html">QCM interactif</a></div>
+</header>
+
+<main>
+
+<!-- ===================== EXAMEN A ===================== -->
+<section class="paper">
+  <h2 class="sec">Examen — Sujet A (10 questions)</h2>
+  <p class="lead">USTHB / L3 ACAD — chaque question est suivie de sa <b style="color:#2f6b3a">solution corrigée</b>.</p>
+
+  <div class="q">
+    <div class="head">Q1 — XQuery erreur d'attribut</div>
+    <div class="body">
+      <p class="given">Soit : <code>element racine {attribute lang {"fr"}, attribute lang {"en"}}</code><br>
+      <span class="pt">1) Pourquoi génère-t-elle une erreur ? &nbsp; 2) Comment la corriger ?</span></p>
+      <div class="sol">
+        <b>1)</b> Erreur : un élément ne peut pas avoir <b>deux attributs portant le même nom</b> (<code>lang</code> est déclaré deux fois).<br>
+        <b>2)</b> Corriger en renommant l'un d'eux, ou en fusionnant les valeurs :<br>
+        <code>element racine {attribute lang {"fr"}, attribute langue {"en"}}</code><br>
+        ou <code>element racine {attribute lang {"fr en"}}</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q2 — XQuery, texte non quoté</div>
+    <div class="body">
+      <p class="given">Soit : <code>element racine {attribute lang {"fr"}, Texte}</code><br>
+      <span class="pt">1) Pourquoi génère-t-elle une erreur ? &nbsp; 2) Comment la corriger ?</span></p>
+      <div class="sol">
+        <b>1)</b> <code>Texte</code> est écrit <b>sans guillemets</b> : il est donc interprété comme une <b>expression de chemin XPath</b> (recherche d'un élément nommé <code>Texte</code> dans le nœud de contexte). Comme aucun contexte n'est défini → erreur (« context item is absent / no context value »).<br>
+        <b>2)</b> Mettre des guillemets pour en faire un <b>littéral de chaîne</b> :<br>
+        <code>element racine {attribute lang {"fr"}, "Texte"}</code> <span class="r">→ &lt;racine lang="fr"&gt;Texte&lt;/racine&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q3 — XPath : <code>.</code> vs <code>text()</code> (avec sous-élément)</div>
+    <div class="body">
+      <p class="given">XML : <code>&lt;a who="C" n="9"&gt;donc &lt;vocal desc="e"/&gt; ben je prends 17h quand même&lt;/a&gt;</code></p>
+      <p class="given">Expliquer : <code>//a[contains(., 'quand')]</code> &nbsp;et&nbsp; <code>//a[contains(text(), 'quand')]</code></p>
+      <div class="sol">
+        <code>//a[contains(<b>.</b>, 'quand')]</code> → <code>.</code> = <b>tout</b> le contenu textuel de <code>a</code> (« donc … quand même », y compris le texte après <code>&lt;vocal/&gt;</code>). « quand » s'y trouve → <span class="r">retourne l'élément &lt;a&gt;</span>.<br>
+        <code>//a[contains(<b>text()</b>, 'quand')]</code> → <code>text()</code> = seulement le <b>premier</b> nœud de texte direct (« donc »). « quand » se trouve <b>après</b> <code>&lt;vocal/&gt;</code>, dans un autre nœud texte → <span class="r">ne retourne rien</span>.
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q4 — XPath : <code>.</code> vs <code>text()</code> (texte simple)</div>
+    <div class="body">
+      <p class="given">XML : <code>&lt;u&gt;&lt;a&gt;quand&lt;/a&gt;&lt;/u&gt;</code></p>
+      <p class="given">Expliquer : <code>//a[text()="quand"]</code> &nbsp;et&nbsp; <code>//a[.="quand"]</code></p>
+      <div class="sol">
+        Ici <code>a</code> ne contient <b>qu'un seul nœud de texte direct</b> (« quand »), sans sous-élément. Donc :<br>
+        <code>text()</code> = « quand » et <code>.</code> (valeur textuelle de <code>a</code>) = « quand ».<br>
+        Les <b>deux expressions donnent le même résultat</b> → <span class="r">retournent &lt;a&gt;quand&lt;/a&gt;</span>.<br>
+        <span class="pt">⟶ Contrairement à Q3, il n'y a pas de sous-élément qui « coupe » le texte, donc <code>.</code> et <code>text()</code> coïncident.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q5 — Expliquer une requête FLWOR (jointure)</div>
+    <div class="body">
+<pre><code>for $b1 in doc("books1.xml")//book, $b2 in doc("books2.xml")//book
+where $b1/@* = $b2/@year
+let $both := ($b2/*/*[2], $b1/*/*[2])
+for $ele at $i in $b2/*/*[2]
+return &lt;a&gt;{$ele, $both[$i + count($both) div 2]}&lt;/a&gt;</code></pre>
+      <div class="sol">
+        <ul>
+          <li><b>Double <code>for</code></b> = <b>jointure</b> : on apparie chaque <code>book</code> de books1 avec chaque <code>book</code> de books2.</li>
+          <li><b><code>where $b1/@* = $b2/@year</code></b> : on ne garde que les paires où un attribut de $b1 est égal à l'attribut <code>year</code> de $b2.</li>
+          <li><b><code>let $both</code></b> : séquence qui regroupe le 2ᵉ sous-sous-élément de $b2 <i>puis</i> celui de $b1 (les deux moitiés).</li>
+          <li><b><code>for $ele at $i</code></b> : on itère sur les 2ᵉ sous-sous-éléments de $b2 ; <code>at $i</code> = compteur de position.</li>
+          <li><b><code>return &lt;a&gt;{$ele, $both[$i + count($both) div 2]}&lt;/a&gt;</code></b> : pour chaque <code>$ele</code>, on l'apparie avec l'élément de <code>$both</code> situé à la position <code>$i + (moitié de la longueur de $both)</code> → on associe ainsi chaque élément de la <b>1ʳᵉ moitié</b> de la séquence à son correspondant dans la <b>2ᵉ moitié</b>, dans un élément <code>&lt;a&gt;</code>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q6 — XQuery : axe attribute, parent::, racine</div>
+    <div class="body">
+      <p class="given">XML : <code>&lt;arbres&gt;&lt;arbre id="6"&gt;&lt;nom_commun&gt;Oranger des osages&lt;/nom_commun&gt;&lt;/arbre&gt;…&lt;/arbres&gt;</code></p>
+<pre><code>R1 : for $arbre in doc("arbres.xml")//arbre
+     return element nom{$arbre/nom_commun/text()," ID",string($arbre/attribute::id)}
+
+R2 : for $nom in doc("arbres.xml")//nom_commun
+     return element nom{$nom/....," ID",string($nom/....::....)}</code></pre>
+      <div class="sol">
+        <b>1)</b> Dans R1, l'axe <code>attribute::id</code> peut être remplacé par <code><b>@id</b></code> (<code>@</code> est le raccourci de <code>attribute::</code>).<br>
+        <b>2)</b> Compléter R2 (afficher le nom commun + son ID, alors que l'<code>id</code> est sur le parent <code>arbre</code>) :<br>
+        <code>return element nom{$nom/<b>text()</b>," ID",string($nom/<b>parent::arbre</b>/@id)}</code>
+        <span class="pt"> (on remonte de <code>nom_commun</code> vers son parent <code>arbre</code> pour atteindre <code>@id</code> ; <code>parent::arbre</code> ≡ <code>..</code>)</span><br>
+        <b>3)</b> Si on ajoute <code>id="6"</code> à l'élément <b>racine</b> <code>&lt;arbres&gt;</code> : <b>les deux requêtes continuent de fonctionner</b>. R1 lit <code>//arbre/@id</code> (l'id de chaque <code>arbre</code>) et R2 lit <code>parent::arbre/@id</code> (l'id du parent <code>arbre</code>). La racine <code>&lt;arbres&gt;</code> n'est jamais sélectionnée comme un <code>arbre</code>, donc son nouvel <code>id</code> est ignoré. <span class="pt">R2 est la plus robuste car elle ancre explicitement sur <code>parent::arbre</code>.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q7 — XPath : 3 expressions de position</div>
+    <div class="body">
+      <p class="given">Expliquer la différence : <code>/descendant::titleStmt[2]</code> , <code>(//titleStmt)[2]</code> , <code>//titleStmt[2]</code></p>
+      <div class="sol">
+        <code>/descendant::titleStmt[2]</code> ≡ <code>//titleStmt[2]</code> → « le <code>titleStmt</code> qui est en <b>2ᵉ position chez son parent</b> » → peut donner <b>0, 1 ou plusieurs</b> résultats.<br>
+        <code>(//titleStmt)[2]</code> → on collecte <b>tous</b> les <code>titleStmt</code> puis on prend le <b>2ᵉ de la liste globale</b> → <b>toujours 1 seul</b> résultat.
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q8 — Code JAVA/DOM (texte parasite + filtrage)</div>
+    <div class="body">
+<pre class="xml"><code>&lt;liste&gt;
+L2&lt;eleve nom="E1" note="12"&gt;L2 ACAD&lt;/eleve&gt;
+L3&lt;eleve nom="E2" note="18"&gt;L3 ACAD&lt;/eleve&gt;
+L2&lt;eleve nom="E3" note="07"&gt;L2 ACAD&lt;/eleve&gt;
+&lt;/liste&gt;</code></pre>
+<pre><code>NodeList etudiant = document.getDocumentElement().getChildNodes();
+for (int o = 0; o&lt;etudiant.getLength(); o++){
+  Filtrer_parasites a = new Filtrer_parasites();   // Filtrer renvoie (getNodeName() != "#text")
+  if(a.Filtrer(etudiant.item(o)))
+     System.out.println(etudiant.item(o).getFirstChild().getNodeValue());
+  else
+     if (!etudiant.item(o).getNodeValue().endsWith( <b>"…."</b> ))     // ← ligne en gras
+        System.out.println(etudiant.item(o).getNodeValue().replaceAll("\\n|\\t",""));
+}</code></pre>
+      <div class="sol">
+        <b>1) Compléter la ligne en gras :</b> <code>endsWith(<b>"\n"</b>)</code>.<br>
+        <span class="pt">Les fils de <code>&lt;liste&gt;</code> sont les #text « \nL2 », « \nL3 », « \nL2 » (utiles) et le dernier « \n » (parasite). Seul le parasite se termine par « \n ».</span>
+        <br><br>
+        <b>2) Ce que le code affiche</b> (les <code>eleve</code> → leur texte ; les #text utiles → valeur sans <code>\n</code>/<code>\t</code> ; le #text « \n » → ignoré) :
+        <div class="out">L2
+L2 ACAD
+L3
+L3 ACAD
+L2
+L2 ACAD</div>
+        <b>3) Rôle de la ligne en gras :</b> elle <b>écarte le nœud #text parasite</b> qui n'est qu'un saut de ligne (le dernier « \n » avant <code>&lt;/liste&gt;</code>), pour ne pas afficher de ligne vide ; elle distingue les vrais textes (« L2/L3 ») des blancs parasites.<br><br>
+        <b>4) Remplacer <code>\n|\t</code> :</b> par <code>\s</code> (classe « espace blanc » qui couvre <code>\n</code>, <code>\t</code>, espace…) → même résultat ici. <span class="pt">(équivalent exact : <code>[\n\t]</code>)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q9 — DTD : attribut ID invalide</div>
+    <div class="body">
+      <p class="given">XML : <code>&lt;personne datenaissance="a 1942-01-08"/&gt;</code><br>
+      DTD : <code>&lt;!ATTLIST personne datenaissance ID #REQUIRED&gt;</code></p>
+      <div class="sol">
+        <b>1)</b> Erreur : un attribut de type <code>ID</code> ne peut <b>pas contenir d'espace</b> (ni commencer par un chiffre). La valeur « a 1942-01-08 » contient un espace.<br>
+        <b>2)</b> Deux corrections possibles :
+        <ul>
+          <li>(a) changer le type en <code>CDATA</code> : <code>&lt;!ATTLIST personne datenaissance CDATA #REQUIRED&gt;</code></li>
+          <li>(b) enlever l'espace dans la valeur : <code>datenaissance="a1942-01-08"</code></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q10 — DTD : contenu mixte</div>
+    <div class="body">
+      <p class="given">XML : <code>&lt;name&gt;W.B&lt;family&gt;Wallace&lt;/family&gt;&lt;/name&gt;</code><br>
+      DTD : <code>&lt;!ELEMENT name (#PCDATA, family)&gt;</code></p>
+      <div class="sol">
+        Erreur : <code>name</code> a un <b>contenu mixte</b> (le texte « W.B » <i>+</i> le sous-élément <code>family</code>). On ne peut pas écrire <code>(#PCDATA, family)</code>.<br>
+        Correction : <code>&lt;!ELEMENT name (#PCDATA | family)*&gt;</code> (forme obligatoire du contenu mixte).
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXAMEN B ===================== -->
+<section class="paper">
+  <h2 class="sec">Examen — Sujet B / Rattrapage (7 questions)</h2>
+  <p class="lead">Même module — variantes des mêmes notions.</p>
+
+  <div class="q">
+    <div class="head">Q1 — Simplifier une expression XPath</div>
+    <div class="body">
+      <p class="given">Simplifier pour obtenir le même résultat : <code>/descendant::titleStmt[2]</code></p>
+      <div class="sol">
+        <code>//titleStmt[2]</code> &nbsp;<span class="pt">(car <code>/descendant::</code> ≡ <code>//</code>)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q2 — Que retourne l'expression taggertoken ?</div>
+    <div class="body">
+<pre><code>//taggertoken[contains(@pos,'ADJ')]/following-sibling::taggertoken[1][contains(@pos,'NOM')] |
+//taggertoken[contains(@pos,'NOM')]/following-sibling::taggertoken[1][contains(@pos,'ADJ')] |
+//taggertoken[contains(@pos,'NOM')]/preceding-sibling::taggertoken[1][contains(@pos,'ADJ')] |
+//taggertoken[contains(@pos,'ADJ')]/preceding-sibling::taggertoken[1][contains(@pos,'NOM')] | …</code></pre>
+      <div class="sol">
+        Cette expression recherche les <b>séquences Nom + Adjectif ou Adjectif + Nom adjacentes</b> (un mot dont le voisin <b>immédiat</b> a le POS complémentaire).
+        <ul>
+          <li><code>following-sibling::taggertoken[1]</code> = le frère <b>immédiatement suivant</b> ; <code>preceding-sibling::…[1]</code> = le frère <b>immédiatement précédent</b>.</li>
+          <li><code>[contains(@pos,'…')]</code> teste l'étiquette grammaticale (ADJ / NOM).</li>
+          <li>L'union <code>|</code> combine tous les cas : ADJ suivi d'un NOM, NOM suivi d'un ADJ, et leurs symétriques avec <code>preceding</code>.</li>
+        </ul>
+        <b>Résultat :</b> tous les <code>taggertoken</code> qui forment une paire <b>nom + adjectif</b> contiguë (dans les deux ordres). <span class="pt">C'est l'exercice « rechercher les séquences NOM ADJ ou ADJ NOM ».</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q3 — XQuery : deux attributs de noms différents</div>
+    <div class="body">
+      <p class="given">Soit : <code>element racine {attribute lang_fr {"fr"}, attribute lang_en {"en"}}</code><br>
+      <span class="pt">1) Génère-t-elle une erreur ? &nbsp; 2) Si oui, corrigez-la.</span></p>
+      <div class="sol">
+        <b>1) Non, pas d'erreur</b> : les deux attributs ont des <b>noms différents</b> (<code>lang_fr</code> et <code>lang_en</code>), ce qui est autorisé. <span class="pt">(Contraste avec le Sujet A Q1 où les deux s'appelaient <code>lang</code> → erreur.)</span><br>
+        <b>Résultat :</b> <span class="r">&lt;racine lang_fr="fr" lang_en="en"/&gt;</span><br>
+        <b>2)</b> Rien à corriger. <span class="trap" style="display:inline-block;margin-top:6px"><b>⚠️</b> Veiller à écrire le mot-clé <code>attribute</code> en <b>minuscule</b> (XQuery est sensible à la casse) ; <code>Attribute</code> avec majuscule serait une erreur de syntaxe.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q4 — XQuery : opérateur <code>is</code></div>
+    <div class="body">
+      <p class="given">XML : <code>&lt;element&gt;&lt;a&gt;5&lt;/a&gt;&lt;b&gt;5&lt;/b&gt;&lt;a&gt;5&lt;/a&gt;&lt;/element&gt;</code><br>
+      Requête : <code>doc("fic1.xml")//a[1] is doc("fic1.xml")//a[2]</code></p>
+      <div class="sol">
+        Résultat : <span class="r">false</span>.<br>
+        <code>is</code> compare l'<b>identité</b> des nœuds (pas leur valeur). Les deux <code>&lt;a&gt;</code> sont <b>deux nœuds différents</b>, chacun avec sa propre identité, même s'ils ont la <b>même valeur</b> (5). Donc <code>false</code>.
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q5 — Expliquer une construction element/attribute</div>
+    <div class="body">
+<pre><code>element { doc("books2.xml")//book[1]/name(@*) } {
+  attribute { doc("books2.xml")//book[1]/name(*[3]) }
+            { doc("books2.xml")//book[1]/*[3] }
+}</code></pre>
+      <p class="given pt">books2.xml : <code>&lt;b&gt;&lt;book title="XQuery"&gt;&lt;author&gt;…&lt;/author&gt;&lt;publisher&gt;O'Reilly&lt;/publisher&gt;&lt;/book&gt;&lt;book/&gt;&lt;/b&gt;</code></p>
+      <div class="sol">
+        <ul>
+          <li><b>Nom de l'élément</b> = <code>name(@*)</code> de <code>book[1]</code> : ce premier <code>book</code> a <b>un seul attribut</b> (<code>title</code>) → <code>name(@*)</code> = « title » → l'élément s'appellera <code>&lt;title&gt;</code>.</li>
+          <li><b>Attribut interne</b> : son <b>nom</b> = <code>name(*[3])</code> (nom du 3ᵉ élément-enfant de <code>book[1]</code>) et sa <b>valeur</b> = <code>*[3]</code> (contenu de ce 3ᵉ enfant).</li>
+        </ul>
+        <b>⚠️ Problème :</b> <code>book[1]</code> n'a que <b>2 éléments-enfants</b> (<code>author</code> et <code>publisher</code>). Donc <code>*[3]</code> = <b>séquence vide</b> → <code>name(*[3])</code> = « » (chaîne vide) → on construit un <b>attribut sans nom</b> → <span class="r">ERREUR (nom d'attribut vide invalide)</span>.<br>
+        <span class="pt">⟶ Si c'était <code>*[2]</code> : <code>name(*[2])</code>=« publisher », <code>*[2]</code>=« O'Reilly » → <code>&lt;title publisher="O'Reilly"/&gt;</code>.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q6 — encoding obligatoire ? + requête analyze-string</div>
+    <div class="body">
+<pre class="xml"><code>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+&lt;classification_atomique type="gaz rare"&gt;
+  &lt;atome&gt;&lt;nom&gt;hélium&lt;/nom&gt;&lt;masse&gt;la masse est 4&lt;/masse&gt;&lt;/atome&gt;
+  &lt;atome&gt;&lt;nom&gt;neon&lt;/nom&gt;&lt;masse&gt;20&lt;/masse&gt;&lt;/atome&gt;
+  &lt;atome&gt;&lt;nom&gt;argon&lt;/nom&gt;&lt;masse&gt;40&lt;/masse&gt;&lt;/atome&gt;
+&lt;/classification_atomique&gt;</code></pre>
+<pre><code>for $i in doc("fic2.xml")//masse
+where analyze-string($i,"\d+")//fn:match &lt; 20
+return $i</code></pre>
+      <div class="sol">
+        <b>1) L'attribut <code>encoding</code> est-il obligatoire ?</b><br>
+        En général il est <b>facultatif</b> (l'encodage par défaut est UTF-8/UTF-16). <b>Mais ici, oui, il est nécessaire</b> : le document est encodé en <code>iso-8859-1</code> (qui n'est <b>pas</b> l'encodage par défaut) et contient des caractères accentués (« <b>hélium</b> »). Sans la déclaration <code>encoding</code>, le parseur supposerait UTF-8 et <b>mal interpréterait les accents</b> (caractères corrompus / erreur). Il faut donc préciser <code>encoding="iso-8859-1"</code>.<br><br>
+        <b>2) Explication de la requête :</b>
+        <ul>
+          <li><code>analyze-string($i, "\d+")</code> applique la regex <code>\d+</code> (un ou plusieurs chiffres) sur le texte de chaque <code>masse</code> et renvoie une structure avec des <code>&lt;fn:match&gt;</code> (les chiffres trouvés).</li>
+          <li><code>//fn:match</code> récupère le <b>nombre extrait</b> de chaque masse ; <code>&lt; 20</code> garde celles dont le nombre est strictement inférieur à 20.</li>
+          <li>Valeurs : « la masse est <b>4</b> » → 4 &lt; 20 = vrai ✔ · « <b>20</b> » → 20 &lt; 20 = faux ✘ · « <b>40</b> » → faux ✘.</li>
+        </ul>
+        <b>Résultat :</b> <span class="r">&lt;masse&gt;la masse est 4&lt;/masse&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="q">
+    <div class="head">Q7 — Code JAVA/DOM récursif (erreur de type)</div>
+    <div class="body">
+      <p class="given">XML : <code>&lt;liste&gt;&lt;eleve nom="Et2" note="15"&gt;L2 ACAD&lt;s&gt;A&lt;u&gt;C&lt;/u&gt;&lt;/s&gt;&lt;/eleve&gt;&lt;/liste&gt;</code></p>
+<pre><code>public static void L(Node n){
+  for (int o=0; o&lt;n.getChildNodes().getLength(); o++){
+     <b>Element z = n.getChildNodes().item(o);</b>     // ← ligne fautive
+     if(z.getNodeName()=="#text")
+        System.out.println(z.getNodeValue());
+     L(z);
+  }
+}</code></pre>
+      <div class="sol">
+        <b>1) Pourquoi une erreur ?</b> <code>item(o)</code> renvoie un <code><b>Node</b></code>, pas un <code>Element</code>. On <b>ne peut pas affecter directement un <code>Node</code> à une variable <code>Element</code></b> sans conversion → <b>erreur de compilation</b> (« Type mismatch: cannot convert from Node to Element »). De plus, un nœud <code>#text</code> n'est pas un <code>Element</code> (un cast forcé lèverait <code>ClassCastException</code> à l'exécution).<br><br>
+        <b>2) Correction :</b> déclarer <code>z</code> comme <code>Node</code> (on n'utilise que <code>getNodeName()</code>/<code>getNodeValue()</code>, méthodes de <code>Node</code>) :<br>
+        <code>Node z = n.getChildNodes().item(o);</code><br><br>
+        <b>3) Ce qu'affiche le code</b> (parcours récursif de tout l'arbre, affichant la valeur de chaque #text). Textes présents : « L2 ACAD » (dans <code>eleve</code>), « A » (dans <code>s</code>), « C » (dans <code>u</code>) — le XML est sur une seule ligne, donc pas de blancs parasites :
+        <div class="out">L2 ACAD
+A
+C</div>
+        <span class="pt">Justification : <code>L()</code> descend récursivement dans <code>eleve → s → u</code> ; à chaque nœud <code>#text</code> rencontré, il imprime sa valeur (dans l'ordre du document).</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p style="text-align:center;color:var(--muted)">Bonne chance 💪 &nbsp;·&nbsp; <a href="resume.html" style="color:var(--accent);font-weight:700">Résumé</a> &nbsp;·&nbsp; <a href="qcm.html" style="color:var(--accent);font-weight:700">QCM</a></p>
+</main>
+<a href="#top" class="back" title="Haut">↑</a>
+</body>
+</html>
